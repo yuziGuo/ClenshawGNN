@@ -161,6 +161,9 @@ def main(args):
     logger.info('Model_seeds:{:s}'.format(str(model_seeds)))
 
     edge_index = data.edge_index
+    # Authors note for L167: 
+    # Always set add_self_loops=False here.
+    # If 
     _, norm_A = gcn_norm(edge_index, add_self_loops=False)
     features = data.features
     labels = data.labels

@@ -41,27 +41,6 @@ class EarlyStopping:
             self.counter = 0
         return self.early_stop
 
-    def step_acc(self, val_acc, model):
-        self.epoch_id += 1
-        self.history.append(val_acc)
-
-        if self.best_score is None:
-            self.best_score = val_acc
-            self.save_checkpoint(model)
-            self.best_epoch = self.epoch_id
-        elif val_acc <= self.best_score:  
-            self.counter += 1
-            # print(f'EarlyStopping counter: {self.counter} out of {self.patience}')
-            if self.counter >= self.patience:
-                self.early_stop = True  # stop
-        else:
-            self.best_score = val_acc
-            self.save_checkpoint(model)
-            self.counter = 0
-            self.best_epoch = self.epoch_id
-            # print(self.best_score)
-        return self.early_stop
-
     def save_checkpoint(self, model):
         """Saves model when validation loss decrease."""
         torch.save(model.state_dict(), self.store_path)

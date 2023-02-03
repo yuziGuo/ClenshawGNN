@@ -14,6 +14,7 @@ import time
 import numpy as np
 import torch as th
 import torch.nn.functional as F
+from torch_geometric.nn.conv.gcn_conv import gcn_norm
 
 
 def build_dataset(args):
@@ -134,7 +135,6 @@ def run(args, cv_id, edge_index, data, norm_A, features, labels, model_seed):
                         )
         if args.early_stop and epoch >= 0:
             score =  val_loss
-            # score = val_acc
             if stopper_step(score, model):
                 break   
     # end for
@@ -159,7 +159,9 @@ def main(args):
     logger.info('Model_seeds:{:s}'.format(str(model_seeds)))
 
     edge_index = data.edge_index
-    from torch_geometric.nn.conv.gcn_conv import gcn_norm
+    # Authors note for L165:
+    # Always set add_self_loops=False here.
+    # If args.self_loop is True, the selfloops will be added in dataloader 
     _, norm_A = gcn_norm(edge_index, add_self_loops=False)
     features = data.features
     labels = data.labels
@@ -205,12 +207,8 @@ def set_args():
     parser.add_argument("--self-loop", action='store_true', default=False, help="graph self-loop (default=False)")
     parser.add_argument("--udgraph", action='store_true', default=False, help="undirected graph (default=False)")
 
-    # semi 
-    parser.add_argument("--semi", action='store_true', default=False, help="Semi supervised experiment setting (default=False)")
-
     # for experiment running
     parser.add_argument("--early-stop", action='store_true', default=False, help="early stop (default=False)")
-    parser.add_argument("--stopper-kind", type=int, default="2", help="(1, 2, 3)")
     parser.add_argument("--patience", type=int, default=300, help="patience for early stop")
     parser.add_argument("--es-ckpt", type=str, default="es_checkpoint", help="Saving directory for early stop checkpoint")
     parser.add_argument("--n-cv", type=int, default=5, help="Number of cross validations")

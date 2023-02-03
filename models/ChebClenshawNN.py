@@ -10,7 +10,8 @@ import math
 
 
 def relu(x):
-    """This implementation allows subgradient of relu(x) at x = 0 to be 1 instead of 0."""
+    """This implementation allows subgradient of relu(x) at x = 0 to be 1 instead of 0.
+    """
     x[x < -0.0] = 0
     return x
 
@@ -53,6 +54,11 @@ class ChebNN(nn.Module):
         self.dropAct = dropAct
 
     def init_alphas(self):
+        '''
+        Author's note: 
+            Combine Line84 to see that, this initialization is equivalent with setting the initial underlying filtering polynomial to be h(\lambda)=1-\lambda 
+            (\lamba is an eigenvalue of the laplacian matrix)
+        '''
         t = th.zeros(self.K + 1)
         t[0] = 1
         self.alpha_params = nn.Parameter(t.float())
@@ -70,6 +76,11 @@ class ChebNN(nn.Module):
         second_last_h = th.zeros_like(h0)
         
         for i, con in enumerate(self.convs):
+            '''
+            Authors' note: 
+                Note that the order of alpha params is INVERSED in clenshaw 
+                algorithm. (Check Theorem 3.1)
+            '''
             alpha = self.alpha_params[-(i + 1)]
             x = con(self.edge_index, self.norm_A, h0, last_h, second_last_h, alpha, i)
             if not self.dropAct:
