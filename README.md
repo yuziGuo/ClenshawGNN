@@ -14,10 +14,10 @@ bash run_all.sh
 ```
 
 
-## Reproduce Results for Table 2
+## Reproduce Results for Table 3
 
 ```bash
-bash run_all.sh
+bash run_all_linkx.sh
 ```
 
 
