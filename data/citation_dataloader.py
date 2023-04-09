@@ -3,7 +3,6 @@ from torch_geometric.utils import add_remaining_self_loops
 from torch_geometric.datasets import Planetoid
 import torch_geometric.transforms as T
 
-
 class citation_loader(loader):
     def __init__(self, ds_name, device='cuda:0', self_loop=True):
         super(citation_loader, self).__init__(ds_name, self_loop)

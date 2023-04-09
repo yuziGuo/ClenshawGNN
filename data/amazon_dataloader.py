@@ -1,19 +1,14 @@
-import sys
+from torch_geometric.datasets import Amazon
 from data.loader import loader
-
-# import loader
-
 from torch_geometric.utils import add_remaining_self_loops
-from torch_geometric.datasets import Planetoid
-import torch_geometric.transforms as T
+import os
 
 import numpy as np
 import os
 import torch as th
 from utils.data_split import random_planetoid_splits
 
-
-class citation_full_supervised_loader(loader):
+class amazon_full_supervised_loader(loader):
     def __init__(
         self,
         ds_name,
@@ -24,7 +19,7 @@ class citation_full_supervised_loader(loader):
         cv_id=0,
         needs_edge=False,
     ):
-        super(citation_full_supervised_loader, self).__init__(
+        super(amazon_full_supervised_loader, self).__init__(
             ds_name,
             self_loop,
             cross_validation=True,
@@ -37,8 +32,8 @@ class citation_full_supervised_loader(loader):
         self.name = ds_name.lower()
 
     def load_vanilla_data(self):
-        data = Planetoid(
-            root='~/datasets/Planetoid', 
+        data = Amazon(
+            root='~/datasets/Amazon', 
             name=self.name.split('full')[0], 
             transform=None)
         g = data[0]
@@ -70,14 +65,6 @@ class citation_full_supervised_loader(loader):
             self.val_mask = th.BoolTensor(val_mask).to(self.device)
             self.test_mask = th.BoolTensor(test_mask).to(self.device)
             return
-        # elif p == 'complete':
-            # N = self.labels.shape[0]
-            # self.train_mask = th.BoolTensor(N).to(self.device)
-            # self.train_mask[:N - 1000] = 1
-            # self.val_mask = th.BoolTensor(N).to(self.device)
-            # self.val_mask[:N-1000 :N-500] = 1
-            # self.test_mask = th.BoolTensor(N).to(self.device)
-            # self.test_mask[:N - 500 :N] = 1
         else:
             (p_train, p_val, p_test) = p
             percls_trn = int(round(p_train * len(self.labels) / self.n_classes))
@@ -93,20 +80,10 @@ class citation_full_supervised_loader(loader):
             self.val_mask = val_mask.bool()
             self.test_mask = test_mask.bool()
 
-            # N = self.labels.shape[0]
-            # train_mask = th.BoolTensor(N).to(self.device)
-            # train_mask[:N - 1000] = 1
-            # val_mask = th.BoolTensor(N).to(self.device)
-            # val_mask[:N-1000 :N-500] = 1
-            # test_mask = th.BoolTensor(N).to(self.device)
-            # test_mask[:N - 500 :N] = 1
-            # self.train_mask = train_mask.bool()
-            # self.val_mask = val_mask.bool()
-            # self.test_mask = test_mask.bool()
 
 if __name__ == "__main__":
-    loader = citation_full_supervised_loader("corafull", "cuda:1", True)
+    # loader = amazon_full_supervised_loader("computersfull", "cuda:1", True)
+    loader = amazon_full_supervised_loader("photofull", "cuda:1", True)
     loader.load_data()
     loader.set_split_seeds()
     loader.load_mask(p=(0.6, 0.2, 0.2))
-    pass
