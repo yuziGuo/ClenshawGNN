@@ -7,6 +7,7 @@ import numpy as np
 import os
 import torch as th
 from utils.data_split import random_planetoid_splits
+import torch_geometric.transforms as T
 
 class amazon_full_supervised_loader(loader):
     def __init__(
@@ -35,7 +36,8 @@ class amazon_full_supervised_loader(loader):
         data = Amazon(
             root='~/datasets/Amazon', 
             name=self.name.split('full')[0], 
-            transform=None)
+            transform=None
+            )
         g = data[0]
         if self.self_loop:
             g.edge_index, _ = add_remaining_self_loops(g.edge_index)
