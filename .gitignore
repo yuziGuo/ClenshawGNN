@@ -6,6 +6,7 @@
 *.log
 optunalog/*
 logNoRelu/*
+*.sh
 
 # vscode
 .vscode/settings.json

@@ -9,7 +9,3 @@ python tune_with_optuna_clenshaw.py --dataset geom-squirrel --n-layers 20 --kw c
 sleep 3
 python tune_with_optuna_clenshaw.py --dataset geom-squirrel --n-layers 24 --kw clengnn24layers --gpu 1  --id-log 0410017803 1> optunalogKlayers/sq-clenshaw24.log 2> optunalogKlayers/sq-clenshaw24.err 
 sleep 3
-python tune_with_optuna_clenshaw.py --dataset geom-squirrel --n-layers 28 --kw clengnn28layers --gpu 1  --id-log 0410017803 1> optunalogKlayers/sq-clenshaw28.log 2> optunalogKlayers/sq-clenshaw28.err 
-sleep 3
-python tune_with_optuna_clenshaw.py --dataset geom-squirrel --n-layers 32 --kw clengnn32layers --gpu 1  --id-log 0410017803 1> optunalogKlayers/sq-clenshaw32.log 2> optunalogKlayers/sq-clenshaw32.err 
-sleep 3
