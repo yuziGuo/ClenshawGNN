@@ -3,8 +3,7 @@
 
 import torch
 import torch.nn.functional as F
-from layers.GATConv import GATConv
-
+from layers.GATConv import GATConv        
 
 class GAT(torch.nn.Module):
     def __init__(self, 
@@ -37,8 +36,6 @@ class GAT(torch.nn.Module):
             self.convs.append(GATConv(hidden_channels, hidden_channels//heads, heads, dropout=dropout))
         self.convs.append(GATConv(hidden_channels, out_channels, heads=out_heads, concat=False, dropout=dropout))
 
-
-    
     def init_alphas(self):
         t = torch.zeros(self.n_layers - 2)
         t[0] = 1
@@ -50,16 +47,22 @@ class GAT(torch.nn.Module):
         x = F.elu(self.convs[0](x, self.edge_index))
         if self.with_initial_residual:
             x_0 = x
+        if self.with_negative_residual:
+            last_h = x
+            second_last_h = torch.zeros_like(x)
 
         # median layers 
+        # V1
         for i in range(1, self.n_layers-1):
-            second_last_x = x
-            x = F.dropout(x, p=0.6, training=self.training)
+            x = F.dropout(last_h, p=self.dropout, training=self.training)
             x = F.elu(self.convs[i](x, self.edge_index))
             if self.with_negative_residual:
-                x = x + (x-second_last_x)
+                x = 2*x - second_last_h
             if self.with_initial_residual:
-                x = x + self.alphas[i-1] * x_0
+                x = x + self.alphas[-i] * x_0
+            second_last_h = last_h
+            last_h = x
+
 
         # last layer
         x = F.dropout(x, p=self.dropout, training=self.training)

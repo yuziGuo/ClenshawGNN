@@ -4,7 +4,7 @@ from data.geom_dataloader import geom_dataloader
 from data.linkx_dataloader import linkx_dataloader
 
 # from models.ChebClenshawNN import ChebNN
-from models.GAT import GAT
+from models.GATV2 import GATV2
 
 from utils.grading_logger import get_logger
 from utils.stopper import EarlyStopping
@@ -36,7 +36,7 @@ def build_dataset(args):
 
 def build_model(args, edge_index, norm_A, in_feats, n_classes):
     if args.model == 'GAT':
-        model = GAT( 
+        model = GATV2( 
                     edge_index,
                     norm_A,
                     in_feats,
@@ -46,6 +46,7 @@ def build_model(args, edge_index, norm_A, in_feats, n_classes):
                     args.heads,
                     args.out_heads,
                     args.dropout,
+                    args.dropout2,
                     args.with_negative_residual,
                     args.with_initial_residual
                     )
@@ -55,16 +56,15 @@ def build_model(args, edge_index, norm_A, in_feats, n_classes):
 
 def build_optimizers(args, model):
     param_groups = [
-        {'params':model.convs.parameters(), 'lr':args.lr1,'weight_decay':args.wd1}
+        {'params': model.fcs.parameters(), 'lr':args.lr1,'weight_decay':args.wd1},
+        {'params': model.convs.parameters(), 'lr':args.lr2,'weight_decay':args.wd2}
     ]
     optimizer_adam = th.optim.Adam(param_groups)
-
-    if args.with_initial_residual and args.n_layers>2:
+    if args.with_initial_residual:
         param_groups = [
-            {'params':[model.alphas], 'lr':args.lr2,'weight_decay':args.wd2}
+            {'params':[model.alphas], 'lr':args.lr3,'weight_decay':args.wd3}
         ]
         optimizer_sgd = th.optim.SGD(param_groups, momentum=args.momentum)
-        # optimizer_sgd = th.optim.Adam(param_groups)
         return [optimizer_adam, optimizer_sgd]
     return [optimizer_adam]
 
@@ -193,10 +193,13 @@ def set_args():
     # for training
     parser.add_argument("--wd1", type=float, default=5e-4, help="Weight for L2 loss")
     parser.add_argument("--wd2", type=float, default=5e-4, help="Weight for L2 loss")
+    parser.add_argument("--wd3", type=float, default=5e-4, help="Weight for L2 loss")
     parser.add_argument("--lr1",  type=float, default=1e-2, help="learning rate")
     parser.add_argument("--lr2",  type=float, default=1e-2, help="learning rate")
+    parser.add_argument("--lr3",  type=float, default=1e-2, help="learning rate")
     parser.add_argument("--momentum",  type=float, default=0.9, help="momentum")
     parser.add_argument("--dropout",  type=float, default=0.6, help="learning rate")
+    parser.add_argument("--dropout2",  type=float, default=0.6, help="learning rate")
     parser.add_argument("--n-epochs", type=int, default=10000, help="number of training epochs")
 
     parser.add_argument("--loss", type=str, default='nll')
