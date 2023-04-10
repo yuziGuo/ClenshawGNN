@@ -45,9 +45,7 @@ def build_model(args, edge_index, norm_A, in_feats, n_classes):
                     args.n_layers,
                     args.heads,
                     args.out_heads,
-                    args.dropout,
-                    args.with_negative_residual,
-                    args.with_initial_residual
+                    args.dropout
                     )
         model.to(args.gpu)
         return model
@@ -58,14 +56,6 @@ def build_optimizers(args, model):
         {'params':model.convs.parameters(), 'lr':args.lr1,'weight_decay':args.wd1}
     ]
     optimizer_adam = th.optim.Adam(param_groups)
-
-    if args.with_initial_residual and args.n_layers>2:
-        param_groups = [
-            {'params':[model.alphas], 'lr':args.lr2,'weight_decay':args.wd2}
-        ]
-        optimizer_sgd = th.optim.SGD(param_groups, momentum=args.momentum)
-        # optimizer_sgd = th.optim.Adam(param_groups)
-        return [optimizer_adam, optimizer_sgd]
     return [optimizer_adam]
 
 def build_stopper(args):
@@ -186,8 +176,6 @@ def set_args():
     parser.add_argument("--n-layers", type=int, default=4, help="number of hidden gcn layers")
     parser.add_argument("--heads", type=int, default=8, help="attention heads")
     parser.add_argument("--out-heads", type=int, default=1, help="number of output attention heads")
-    parser.add_argument("--with-negative-residual", action='store_true', default=False, help="")
-    parser.add_argument("--with-initial-residual", action='store_true', default=False, help="")
 
 
     # for training

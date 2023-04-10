@@ -13,6 +13,7 @@ logNoRelu/*
 
 #
 run.sh
+*.sh
 
 # checkpoints
 *.pt
