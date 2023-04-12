@@ -48,7 +48,8 @@ def build_model(args, edge_index, norm_A, in_feats, n_classes):
                     args.dropout,
                     args.dropout2,
                     args.with_negative_residual,
-                    args.with_initial_residual
+                    args.with_initial_residual,
+                    args.bn
                     )
         model.to(args.gpu)
         return model
@@ -59,6 +60,10 @@ def build_optimizers(args, model):
         {'params': model.fcs.parameters(), 'lr':args.lr1,'weight_decay':args.wd1},
         {'params': model.convs.parameters(), 'lr':args.lr2,'weight_decay':args.wd2}
     ]
+    if args.bn:
+        param_groups.append(
+            {'params': model.bns.parameters(), 'lr':args.lr2,'weight_decay':args.wd2}
+        )
     optimizer_adam = th.optim.Adam(param_groups)
     if args.with_initial_residual:
         param_groups = [
@@ -200,6 +205,7 @@ def set_args():
     parser.add_argument("--momentum",  type=float, default=0.9, help="momentum")
     parser.add_argument("--dropout",  type=float, default=0.6, help="learning rate")
     parser.add_argument("--dropout2",  type=float, default=0.6, help="learning rate")
+    parser.add_argument("--bn",  action='store_true', default=False, help="batch norm")
     parser.add_argument("--n-epochs", type=int, default=10000, help="number of training epochs")
 
     parser.add_argument("--loss", type=str, default='nll')

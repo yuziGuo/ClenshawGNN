@@ -25,7 +25,7 @@ import torch.nn.functional as F
 def build_dataset(args):
     if args.dataset in ['twitch-gamer', 'Penn94', 'genius']:
         loader = linkx_dataloader(args.dataset, args.gpu, args.self_loop, n_cv=1)
-    elif args.dataset in ['citeseerfull', 'pubmedfull']:
+    elif args.dataset in ['citeseerfull', 'pubmedfull', 'corafull']:
         # For full-supervised  
         loader = citation_full_supervised_loader(args.dataset, args.gpu, args.self_loop, n_cv=args.n_cv)
     elif args.dataset.startswith('geom'):
@@ -51,7 +51,8 @@ def build_model(args, edge_index, norm_A, in_feats, n_classes):
                     args.dropout,
                     args.dropout2,
                     args.with_negative_residual,
-                    args.with_initial_residual
+                    args.with_initial_residual,
+                    args.bn
                     )
         model.to(args.gpu)
         return model
@@ -61,6 +62,10 @@ def build_optimizers(args, model):
         {'params': model.fcs.parameters(), 'lr':args.lr1,'weight_decay':args.wd1},
         {'params': model.convs.parameters(), 'lr':args.lr2,'weight_decay':args.wd2}
     ]
+    if args.bn:
+        param_groups.append(
+            {'params': model.bns.parameters(), 'lr':args.lr2,'weight_decay':args.wd2}
+        )
     optimizer_adam = th.optim.Adam(param_groups)
     if args.with_initial_residual:
         param_groups = [
@@ -197,6 +202,7 @@ def set_args():
     parser.add_argument("--out-heads", type=int, default=1, help="number of output attention heads")
     parser.add_argument("--with-negative-residual", action='store_true', default=False, help="")
     parser.add_argument("--with-initial-residual", action='store_true', default=False, help="")
+    parser.add_argument("--bn", action='store_true', default=False, help="")
 
 
     # for training
@@ -274,6 +280,7 @@ fixed_params = {
         'self_loop': True,
 
         'out_heads': 1,
+        'bn': True,
         'logging': True,
         'log_detail': True,
         'log_detailedCh': False,
@@ -380,7 +387,6 @@ if __name__ == '__main__':
     dataset = args.dataset
     n_trials = args.optuna_n_trials
 
-    # kw = 'gat1cv+clenshawRes'
     kw = args.kw
     study = optuna.create_study(
         study_name="GATV2-{}-{}".format(dataset, kw),
