@@ -9,7 +9,7 @@ from data.amazon_dataloader import amazon_full_supervised_loader
 from data.geom_dataloader import geom_dataloader
 from data.linkx_dataloader import linkx_dataloader
 
-from models.ChebClenshawNN import ChebNN
+from models.GCNIIJK import GCNIIJK
 
 import logging
 from utils.grading_logger import get_logger
@@ -44,8 +44,8 @@ def build_dataset(args):
 
 
 def build_model(args, edge_index, norm_A, in_feats, n_classes):
-    if args.model == 'ChebNN':
-        model = ChebNN(
+    if args.model == 'GCNIIJK':
+        model = GCNIIJK(
                     edge_index,
                     norm_A,
                     in_feats,
@@ -54,9 +54,9 @@ def build_model(args, edge_index, norm_A, in_feats, n_classes):
                     args.n_layers,
                     args.dropout,
                     args.dropout2,
+                    args.alpha,
                     args.lamda,
-                    args.dropW,
-                    args.dropAct
+                    jk_type=args.jk_type
                     )
         model.to(args.gpu)
         return model
@@ -66,16 +66,11 @@ def build_optimizer(args, model):
     param_groups = [
         {'params':model.params1, 'lr':args.lr1,'weight_decay':args.wd1}, # convs
         {'params':model.params2, 'lr':args.lr2,'weight_decay':args.wd2}, # fcs
+        # {'params':model.params3, 'lr':args.lr3,'weight_decay':args.wd3}, # bns
     ]
     optimizer = th.optim.Adam(param_groups)
     return optimizer
 
-def build_optimizer_SGD(args, model):
-    param_groups = [
-        {'params':[model.alpha_params], 'lr':args.lr3,'weight_decay':args.wd3}, # p
-    ]
-    optimizer = th.optim.SGD(param_groups, momentum=args.momentum)
-    return optimizer
 
 
 def build_stopper(args):
@@ -117,7 +112,6 @@ def run(args, logger, trial, cv_id, edge_index, data, norm_A, features, labels, 
     data.in_feats = features.shape[-1] # ----
     model = build_model(args, edge_index, norm_A, data.in_feats, data.n_classes)
     optimizer = build_optimizer(args, model)
-    optimizer_2 = build_optimizer_SGD(args, model)
     stopper_step, stopper = build_stopper(args)
     
     rec_val_loss = []
@@ -128,13 +122,11 @@ def run(args, logger, trial, cv_id, edge_index, data, norm_A, features, labels, 
         
         model.train()
         optimizer.zero_grad()
-        optimizer_2.zero_grad()
         logits = model(features)
         loss = loss_fcn(logits[data.train_mask], labels[data.train_mask])
         loss.backward()
 
         optimizer.step()
-        optimizer_2.step()
 
         val_acc, val_loss = evaluate(model, loss_fcn, features, labels, data.val_mask, epoch, evaluator=None)
 
@@ -205,7 +197,7 @@ def set_args():
     parser = argparse.ArgumentParser(description='GCN')
     parser.add_argument('--seed', type=int, default=42, help='Random seed.')
     parser.add_argument('--split-seed', type=str, default='random', help='(predefined, random)')
-    parser.add_argument("--model", type=str, default='ChebNN')
+    parser.add_argument("--model", type=str, default='GCNIIJK')
     parser.add_argument("--gpu", type=int, default=0, help="gpu")
     parser.add_argument("--dataset", type=str, default="cora", help="Dataset name ('cora', 'citeseer', 'pubmed').")
     parser.add_argument("--ds-split", type=str, default="standard", help="split by ('standard', 'mg', 'random').")
@@ -215,33 +207,27 @@ def set_args():
 
 
     parser.add_argument("--n-hidden", type=int, default=64, help="number of hidden gcn units")
-    parser.add_argument("--n-layers", type=int, default=64, help="number of hidden gcn layers")
+    parser.add_argument("--n-layers", type=int, default=4, help="number of hidden gcn layers")
 
     # for training
     parser.add_argument("--wd1", type=float, default=1e-2, help="Weight for L2 loss")
     parser.add_argument("--wd2", type=float, default=5e-4, help="Weight for L2 loss")
-    parser.add_argument("--wd3", type=float, default=0, help="Weight for L2 loss")
     parser.add_argument("--lr1",  type=float, default=1e-2, help="learning rate")
     parser.add_argument("--lr2",  type=float, default=1e-2, help="learning rate")
-    parser.add_argument("--lr3",  type=float, default=1e-2, help="learning rate")
-    parser.add_argument("--momentum",  type=float, default=0.9, help="SGD momentum")
     parser.add_argument("--n-epochs", type=int, default=2000, help="number of training epochs")
     parser.add_argument("--dropout", type=float, default=0.5, help="dropout probability")
     parser.add_argument("--dropout2", type=float, default=0.7, help="dropout probability")
 
-    # ablation options
-    parser.add_argument("--dropW", action='store_true', default=False)
-    parser.add_argument("--dropAct", action='store_true', default=False)
+    # for gcnii
+    parser.add_argument("--alpha", type=float, default=0.5, help="GCNII alpha")
+    parser.add_argument("--lamda", type=float, default=1.0, help="GCNII lambda")
+    # for jknet
+    parser.add_argument("--jk-type", type=str, default='max')
 
     parser.add_argument("--loss", type=str, default='nll')
     parser.add_argument("--self-loop", action='store_true', default=False, help="graph self-loop (default=False)")
     parser.add_argument("--udgraph", action='store_true', default=False, help="undirected graph (default=False)")
     parser.add_argument("--l-norm", type=str, default='sym')
-    parser.add_argument("--inv-edge", action='store_true', default=False)
-
-        # for gcnii
-    parser.add_argument("--last-act-fn", type=int, default=0)
-    parser.add_argument("--stparam", type=float, default=1e-3)
 
     # for experiment running
     parser.add_argument("--early-stop", action='store_true', default=False, help="early stop (default=False)")
@@ -305,15 +291,14 @@ def suggest_args(trial):
 
             'lr1': trial.suggest_float('lr1', -0.02, 0.05, step=0.01), # -0.01 --> 0.001  0.-->0.005
             'lr2': trial.suggest_float('lr2', -0.02, 0.05, step=0.01),
-            'lr3': trial.suggest_float('lr3', -0.02, 0.05, step=0.01),
             'wd1': trial.suggest_int('wd1', -8, -3),
             'wd2': trial.suggest_int('wd2', -8, -3),
-            'wd3': trial.suggest_int('wd3', -8, -3),
             'dropout': trial.suggest_float('dropout', 0.0, 0.7, step=0.1),
             'dropout2': trial.suggest_float('dropout2', 0.0, 0.7, step=0.1),
             'lamda': trial.suggest_float('lamda', 0.5, 2.0, step=0.5),
-            'n_layers': trial.suggest_int("n_layers", 2, 12, step=2), 
-            'momentum': trial.suggest_float("momentum", 0.8, 0.95, step=0.05),
+            'alpha': trial.suggest_float('alpha', 0.1, 0.9, step=0.1),
+            'jk_type': trial.suggest_categorical('jk_type', ['max', 'cat']),
+            'n_layers': trial.suggest_int('n_layers', 0, 16, step=4),
             }
         for k in params.keys():
             if k.startswith('wd'):
@@ -329,6 +314,9 @@ def suggest_args(trial):
                 if params[k] == 0.:
                     params[k] = 0.005
                 continue
+            if k.startswith('n_layers'):
+                if params[k] == 0:
+                    params[k] = 2
         params['es_ckpt'] = get_es_ckpt_fname(trial.study, trial)
         update_args_(args, params)
     return args
@@ -390,9 +378,9 @@ if __name__ == '__main__':
     
     kw = args.kw
     study = optuna.create_study(
-        study_name="ClenGNN-{}-{}".format(dataset, kw),
+        study_name="GCNIIJK-{}-{}".format(dataset, kw),
         direction="maximize", 
-        storage = optuna.storages.RDBStorage(url='sqlite:///{}/ClenGNN-{}.db'.format('cache/OptunaTrials', kw), 
+        storage = optuna.storages.RDBStorage(url='sqlite:///{}/GCNIIJK-{}.db'.format('cache/OptunaTrials', kw), 
                 engine_kwargs={"connect_args": {"timeout": 20000}}),
         pruner=optuna.pruners.MedianPruner(n_startup_trials=5,n_warmup_steps=3,interval_steps=1,n_min_trials=5),
         load_if_exists=True
