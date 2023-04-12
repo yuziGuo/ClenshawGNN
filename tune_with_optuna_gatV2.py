@@ -6,7 +6,7 @@ from data.citation_full_dataloader import  citation_full_supervised_loader
 from data.geom_dataloader import geom_dataloader
 from data.linkx_dataloader import linkx_dataloader
 
-from models.GAT import GAT
+from models.GATV2 import GATV2
 
 import logging
 from utils.grading_logger import get_logger
@@ -25,7 +25,7 @@ import torch.nn.functional as F
 def build_dataset(args):
     if args.dataset in ['twitch-gamer', 'Penn94', 'genius']:
         loader = linkx_dataloader(args.dataset, args.gpu, args.self_loop, n_cv=1)
-    elif args.dataset in ['citeseerfull', 'pubmedfull']:
+    elif args.dataset in ['citeseerfull', 'pubmedfull', 'corafull']:
         # For full-supervised  
         loader = citation_full_supervised_loader(args.dataset, args.gpu, args.self_loop, n_cv=args.n_cv)
     elif args.dataset.startswith('geom'):
@@ -39,7 +39,7 @@ def build_dataset(args):
 
 def build_model(args, edge_index, norm_A, in_feats, n_classes):
     if args.model == 'GAT':
-        model = GAT( 
+        model = GATV2( 
                     edge_index,
                     norm_A,
                     in_feats,
@@ -49,20 +49,27 @@ def build_model(args, edge_index, norm_A, in_feats, n_classes):
                     args.heads,
                     args.out_heads,
                     args.dropout,
+                    args.dropout2,
                     args.with_negative_residual,
-                    args.with_initial_residual
+                    args.with_initial_residual,
+                    args.bn
                     )
         model.to(args.gpu)
         return model
 
 def build_optimizers(args, model):
     param_groups = [
-        {'params':model.convs.parameters(), 'lr':args.lr1,'weight_decay':args.wd1}
+        {'params': model.fcs.parameters(), 'lr':args.lr1,'weight_decay':args.wd1},
+        {'params': model.convs.parameters(), 'lr':args.lr2,'weight_decay':args.wd2}
     ]
+    if args.bn:
+        param_groups.append(
+            {'params': model.bns.parameters(), 'lr':args.lr2,'weight_decay':args.wd2}
+        )
     optimizer_adam = th.optim.Adam(param_groups)
-    if args.with_initial_residual and args.n_layers>2:
+    if args.with_initial_residual:
         param_groups = [
-            {'params':[model.alphas], 'lr':args.lr2,'weight_decay':args.wd2}
+            {'params':[model.alphas], 'lr':args.lr3,'weight_decay':args.wd3}
         ]
         optimizer_sgd = th.optim.SGD(param_groups, momentum=args.momentum)
         return [optimizer_adam, optimizer_sgd]
@@ -195,6 +202,7 @@ def set_args():
     parser.add_argument("--out-heads", type=int, default=1, help="number of output attention heads")
     parser.add_argument("--with-negative-residual", action='store_true', default=False, help="")
     parser.add_argument("--with-initial-residual", action='store_true', default=False, help="")
+    parser.add_argument("--bn", action='store_true', default=False, help="")
 
 
     # for training
@@ -203,7 +211,8 @@ def set_args():
     parser.add_argument("--lr1",  type=float, default=1e-2, help="learning rate")
     parser.add_argument("--lr2",  type=float, default=1e-2, help="learning rate")
     parser.add_argument("--momentum",  type=float, default=0.9, help="SGD momentum")
-    parser.add_argument("--dropout",  type=float, default=0.6, help="learning rate")
+    parser.add_argument("--dropout",  type=float, default=0.6)
+    parser.add_argument("--dropout2",  type=float, default=0.6)
     parser.add_argument("--n-epochs", type=int, default=2000, help="number of training epochs")
 
     parser.add_argument("--loss", type=str, default='nll')
@@ -271,9 +280,10 @@ fixed_params = {
         'self_loop': True,
 
         'out_heads': 1,
+        'bn': True,
         'logging': True,
         'log_detail': True,
-        # 'log_detailedCh': True,
+        'log_detailedCh': False,
     }
 
 def suggest_args(trial):
@@ -285,18 +295,19 @@ def suggest_args(trial):
     # args <--> suggest number
     if trial is not None:  
         suggested_params = {
-            'lr1': trial.suggest_float('lr1', -0.02, 0.05, step=0.01), # -0.01 --> 0.001  0.-->0.005
+            'lr1': trial.suggest_float('lr1', -0.02, 0.05, step=0.01),
             'wd1': trial.suggest_int('wd1', -8, -3),
-            'dropout': trial.suggest_float('dropout', 0.0, 0.9, step=0.1)
+            'lr2': trial.suggest_float('lr2', -0.02, 0.05, step=0.01),
+            'wd2': trial.suggest_int('wd2', -8, -3),
+            'dropout': trial.suggest_float('dropout', 0.0, 0.9, step=0.1),
+            'dropout2': trial.suggest_float('dropout2', 0.0, 0.9, step=0.1)
             } 
         if use_clenshaw_for_gat:
-            suggested_params['n_layers'] = trial.suggest_int("n_layers", 4, 12, step=2)
+            suggested_params['n_layers'] = trial.suggest_int("n_layers", 2, 12, step=2)
         if args.with_initial_residual:
-            suggested_params['lr2'] = trial.suggest_float('lr2', -0.02, 0.05, step=0.01)
-            suggested_params['wd2'] =  trial.suggest_int('wd2', -8, -3)
+            suggested_params['lr3'] = trial.suggest_float('lr3', -0.02, 0.05, step=0.01)
+            suggested_params['wd3'] =  trial.suggest_int('wd3', -8, -3)
             suggested_params['momentum'] = trial.suggest_float("momentum", 0.8, 0.95, step=0.05)
-        # else: 
-        #     suggested_params['n_layers'] = trial.suggest_int("n_layers", 2, 2, step=0)
 
         # II. postprocess of params
         for k in suggested_params.keys():
@@ -316,10 +327,6 @@ def suggest_args(trial):
         suggested_params['es_ckpt'] = get_es_ckpt_fname(trial.study, trial)
         
         # III. params --> args
-        if args.dataset == 'pubmedfull':
-            fixed_params['out_heads'] = 8
-        if use_clenshaw_for_gat is False:
-            fixed_params['n_layers'] = 2
         update_args_(args, fixed_params)
         update_args_(args, suggested_params)
     return args
@@ -380,14 +387,13 @@ if __name__ == '__main__':
     dataset = args.dataset
     n_trials = args.optuna_n_trials
 
-    # kw = 'gat1cv+clenshawRes'
     kw = args.kw
     study = optuna.create_study(
-        study_name="GAT-{}-{}".format(dataset, kw),
+        study_name="GATV2-{}-{}".format(dataset, kw),
         direction="maximize", 
-        storage = optuna.storages.RDBStorage(url='sqlite:///{}/GAT-{}.db'.format('cache/OptunaTrials', kw), 
+        storage = optuna.storages.RDBStorage(url='sqlite:///{}/GATV2-{}.db'.format('cache/OptunaTrials', kw), 
                 engine_kwargs={"connect_args": {"timeout": 20000}}),
-        pruner=optuna.pruners.MedianPruner(n_startup_trials=5,n_warmup_steps=3,interval_steps=1,n_min_trials=5),
+        pruner=optuna.pruners.MedianPruner(n_startup_trials=5,n_warmup_steps=10,interval_steps=1,n_min_trials=5),
         load_if_exists=True
         )
     study.set_system_attr('kw', kw)

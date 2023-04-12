@@ -4,7 +4,7 @@ from data.geom_dataloader import geom_dataloader
 from data.linkx_dataloader import linkx_dataloader
 
 # from models.ChebClenshawNN import ChebNN
-from models.GAT import GAT
+from models.GATV2 import GATV2
 
 from utils.grading_logger import get_logger
 from utils.stopper import EarlyStopping
@@ -36,7 +36,7 @@ def build_dataset(args):
 
 def build_model(args, edge_index, norm_A, in_feats, n_classes):
     if args.model == 'GAT':
-        model = GAT( 
+        model = GATV2( 
                     edge_index,
                     norm_A,
                     in_feats,
@@ -45,7 +45,11 @@ def build_model(args, edge_index, norm_A, in_feats, n_classes):
                     args.n_layers,
                     args.heads,
                     args.out_heads,
-                    args.dropout
+                    args.dropout,
+                    args.dropout2,
+                    args.with_negative_residual,
+                    args.with_initial_residual,
+                    args.bn
                     )
         model.to(args.gpu)
         return model
@@ -53,9 +57,20 @@ def build_model(args, edge_index, norm_A, in_feats, n_classes):
 
 def build_optimizers(args, model):
     param_groups = [
-        {'params':model.convs.parameters(), 'lr':args.lr1,'weight_decay':args.wd1}
+        {'params': model.fcs.parameters(), 'lr':args.lr1,'weight_decay':args.wd1},
+        {'params': model.convs.parameters(), 'lr':args.lr2,'weight_decay':args.wd2}
     ]
+    if args.bn:
+        param_groups.append(
+            {'params': model.bns.parameters(), 'lr':args.lr2,'weight_decay':args.wd2}
+        )
     optimizer_adam = th.optim.Adam(param_groups)
+    if args.with_initial_residual:
+        param_groups = [
+            {'params':[model.alphas], 'lr':args.lr3,'weight_decay':args.wd3}
+        ]
+        optimizer_sgd = th.optim.SGD(param_groups, momentum=args.momentum)
+        return [optimizer_adam, optimizer_sgd]
     return [optimizer_adam]
 
 def build_stopper(args):
@@ -176,15 +191,21 @@ def set_args():
     parser.add_argument("--n-layers", type=int, default=4, help="number of hidden gcn layers")
     parser.add_argument("--heads", type=int, default=8, help="attention heads")
     parser.add_argument("--out-heads", type=int, default=1, help="number of output attention heads")
+    parser.add_argument("--with-negative-residual", action='store_true', default=False, help="")
+    parser.add_argument("--with-initial-residual", action='store_true', default=False, help="")
 
 
     # for training
     parser.add_argument("--wd1", type=float, default=5e-4, help="Weight for L2 loss")
     parser.add_argument("--wd2", type=float, default=5e-4, help="Weight for L2 loss")
+    parser.add_argument("--wd3", type=float, default=5e-4, help="Weight for L2 loss")
     parser.add_argument("--lr1",  type=float, default=1e-2, help="learning rate")
     parser.add_argument("--lr2",  type=float, default=1e-2, help="learning rate")
+    parser.add_argument("--lr3",  type=float, default=1e-2, help="learning rate")
     parser.add_argument("--momentum",  type=float, default=0.9, help="momentum")
     parser.add_argument("--dropout",  type=float, default=0.6, help="learning rate")
+    parser.add_argument("--dropout2",  type=float, default=0.6, help="learning rate")
+    parser.add_argument("--bn",  action='store_true', default=False, help="batch norm")
     parser.add_argument("--n-epochs", type=int, default=10000, help="number of training epochs")
 
     parser.add_argument("--loss", type=str, default='nll')

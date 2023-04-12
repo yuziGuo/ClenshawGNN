@@ -210,7 +210,7 @@ def set_args():
     parser.add_argument("--dataset", type=str, default="cora", help="Dataset name ('cora', 'citeseer', 'pubmed').")
     parser.add_argument("--ds-split", type=str, default="standard", help="split by ('standard', 'mg', 'random').")
 
-    parser.add_argument("--optuna-n-trials", type=int, default=200)
+    parser.add_argument("--optuna-n-trials", type=int, default=100)
     parser.add_argument("--kw", type=str)
 
 
@@ -312,7 +312,7 @@ def suggest_args(trial):
             'dropout': trial.suggest_float('dropout', 0.0, 0.7, step=0.1),
             'dropout2': trial.suggest_float('dropout2', 0.0, 0.7, step=0.1),
             'lamda': trial.suggest_float('lamda', 0.5, 2.0, step=0.5),
-            # 'n_layers': trial.suggest_int("n_layers", 8, 32, step=4), 
+            'n_layers': trial.suggest_int("n_layers", 2, 12, step=2), 
             'momentum': trial.suggest_float("momentum", 0.8, 0.95, step=0.05),
             }
         for k in params.keys():

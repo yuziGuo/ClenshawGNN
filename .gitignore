@@ -6,12 +6,14 @@
 *.log
 optunalog/*
 logNoRelu/*
+*.sh
 
 # vscode
 .vscode/settings.json
 
 #
 run.sh
+*.sh
 
 # checkpoints
 *.pt
