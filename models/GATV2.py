@@ -120,7 +120,8 @@ class GATV2(torch.nn.Module):
             dropout=0.6,
             dropout2=0.6,
             with_negative_residual=False,
-            with_initial_residual=False
+            with_initial_residual=False,
+            batchNorm=False,
             ):
         super().__init__()
         self.edge_index = edge_index
@@ -142,6 +143,12 @@ class GATV2(torch.nn.Module):
         else: 
             for _ in range(0,self.K):
                 self.convs.append(GATConv(hidden_channels, hidden_channels//heads, heads, dropout=dropout))
+        
+        self.bn = batchNorm
+        if self.bn:
+            self.bns = torch.nn.ModuleList()
+            for _ in range(len(self.convs)):    
+                self.bns.append(torch.nn.BatchNorm1d(hidden_channels))
 
     def init_alphas(self):
         t = torch.zeros(self.K+1)
@@ -152,8 +159,10 @@ class GATV2(torch.nn.Module):
         # MLP
         x = F.dropout(x, p=self.dropout, training=self.training)
         x = self.fcs[0](x)
+        if self.bn:
+            x = self.bns[0](x)
         h0 = x
-
+        
         last_h = torch.zeros_like(h0)
         second_last_h = torch.zeros_like(h0)
 
@@ -161,9 +170,10 @@ class GATV2(torch.nn.Module):
         for i, con in enumerate(self.convs,0):
             x = F.dropout(last_h, p=self.dropout2, training=self.training)
             x = F.elu(con(x, self.edge_index))
-            
             x = 2*x - second_last_h
             x = x + self.alphas[-(i + 1)] * h0
+            if i<len(self.convs)-1 and self.bn:
+                x = self.bns[i+1](x)
             
             second_last_h = last_h
             last_h = x
@@ -179,16 +189,20 @@ class GATV2(torch.nn.Module):
         # MLP
         x = F.dropout(x, p=self.dropout, training=self.training)
         x = self.fcs[0](x)
+        if self.bn:
+            x = self.bns[0](x)
         h0 = x
 
         last_h = x
         second_last_h = torch.zeros_like(h0)
 
         # convlutions
-        for con in self.convs:
+        for i,con in enumerate(self.convs):
             # convolution
             x = F.dropout(last_h, p=self.dropout2, training=self.training)
             x = F.elu(con(x, self.edge_index))
+            if i<len(self.convs)-1 and self.bn:
+                x = self.bns[i+1](x)
             
             # residual
             x = 2*x - second_last_h
