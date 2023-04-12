@@ -276,7 +276,7 @@ fixed_params = {
         'out_heads': 1,
         'logging': True,
         'log_detail': True,
-        # 'log_detailedCh': True,
+        'log_detailedCh': False,
     }
 
 def suggest_args(trial):
