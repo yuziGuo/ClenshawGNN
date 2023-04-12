@@ -1,6 +1,7 @@
 import torch.nn as nn
 from layers.GCNIIConv import GraphConvII
 
+import torch as th
 import torch.nn.functional as F
 
 class GCNII(nn.Module):
@@ -11,7 +12,6 @@ class GCNII(nn.Module):
                  n_hidden,
                  n_classes,
                  n_layers,
-                 act_fn,
                  dropout,
                  alpha,
                  lamda,
@@ -27,10 +27,29 @@ class GCNII(nn.Module):
         self.fcs.append(nn.Linear(n_hidden, n_classes))
         self.params1 = list(self.convs.parameters())
         self.params2 = list(self.fcs.parameters())
-        self.act_fn = act_fn
+        self.act_fn = F.relu
         self.dropout = nn.Dropout(p=dropout)
         self.alpha = alpha
         self.lamda = lamda
+
+    def predict(self, features):
+        with th.no_grad():
+            self.eval()
+            x = features
+            x = self.dropout(x)
+            x = self.fcs[0](x)
+            x = self.act_fn(x)
+            h0 = x
+
+            for i, con in enumerate(self.convs):
+                x = self.dropout(x)
+                x = con(x, self.edge_index, self.norm_A, 
+                        h0, self.lamda, self.alpha, i+1)
+                x = self.act_fn(x)
+
+            x = self.dropout(x)
+            x = self.fcs[-1](x)
+            return x
 
     def forward(self, features):
         x = features
