@@ -7,6 +7,7 @@
 optunalog/*
 logNoRelu/*
 *.sh
+tune_with_optuna*
 
 # vscode
 .vscode/settings.json
