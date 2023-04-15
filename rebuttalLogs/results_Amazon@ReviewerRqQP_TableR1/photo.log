@@ -1,0 +1,236 @@
+2023-04-10 17:17:36,923 - train_clenshaw.py [line:265] - INFO: Namespace(seed=42, model='ChebNN', gpu=0, dataset='photofull', n_hidden=64, n_layers=8, wd1=1e-05, wd2=0.001, wd3=1e-08, lr1=0.02, lr2=0.005, lr3=0.01, momentum=0.8, n_epochs=10000, dropout=0.4, dropout2=0.0, dropW=False, dropAct=False, loss='nll', self_loop=True, udgraph=True, lamda=1.5, early_stop=True, patience=300, es_ckpt='es_checkpoint_device=0', n_cv=20, start_cv=0, logging=False, log_detail=True, log_detailedCh=True, id_log=0)
+2023-04-10 17:17:39,511 - train_clenshaw.py [line:163] - INFO: Split_seeds:[1824, 409, 4506, 4012, 3657, 2286, 1679, 8935, 1424, 9674, 6912, 520, 488, 1535, 3582, 3811, 8279, 9863, 434, 9195]
+2023-04-10 17:17:39,512 - train_clenshaw.py [line:164] - INFO: Model_seeds:[3257, 8928, 6873, 3611, 7359, 9654, 4557, 106, 2615, 6924, 5574, 4552, 2547, 3527, 5514, 1674, 1519, 6224, 1584, 5881]
+2023-04-10 17:17:47,303 - train_clenshaw.py [line:138] - INFO: Epoch 00050 | Time(s) 0.1529 | Val Loss 0.2583 | Val Acc 0.9268 |  Train Acc 0.9611 | ETputs(KTEPS) 16080.76
+2023-04-10 17:17:53,055 - train_clenshaw.py [line:138] - INFO: Epoch 00100 | Time(s) 0.1339 | Val Loss 0.2335 | Val Acc 0.9431 |  Train Acc 0.9800 | ETputs(KTEPS) 18357.50
+2023-04-10 17:17:58,841 - train_clenshaw.py [line:138] - INFO: Epoch 00150 | Time(s) 0.1278 | Val Loss 0.2806 | Val Acc 0.9314 |  Train Acc 0.9906 | ETputs(KTEPS) 19228.57
+2023-04-10 17:18:04,614 - train_clenshaw.py [line:138] - INFO: Epoch 00200 | Time(s) 0.1247 | Val Loss 0.2751 | Val Acc 0.9379 |  Train Acc 0.9947 | ETputs(KTEPS) 19706.54
+2023-04-10 17:18:10,390 - train_clenshaw.py [line:138] - INFO: Epoch 00250 | Time(s) 0.1229 | Val Loss 0.3466 | Val Acc 0.9268 |  Train Acc 0.9954 | ETputs(KTEPS) 20002.83
+2023-04-10 17:18:16,114 - train_clenshaw.py [line:138] - INFO: Epoch 00300 | Time(s) 0.1215 | Val Loss 0.2936 | Val Acc 0.9353 |  Train Acc 0.9966 | ETputs(KTEPS) 20234.23
+2023-04-10 17:18:21,880 - train_clenshaw.py [line:138] - INFO: Epoch 00350 | Time(s) 0.1206 | Val Loss 0.2816 | Val Acc 0.9412 |  Train Acc 0.9983 | ETputs(KTEPS) 20382.30
+2023-04-10 17:18:26,060 - train_clenshaw.py [line:149] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-10 17:18:26,095 - train_clenshaw.py [line:152] - INFO: [FINAL MODEL] Run 0 .\Val accuracy 94.12% \Val loss: 0.22
+2023-04-10 17:18:26,130 - train_clenshaw.py [line:154] - INFO: [FINAL MODEL] Run 0 .	Test accuracy 95.19% \Test loss: 0.17
+2023-04-10 17:18:31,997 - train_clenshaw.py [line:138] - INFO: Epoch 00050 | Time(s) 0.1145 | Val Loss 0.2626 | Val Acc 0.9248 |  Train Acc 0.9633 | ETputs(KTEPS) 21460.82
+2023-04-10 17:18:37,788 - train_clenshaw.py [line:138] - INFO: Epoch 00100 | Time(s) 0.1150 | Val Loss 0.2164 | Val Acc 0.9405 |  Train Acc 0.9802 | ETputs(KTEPS) 21374.24
+2023-04-10 17:18:43,551 - train_clenshaw.py [line:138] - INFO: Epoch 00150 | Time(s) 0.1151 | Val Loss 0.2839 | Val Acc 0.9248 |  Train Acc 0.9894 | ETputs(KTEPS) 21361.85
+2023-04-10 17:18:49,307 - train_clenshaw.py [line:138] - INFO: Epoch 00200 | Time(s) 0.1151 | Val Loss 0.2437 | Val Acc 0.9484 |  Train Acc 0.9940 | ETputs(KTEPS) 21360.45
+2023-04-10 17:18:55,050 - train_clenshaw.py [line:138] - INFO: Epoch 00250 | Time(s) 0.1150 | Val Loss 0.2500 | Val Acc 0.9458 |  Train Acc 0.9966 | ETputs(KTEPS) 21368.84
+2023-04-10 17:19:00,798 - train_clenshaw.py [line:138] - INFO: Epoch 00300 | Time(s) 0.1150 | Val Loss 0.2562 | Val Acc 0.9444 |  Train Acc 0.9971 | ETputs(KTEPS) 21371.89
+2023-04-10 17:19:06,574 - train_clenshaw.py [line:138] - INFO: Epoch 00350 | Time(s) 0.1151 | Val Loss 0.2939 | Val Acc 0.9399 |  Train Acc 0.9978 | ETputs(KTEPS) 21359.19
+2023-04-10 17:19:12,332 - train_clenshaw.py [line:138] - INFO: Epoch 00400 | Time(s) 0.1151 | Val Loss 0.2780 | Val Acc 0.9451 |  Train Acc 0.9986 | ETputs(KTEPS) 21357.70
+2023-04-10 17:19:12,377 - train_clenshaw.py [line:149] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-10 17:19:12,412 - train_clenshaw.py [line:152] - INFO: [FINAL MODEL] Run 1 .\Val accuracy 94.05% \Val loss: 0.22
+2023-04-10 17:19:12,447 - train_clenshaw.py [line:154] - INFO: [FINAL MODEL] Run 1 .	Test accuracy 95.19% \Test loss: 0.17
+2023-04-10 17:19:18,318 - train_clenshaw.py [line:138] - INFO: Epoch 00050 | Time(s) 0.1147 | Val Loss 0.1838 | Val Acc 0.9529 |  Train Acc 0.9575 | ETputs(KTEPS) 21430.49
+2023-04-10 17:19:24,069 - train_clenshaw.py [line:138] - INFO: Epoch 00100 | Time(s) 0.1147 | Val Loss 0.1922 | Val Acc 0.9503 |  Train Acc 0.9764 | ETputs(KTEPS) 21424.27
+2023-04-10 17:19:29,782 - train_clenshaw.py [line:138] - INFO: Epoch 00150 | Time(s) 0.1146 | Val Loss 0.1762 | Val Acc 0.9654 |  Train Acc 0.9899 | ETputs(KTEPS) 21455.28
+2023-04-10 17:19:35,558 - train_clenshaw.py [line:138] - INFO: Epoch 00200 | Time(s) 0.1148 | Val Loss 0.2222 | Val Acc 0.9536 |  Train Acc 0.9918 | ETputs(KTEPS) 21411.75
+2023-04-10 17:19:41,352 - train_clenshaw.py [line:138] - INFO: Epoch 00250 | Time(s) 0.1150 | Val Loss 0.2198 | Val Acc 0.9503 |  Train Acc 0.9952 | ETputs(KTEPS) 21371.90
+2023-04-10 17:19:47,102 - train_clenshaw.py [line:138] - INFO: Epoch 00300 | Time(s) 0.1150 | Val Loss 0.1832 | Val Acc 0.9660 |  Train Acc 0.9966 | ETputs(KTEPS) 21373.08
+2023-04-10 17:19:52,929 - train_clenshaw.py [line:138] - INFO: Epoch 00350 | Time(s) 0.1152 | Val Loss 0.2055 | Val Acc 0.9660 |  Train Acc 0.9971 | ETputs(KTEPS) 21332.98
+2023-04-10 17:19:56,905 - train_clenshaw.py [line:149] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-10 17:19:56,932 - train_clenshaw.py [line:152] - INFO: [FINAL MODEL] Run 2 .\Val accuracy 96.27% \Val loss: 0.16
+2023-04-10 17:19:56,967 - train_clenshaw.py [line:154] - INFO: [FINAL MODEL] Run 2 .	Test accuracy 94.03% \Test loss: 0.22
+2023-04-10 17:20:02,850 - train_clenshaw.py [line:138] - INFO: Epoch 00050 | Time(s) 0.1146 | Val Loss 0.1912 | Val Acc 0.9503 |  Train Acc 0.9628 | ETputs(KTEPS) 21448.83
+2023-04-10 17:20:08,529 - train_clenshaw.py [line:138] - INFO: Epoch 00100 | Time(s) 0.1139 | Val Loss 0.1603 | Val Acc 0.9588 |  Train Acc 0.9773 | ETputs(KTEPS) 21579.03
+2023-04-10 17:20:14,368 - train_clenshaw.py [line:138] - INFO: Epoch 00150 | Time(s) 0.1149 | Val Loss 0.1944 | Val Acc 0.9529 |  Train Acc 0.9867 | ETputs(KTEPS) 21402.32
+2023-04-10 17:20:20,157 - train_clenshaw.py [line:138] - INFO: Epoch 00200 | Time(s) 0.1151 | Val Loss 0.1960 | Val Acc 0.9575 |  Train Acc 0.9937 | ETputs(KTEPS) 21359.98
+2023-04-10 17:20:25,897 - train_clenshaw.py [line:138] - INFO: Epoch 00250 | Time(s) 0.1150 | Val Loss 0.2190 | Val Acc 0.9536 |  Train Acc 0.9961 | ETputs(KTEPS) 21371.03
+2023-04-10 17:20:31,679 - train_clenshaw.py [line:138] - INFO: Epoch 00300 | Time(s) 0.1151 | Val Loss 0.2284 | Val Acc 0.9595 |  Train Acc 0.9983 | ETputs(KTEPS) 21352.86
+2023-04-10 17:20:37,515 - train_clenshaw.py [line:138] - INFO: Epoch 00350 | Time(s) 0.1153 | Val Loss 2.1665 | Val Acc 0.0542 |  Train Acc 0.2235 | ETputs(KTEPS) 21310.97
+2023-04-10 17:20:43,264 - train_clenshaw.py [line:138] - INFO: Epoch 00400 | Time(s) 0.1153 | Val Loss 1.2414 | Val Acc 0.4092 |  Train Acc 0.6378 | ETputs(KTEPS) 21319.59
+2023-04-10 17:20:43,440 - train_clenshaw.py [line:149] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-10 17:20:43,475 - train_clenshaw.py [line:152] - INFO: [FINAL MODEL] Run 3 .\Val accuracy 96.08% \Val loss: 0.16
+2023-04-10 17:20:43,502 - train_clenshaw.py [line:154] - INFO: [FINAL MODEL] Run 3 .	Test accuracy 95.55% \Test loss: 0.19
+2023-04-10 17:20:49,359 - train_clenshaw.py [line:138] - INFO: Epoch 00050 | Time(s) 0.1143 | Val Loss 0.2434 | Val Acc 0.9248 |  Train Acc 0.9561 | ETputs(KTEPS) 21503.34
+2023-04-10 17:20:55,183 - train_clenshaw.py [line:138] - INFO: Epoch 00100 | Time(s) 0.1153 | Val Loss 0.1857 | Val Acc 0.9471 |  Train Acc 0.9780 | ETputs(KTEPS) 21317.14
+2023-04-10 17:21:00,938 - train_clenshaw.py [line:138] - INFO: Epoch 00150 | Time(s) 0.1152 | Val Loss 0.1707 | Val Acc 0.9595 |  Train Acc 0.9838 | ETputs(KTEPS) 21334.29
+2023-04-10 17:21:06,701 - train_clenshaw.py [line:138] - INFO: Epoch 00200 | Time(s) 0.1152 | Val Loss 0.1918 | Val Acc 0.9536 |  Train Acc 0.9916 | ETputs(KTEPS) 21333.10
+2023-04-10 17:21:12,500 - train_clenshaw.py [line:138] - INFO: Epoch 00250 | Time(s) 0.1154 | Val Loss 0.2176 | Val Acc 0.9477 |  Train Acc 0.9959 | ETputs(KTEPS) 21307.13
+2023-04-10 17:21:18,225 - train_clenshaw.py [line:138] - INFO: Epoch 00300 | Time(s) 0.1152 | Val Loss 0.2108 | Val Acc 0.9549 |  Train Acc 0.9959 | ETputs(KTEPS) 21334.60
+2023-04-10 17:21:24,005 - train_clenshaw.py [line:138] - INFO: Epoch 00350 | Time(s) 0.1153 | Val Loss 0.2158 | Val Acc 0.9510 |  Train Acc 0.9978 | ETputs(KTEPS) 21325.08
+2023-04-10 17:21:29,798 - train_clenshaw.py [line:138] - INFO: Epoch 00400 | Time(s) 0.1153 | Val Loss 0.2327 | Val Acc 0.9497 |  Train Acc 0.9971 | ETputs(KTEPS) 21311.92
+2023-04-10 17:21:35,609 - train_clenshaw.py [line:138] - INFO: Epoch 00450 | Time(s) 0.1154 | Val Loss 0.2123 | Val Acc 0.9510 |  Train Acc 0.9983 | ETputs(KTEPS) 21294.21
+2023-04-10 17:21:41,406 - train_clenshaw.py [line:138] - INFO: Epoch 00500 | Time(s) 0.1155 | Val Loss 0.2001 | Val Acc 0.9575 |  Train Acc 0.9990 | ETputs(KTEPS) 21285.25
+2023-04-10 17:21:44,010 - train_clenshaw.py [line:149] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-10 17:21:44,044 - train_clenshaw.py [line:152] - INFO: [FINAL MODEL] Run 4 .\Val accuracy 96.14% \Val loss: 0.17
+2023-04-10 17:21:44,078 - train_clenshaw.py [line:154] - INFO: [FINAL MODEL] Run 4 .	Test accuracy 96.10% \Test loss: 0.18
+2023-04-10 17:21:49,931 - train_clenshaw.py [line:138] - INFO: Epoch 00050 | Time(s) 0.1141 | Val Loss 0.2584 | Val Acc 0.9320 |  Train Acc 0.9619 | ETputs(KTEPS) 21548.33
+2023-04-10 17:21:55,739 - train_clenshaw.py [line:138] - INFO: Epoch 00100 | Time(s) 0.1150 | Val Loss 0.2023 | Val Acc 0.9516 |  Train Acc 0.9744 | ETputs(KTEPS) 21368.11
+2023-04-10 17:22:01,420 - train_clenshaw.py [line:138] - INFO: Epoch 00150 | Time(s) 0.1145 | Val Loss 0.2402 | Val Acc 0.9497 |  Train Acc 0.9870 | ETputs(KTEPS) 21459.89
+2023-04-10 17:22:07,262 - train_clenshaw.py [line:138] - INFO: Epoch 00200 | Time(s) 0.1151 | Val Loss 0.2613 | Val Acc 0.9386 |  Train Acc 0.9928 | ETputs(KTEPS) 21353.54
+2023-04-10 17:22:13,053 - train_clenshaw.py [line:138] - INFO: Epoch 00250 | Time(s) 0.1153 | Val Loss 0.2363 | Val Acc 0.9510 |  Train Acc 0.9942 | ETputs(KTEPS) 21328.10
+2023-04-10 17:22:18,780 - train_clenshaw.py [line:138] - INFO: Epoch 00300 | Time(s) 0.1151 | Val Loss 0.2457 | Val Acc 0.9471 |  Train Acc 0.9961 | ETputs(KTEPS) 21350.62
+2023-04-10 17:22:24,576 - train_clenshaw.py [line:138] - INFO: Epoch 00350 | Time(s) 0.1152 | Val Loss 0.2511 | Val Acc 0.9477 |  Train Acc 0.9969 | ETputs(KTEPS) 21329.98
+2023-04-10 17:22:30,317 - train_clenshaw.py [line:138] - INFO: Epoch 00400 | Time(s) 0.1152 | Val Loss 1.9940 | Val Acc 0.3314 |  Train Acc 0.1392 | ETputs(KTEPS) 21340.27
+2023-04-10 17:22:30,373 - train_clenshaw.py [line:149] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-10 17:22:30,406 - train_clenshaw.py [line:152] - INFO: [FINAL MODEL] Run 5 .\Val accuracy 95.16% \Val loss: 0.2
+2023-04-10 17:22:30,433 - train_clenshaw.py [line:154] - INFO: [FINAL MODEL] Run 5 .	Test accuracy 95.55% \Test loss: 0.19
+2023-04-10 17:22:36,390 - train_clenshaw.py [line:138] - INFO: Epoch 00050 | Time(s) 0.1164 | Val Loss 0.2476 | Val Acc 0.9314 |  Train Acc 0.9595 | ETputs(KTEPS) 21125.87
+2023-04-10 17:22:42,227 - train_clenshaw.py [line:138] - INFO: Epoch 00100 | Time(s) 0.1164 | Val Loss 0.2179 | Val Acc 0.9412 |  Train Acc 0.9761 | ETputs(KTEPS) 21114.61
+2023-04-10 17:22:47,979 - train_clenshaw.py [line:138] - INFO: Epoch 00150 | Time(s) 0.1159 | Val Loss 0.2302 | Val Acc 0.9392 |  Train Acc 0.9764 | ETputs(KTEPS) 21204.85
+2023-04-10 17:22:53,783 - train_clenshaw.py [line:138] - INFO: Epoch 00200 | Time(s) 0.1160 | Val Loss 0.2070 | Val Acc 0.9536 |  Train Acc 0.9875 | ETputs(KTEPS) 21198.23
+2023-04-10 17:22:59,544 - train_clenshaw.py [line:138] - INFO: Epoch 00250 | Time(s) 0.1158 | Val Loss 0.2236 | Val Acc 0.9464 |  Train Acc 0.9940 | ETputs(KTEPS) 21225.92
+2023-04-10 17:23:05,303 - train_clenshaw.py [line:138] - INFO: Epoch 00300 | Time(s) 0.1157 | Val Loss 0.2342 | Val Acc 0.9490 |  Train Acc 0.9957 | ETputs(KTEPS) 21245.73
+2023-04-10 17:23:11,113 - train_clenshaw.py [line:138] - INFO: Epoch 00350 | Time(s) 0.1158 | Val Loss 0.2321 | Val Acc 0.9562 |  Train Acc 0.9971 | ETputs(KTEPS) 21233.28
+2023-04-10 17:23:16,857 - train_clenshaw.py [line:138] - INFO: Epoch 00400 | Time(s) 0.1157 | Val Loss 0.2369 | Val Acc 0.9458 |  Train Acc 0.9971 | ETputs(KTEPS) 21254.00
+2023-04-10 17:23:22,134 - train_clenshaw.py [line:149] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-10 17:23:22,170 - train_clenshaw.py [line:152] - INFO: [FINAL MODEL] Run 6 .\Val accuracy 95.69% \Val loss: 0.19
+2023-04-10 17:23:22,204 - train_clenshaw.py [line:154] - INFO: [FINAL MODEL] Run 6 .	Test accuracy 95.14% \Test loss: 0.19
+2023-04-10 17:23:28,094 - train_clenshaw.py [line:138] - INFO: Epoch 00050 | Time(s) 0.1151 | Val Loss 0.2719 | Val Acc 0.9222 |  Train Acc 0.9607 | ETputs(KTEPS) 21360.87
+2023-04-10 17:23:33,875 - train_clenshaw.py [line:138] - INFO: Epoch 00100 | Time(s) 0.1152 | Val Loss 0.2469 | Val Acc 0.9425 |  Train Acc 0.9814 | ETputs(KTEPS) 21329.41
+2023-04-10 17:23:39,650 - train_clenshaw.py [line:138] - INFO: Epoch 00150 | Time(s) 0.1153 | Val Loss 0.2943 | Val Acc 0.9196 |  Train Acc 0.9867 | ETputs(KTEPS) 21314.18
+2023-04-10 17:23:45,429 - train_clenshaw.py [line:138] - INFO: Epoch 00200 | Time(s) 0.1154 | Val Loss 0.2417 | Val Acc 0.9516 |  Train Acc 0.9940 | ETputs(KTEPS) 21303.72
+2023-04-10 17:23:51,253 - train_clenshaw.py [line:138] - INFO: Epoch 00250 | Time(s) 0.1156 | Val Loss 0.2615 | Val Acc 0.9464 |  Train Acc 0.9964 | ETputs(KTEPS) 21264.42
+2023-04-10 17:23:57,022 - train_clenshaw.py [line:138] - INFO: Epoch 00300 | Time(s) 0.1156 | Val Loss 0.3511 | Val Acc 0.9301 |  Train Acc 0.9969 | ETputs(KTEPS) 21271.23
+2023-04-10 17:24:02,842 - train_clenshaw.py [line:138] - INFO: Epoch 00350 | Time(s) 0.1157 | Val Loss 0.3098 | Val Acc 0.9412 |  Train Acc 0.9976 | ETputs(KTEPS) 21251.12
+2023-04-10 17:24:08,584 - train_clenshaw.py [line:138] - INFO: Epoch 00400 | Time(s) 0.1156 | Val Loss 0.3436 | Val Acc 0.9301 |  Train Acc 0.9981 | ETputs(KTEPS) 21270.42
+2023-04-10 17:24:14,368 - train_clenshaw.py [line:138] - INFO: Epoch 00450 | Time(s) 0.1156 | Val Loss 0.2932 | Val Acc 0.9425 |  Train Acc 0.9993 | ETputs(KTEPS) 21268.62
+2023-04-10 17:24:20,190 - train_clenshaw.py [line:138] - INFO: Epoch 00500 | Time(s) 0.1157 | Val Loss 2.9841 | Val Acc 0.3176 |  Train Acc 0.1385 | ETputs(KTEPS) 21253.13
+2023-04-10 17:24:26,013 - train_clenshaw.py [line:138] - INFO: Epoch 00550 | Time(s) 0.1157 | Val Loss 2.0401 | Val Acc 0.0908 |  Train Acc 0.1385 | ETputs(KTEPS) 21239.91
+2023-04-10 17:24:31,786 - train_clenshaw.py [line:138] - INFO: Epoch 00600 | Time(s) 0.1157 | Val Loss 2.0031 | Val Acc 0.0667 |  Train Acc 0.1385 | ETputs(KTEPS) 21244.36
+2023-04-10 17:24:32,428 - train_clenshaw.py [line:149] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-10 17:24:32,463 - train_clenshaw.py [line:152] - INFO: [FINAL MODEL] Run 7 .\Val accuracy 95.16% \Val loss: 0.22
+2023-04-10 17:24:32,497 - train_clenshaw.py [line:154] - INFO: [FINAL MODEL] Run 7 .	Test accuracy 95.39% \Test loss: 0.23
+2023-04-10 17:24:38,377 - train_clenshaw.py [line:138] - INFO: Epoch 00050 | Time(s) 0.1149 | Val Loss 0.2643 | Val Acc 0.9379 |  Train Acc 0.9534 | ETputs(KTEPS) 21398.29
+2023-04-10 17:24:44,182 - train_clenshaw.py [line:138] - INFO: Epoch 00100 | Time(s) 0.1152 | Val Loss 0.2232 | Val Acc 0.9418 |  Train Acc 0.9732 | ETputs(KTEPS) 21333.76
+2023-04-10 17:24:49,949 - train_clenshaw.py [line:138] - INFO: Epoch 00150 | Time(s) 0.1152 | Val Loss 0.2300 | Val Acc 0.9444 |  Train Acc 0.9843 | ETputs(KTEPS) 21332.16
+2023-04-10 17:24:55,670 - train_clenshaw.py [line:138] - INFO: Epoch 00200 | Time(s) 0.1150 | Val Loss 0.2655 | Val Acc 0.9425 |  Train Acc 0.9882 | ETputs(KTEPS) 21370.49
+2023-04-10 17:25:01,501 - train_clenshaw.py [line:138] - INFO: Epoch 00250 | Time(s) 0.1153 | Val Loss 0.2194 | Val Acc 0.9556 |  Train Acc 0.9930 | ETputs(KTEPS) 21312.36
+2023-04-10 17:25:07,271 - train_clenshaw.py [line:138] - INFO: Epoch 00300 | Time(s) 0.1153 | Val Loss 0.2582 | Val Acc 0.9523 |  Train Acc 0.9944 | ETputs(KTEPS) 21310.71
+2023-04-10 17:25:13,033 - train_clenshaw.py [line:138] - INFO: Epoch 00350 | Time(s) 0.1153 | Val Loss 0.2301 | Val Acc 0.9575 |  Train Acc 0.9957 | ETputs(KTEPS) 21314.40
+2023-04-10 17:25:18,809 - train_clenshaw.py [line:138] - INFO: Epoch 00400 | Time(s) 0.1154 | Val Loss 0.2459 | Val Acc 0.9529 |  Train Acc 0.9959 | ETputs(KTEPS) 21310.06
+2023-04-10 17:25:22,422 - train_clenshaw.py [line:149] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-10 17:25:22,457 - train_clenshaw.py [line:152] - INFO: [FINAL MODEL] Run 8 .\Val accuracy 96.21% \Val loss: 0.19
+2023-04-10 17:25:22,495 - train_clenshaw.py [line:154] - INFO: [FINAL MODEL] Run 8 .	Test accuracy 95.14% \Test loss: 0.19
+2023-04-10 17:25:28,372 - train_clenshaw.py [line:138] - INFO: Epoch 00050 | Time(s) 0.1147 | Val Loss 0.2611 | Val Acc 0.9222 |  Train Acc 0.9653 | ETputs(KTEPS) 21435.54
+2023-04-10 17:25:34,192 - train_clenshaw.py [line:138] - INFO: Epoch 00100 | Time(s) 0.1154 | Val Loss 0.2622 | Val Acc 0.9242 |  Train Acc 0.9817 | ETputs(KTEPS) 21296.28
+2023-04-10 17:25:39,971 - train_clenshaw.py [line:138] - INFO: Epoch 00150 | Time(s) 0.1155 | Val Loss 0.2326 | Val Acc 0.9327 |  Train Acc 0.9879 | ETputs(KTEPS) 21291.07
+2023-04-10 17:25:45,728 - train_clenshaw.py [line:138] - INFO: Epoch 00200 | Time(s) 0.1154 | Val Loss 0.2549 | Val Acc 0.9333 |  Train Acc 0.9928 | ETputs(KTEPS) 21308.11
+2023-04-10 17:25:51,489 - train_clenshaw.py [line:138] - INFO: Epoch 00250 | Time(s) 0.1153 | Val Loss 0.2519 | Val Acc 0.9333 |  Train Acc 0.9959 | ETputs(KTEPS) 21313.79
+2023-04-10 17:25:57,312 - train_clenshaw.py [line:138] - INFO: Epoch 00300 | Time(s) 0.1155 | Val Loss 0.2445 | Val Acc 0.9412 |  Train Acc 0.9966 | ETputs(KTEPS) 21279.51
+2023-04-10 17:26:03,070 - train_clenshaw.py [line:138] - INFO: Epoch 00350 | Time(s) 0.1155 | Val Loss 0.2900 | Val Acc 0.9379 |  Train Acc 0.9973 | ETputs(KTEPS) 21289.20
+2023-04-10 17:26:08,800 - train_clenshaw.py [line:138] - INFO: Epoch 00400 | Time(s) 0.1154 | Val Loss 0.2856 | Val Acc 0.9359 |  Train Acc 0.9964 | ETputs(KTEPS) 21309.84
+2023-04-10 17:26:14,610 - train_clenshaw.py [line:138] - INFO: Epoch 00450 | Time(s) 0.1154 | Val Loss 0.2571 | Val Acc 0.9431 |  Train Acc 0.9986 | ETputs(KTEPS) 21292.51
+2023-04-10 17:26:19,534 - train_clenshaw.py [line:149] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-10 17:26:19,568 - train_clenshaw.py [line:152] - INFO: [FINAL MODEL] Run 9 .\Val accuracy 94.97% \Val loss: 0.19
+2023-04-10 17:26:19,602 - train_clenshaw.py [line:154] - INFO: [FINAL MODEL] Run 9 .	Test accuracy 95.50% \Test loss: 0.2
+2023-04-10 17:26:25,470 - train_clenshaw.py [line:138] - INFO: Epoch 00050 | Time(s) 0.1145 | Val Loss 0.2339 | Val Acc 0.9346 |  Train Acc 0.9575 | ETputs(KTEPS) 21461.49
+2023-04-10 17:26:31,251 - train_clenshaw.py [line:138] - INFO: Epoch 00100 | Time(s) 0.1149 | Val Loss 0.2181 | Val Acc 0.9418 |  Train Acc 0.9778 | ETputs(KTEPS) 21386.15
+2023-04-10 17:26:37,023 - train_clenshaw.py [line:138] - INFO: Epoch 00150 | Time(s) 0.1151 | Val Loss 0.2424 | Val Acc 0.9373 |  Train Acc 0.9862 | ETputs(KTEPS) 21357.56
+2023-04-10 17:26:42,841 - train_clenshaw.py [line:138] - INFO: Epoch 00200 | Time(s) 0.1154 | Val Loss 0.2163 | Val Acc 0.9484 |  Train Acc 0.9930 | ETputs(KTEPS) 21303.45
+2023-04-10 17:26:48,638 - train_clenshaw.py [line:138] - INFO: Epoch 00250 | Time(s) 0.1155 | Val Loss 0.2570 | Val Acc 0.9418 |  Train Acc 0.9959 | ETputs(KTEPS) 21284.10
+2023-04-10 17:26:54,459 - train_clenshaw.py [line:138] - INFO: Epoch 00300 | Time(s) 0.1156 | Val Loss 0.2613 | Val Acc 0.9438 |  Train Acc 0.9983 | ETputs(KTEPS) 21255.68
+2023-04-10 17:27:00,215 - train_clenshaw.py [line:138] - INFO: Epoch 00350 | Time(s) 0.1156 | Val Loss 0.3026 | Val Acc 0.9373 |  Train Acc 0.9971 | ETputs(KTEPS) 21270.12
+2023-04-10 17:27:05,996 - train_clenshaw.py [line:138] - INFO: Epoch 00400 | Time(s) 0.1156 | Val Loss 0.2833 | Val Acc 0.9399 |  Train Acc 0.9995 | ETputs(KTEPS) 21269.20
+2023-04-10 17:27:11,708 - train_clenshaw.py [line:138] - INFO: Epoch 00450 | Time(s) 0.1154 | Val Loss 2.0450 | Val Acc 0.1098 |  Train Acc 0.1262 | ETputs(KTEPS) 21296.95
+2023-04-10 17:27:15,004 - train_clenshaw.py [line:149] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-10 17:27:15,039 - train_clenshaw.py [line:152] - INFO: [FINAL MODEL] Run 10 .\Val accuracy 95.75% \Val loss: 0.19
+2023-04-10 17:27:15,074 - train_clenshaw.py [line:154] - INFO: [FINAL MODEL] Run 10 .	Test accuracy 95.45% \Test loss: 0.19
+2023-04-10 17:27:20,941 - train_clenshaw.py [line:138] - INFO: Epoch 00050 | Time(s) 0.1147 | Val Loss 0.1947 | Val Acc 0.9438 |  Train Acc 0.9599 | ETputs(KTEPS) 21426.26
+2023-04-10 17:27:26,721 - train_clenshaw.py [line:138] - INFO: Epoch 00100 | Time(s) 0.1151 | Val Loss 0.1863 | Val Acc 0.9516 |  Train Acc 0.9800 | ETputs(KTEPS) 21363.56
+2023-04-10 17:27:32,486 - train_clenshaw.py [line:138] - INFO: Epoch 00150 | Time(s) 0.1151 | Val Loss 0.2345 | Val Acc 0.9451 |  Train Acc 0.9877 | ETputs(KTEPS) 21349.63
+2023-04-10 17:27:38,239 - train_clenshaw.py [line:138] - INFO: Epoch 00200 | Time(s) 0.1151 | Val Loss 0.2327 | Val Acc 0.9510 |  Train Acc 0.9940 | ETputs(KTEPS) 21353.78
+2023-04-10 17:27:44,012 - train_clenshaw.py [line:138] - INFO: Epoch 00250 | Time(s) 0.1152 | Val Loss 0.2236 | Val Acc 0.9523 |  Train Acc 0.9954 | ETputs(KTEPS) 21341.71
+2023-04-10 17:27:49,801 - train_clenshaw.py [line:138] - INFO: Epoch 00300 | Time(s) 0.1153 | Val Loss 1.8773 | Val Acc 0.4791 |  Train Acc 0.2886 | ETputs(KTEPS) 21323.97
+2023-04-10 17:27:55,542 - train_clenshaw.py [line:138] - INFO: Epoch 00350 | Time(s) 0.1152 | Val Loss 1.5735 | Val Acc 0.4935 |  Train Acc 0.4141 | ETputs(KTEPS) 21336.56
+2023-04-10 17:27:58,128 - train_clenshaw.py [line:149] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-10 17:27:58,163 - train_clenshaw.py [line:152] - INFO: [FINAL MODEL] Run 11 .\Val accuracy 95.10% \Val loss: 0.17
+2023-04-10 17:27:58,198 - train_clenshaw.py [line:154] - INFO: [FINAL MODEL] Run 11 .	Test accuracy 95.19% \Test loss: 0.19
+2023-04-10 17:28:04,081 - train_clenshaw.py [line:138] - INFO: Epoch 00050 | Time(s) 0.1152 | Val Loss 0.2348 | Val Acc 0.9294 |  Train Acc 0.9602 | ETputs(KTEPS) 21334.44
+2023-04-10 17:28:09,877 - train_clenshaw.py [line:138] - INFO: Epoch 00100 | Time(s) 0.1155 | Val Loss 0.2241 | Val Acc 0.9458 |  Train Acc 0.9870 | ETputs(KTEPS) 21284.52
+2023-04-10 17:28:15,626 - train_clenshaw.py [line:138] - INFO: Epoch 00150 | Time(s) 0.1153 | Val Loss 0.3074 | Val Acc 0.9451 |  Train Acc 0.9937 | ETputs(KTEPS) 21317.08
+2023-04-10 17:28:21,428 - train_clenshaw.py [line:138] - INFO: Epoch 00200 | Time(s) 0.1155 | Val Loss 0.2802 | Val Acc 0.9412 |  Train Acc 0.9932 | ETputs(KTEPS) 21284.35
+2023-04-10 17:28:27,156 - train_clenshaw.py [line:138] - INFO: Epoch 00250 | Time(s) 0.1153 | Val Loss 0.3028 | Val Acc 0.9464 |  Train Acc 0.9976 | ETputs(KTEPS) 21319.50
+2023-04-10 17:28:32,929 - train_clenshaw.py [line:138] - INFO: Epoch 00300 | Time(s) 0.1153 | Val Loss 0.3736 | Val Acc 0.9248 |  Train Acc 0.9346 | ETputs(KTEPS) 21315.17
+2023-04-10 17:28:38,674 - train_clenshaw.py [line:138] - INFO: Epoch 00350 | Time(s) 0.1153 | Val Loss 0.2590 | Val Acc 0.9327 |  Train Acc 0.9568 | ETputs(KTEPS) 21326.92
+2023-04-10 17:28:41,622 - train_clenshaw.py [line:149] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-10 17:28:41,658 - train_clenshaw.py [line:152] - INFO: [FINAL MODEL] Run 12 .\Val accuracy 94.18% \Val loss: 0.21
+2023-04-10 17:28:41,693 - train_clenshaw.py [line:154] - INFO: [FINAL MODEL] Run 12 .	Test accuracy 94.33% \Test loss: 0.2
+2023-04-10 17:28:47,545 - train_clenshaw.py [line:138] - INFO: Epoch 00050 | Time(s) 0.1144 | Val Loss 0.2437 | Val Acc 0.9359 |  Train Acc 0.9640 | ETputs(KTEPS) 21478.85
+2023-04-10 17:28:53,344 - train_clenshaw.py [line:138] - INFO: Epoch 00100 | Time(s) 0.1152 | Val Loss 0.2765 | Val Acc 0.9340 |  Train Acc 0.9819 | ETputs(KTEPS) 21345.48
+2023-04-10 17:28:59,098 - train_clenshaw.py [line:138] - INFO: Epoch 00150 | Time(s) 0.1151 | Val Loss 0.2621 | Val Acc 0.9458 |  Train Acc 0.9887 | ETputs(KTEPS) 21351.50
+2023-04-10 17:29:04,861 - train_clenshaw.py [line:138] - INFO: Epoch 00200 | Time(s) 0.1152 | Val Loss 0.3068 | Val Acc 0.9438 |  Train Acc 0.9937 | ETputs(KTEPS) 21346.78
+2023-04-10 17:29:10,629 - train_clenshaw.py [line:138] - INFO: Epoch 00250 | Time(s) 0.1152 | Val Loss 0.4009 | Val Acc 0.9216 |  Train Acc 0.9940 | ETputs(KTEPS) 21339.91
+2023-04-10 17:29:16,383 - train_clenshaw.py [line:138] - INFO: Epoch 00300 | Time(s) 0.1152 | Val Loss 0.3357 | Val Acc 0.9327 |  Train Acc 0.9826 | ETputs(KTEPS) 21343.94
+2023-04-10 17:29:22,151 - train_clenshaw.py [line:138] - INFO: Epoch 00350 | Time(s) 0.1152 | Val Loss 1.9047 | Val Acc 0.3817 |  Train Acc 0.1424 | ETputs(KTEPS) 21339.12
+2023-04-10 17:29:23,601 - train_clenshaw.py [line:149] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-10 17:29:23,636 - train_clenshaw.py [line:152] - INFO: [FINAL MODEL] Run 13 .\Val accuracy 94.44% \Val loss: 0.22
+2023-04-10 17:29:23,670 - train_clenshaw.py [line:154] - INFO: [FINAL MODEL] Run 13 .	Test accuracy 94.94% \Test loss: 0.19
+2023-04-10 17:29:29,524 - train_clenshaw.py [line:138] - INFO: Epoch 00050 | Time(s) 0.1146 | Val Loss 0.2220 | Val Acc 0.9340 |  Train Acc 0.9590 | ETputs(KTEPS) 21442.05
+2023-04-10 17:29:35,300 - train_clenshaw.py [line:138] - INFO: Epoch 00100 | Time(s) 0.1149 | Val Loss 0.2098 | Val Acc 0.9451 |  Train Acc 0.9754 | ETputs(KTEPS) 21386.73
+2023-04-10 17:29:41,083 - train_clenshaw.py [line:138] - INFO: Epoch 00150 | Time(s) 0.1152 | Val Loss 0.2803 | Val Acc 0.9405 |  Train Acc 0.9826 | ETputs(KTEPS) 21343.49
+2023-04-10 17:29:46,870 - train_clenshaw.py [line:138] - INFO: Epoch 00200 | Time(s) 0.1153 | Val Loss 0.2482 | Val Acc 0.9477 |  Train Acc 0.9918 | ETputs(KTEPS) 21318.29
+2023-04-10 17:29:52,634 - train_clenshaw.py [line:138] - INFO: Epoch 00250 | Time(s) 0.1153 | Val Loss 0.2839 | Val Acc 0.9425 |  Train Acc 0.9952 | ETputs(KTEPS) 21319.28
+2023-04-10 17:29:58,339 - train_clenshaw.py [line:138] - INFO: Epoch 00300 | Time(s) 0.1151 | Val Loss 0.2853 | Val Acc 0.9464 |  Train Acc 0.9961 | ETputs(KTEPS) 21357.06
+2023-04-10 17:30:04,127 - train_clenshaw.py [line:138] - INFO: Epoch 00350 | Time(s) 0.1152 | Val Loss 0.2736 | Val Acc 0.9444 |  Train Acc 0.9971 | ETputs(KTEPS) 21340.18
+2023-04-10 17:30:08,566 - train_clenshaw.py [line:149] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-10 17:30:08,601 - train_clenshaw.py [line:152] - INFO: [FINAL MODEL] Run 14 .\Val accuracy 94.51% \Val loss: 0.2
+2023-04-10 17:30:08,635 - train_clenshaw.py [line:154] - INFO: [FINAL MODEL] Run 14 .	Test accuracy 93.78% \Test loss: 0.19
+2023-04-10 17:30:14,484 - train_clenshaw.py [line:138] - INFO: Epoch 00050 | Time(s) 0.1143 | Val Loss 0.2489 | Val Acc 0.9333 |  Train Acc 0.9583 | ETputs(KTEPS) 21504.45
+2023-04-10 17:30:20,206 - train_clenshaw.py [line:138] - INFO: Epoch 00100 | Time(s) 0.1143 | Val Loss 0.2626 | Val Acc 0.9307 |  Train Acc 0.9780 | ETputs(KTEPS) 21501.35
+2023-04-10 17:30:25,999 - train_clenshaw.py [line:138] - INFO: Epoch 00150 | Time(s) 0.1148 | Val Loss 0.2684 | Val Acc 0.9353 |  Train Acc 0.9872 | ETputs(KTEPS) 21408.32
+2023-04-10 17:30:31,792 - train_clenshaw.py [line:138] - INFO: Epoch 00200 | Time(s) 0.1151 | Val Loss 0.2560 | Val Acc 0.9386 |  Train Acc 0.9570 | ETputs(KTEPS) 21364.30
+2023-04-10 17:30:37,588 - train_clenshaw.py [line:138] - INFO: Epoch 00250 | Time(s) 0.1152 | Val Loss 0.2126 | Val Acc 0.9444 |  Train Acc 0.9778 | ETputs(KTEPS) 21332.97
+2023-04-10 17:30:43,321 - train_clenshaw.py [line:138] - INFO: Epoch 00300 | Time(s) 0.1151 | Val Loss 0.2035 | Val Acc 0.9451 |  Train Acc 0.9841 | ETputs(KTEPS) 21351.01
+2023-04-10 17:30:49,064 - train_clenshaw.py [line:138] - INFO: Epoch 00350 | Time(s) 0.1151 | Val Loss 0.2095 | Val Acc 0.9523 |  Train Acc 0.9855 | ETputs(KTEPS) 21358.59
+2023-04-10 17:30:54,813 - train_clenshaw.py [line:138] - INFO: Epoch 00400 | Time(s) 0.1151 | Val Loss 0.2473 | Val Acc 0.9444 |  Train Acc 0.9918 | ETputs(KTEPS) 21361.70
+2023-04-10 17:31:00,542 - train_clenshaw.py [line:138] - INFO: Epoch 00450 | Time(s) 0.1150 | Val Loss 0.2502 | Val Acc 0.9451 |  Train Acc 0.9935 | ETputs(KTEPS) 21372.01
+2023-04-10 17:31:03,138 - train_clenshaw.py [line:149] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-10 17:31:03,173 - train_clenshaw.py [line:152] - INFO: [FINAL MODEL] Run 15 .\Val accuracy 95.75% \Val loss: 0.2
+2023-04-10 17:31:03,209 - train_clenshaw.py [line:154] - INFO: [FINAL MODEL] Run 15 .	Test accuracy 95.24% \Test loss: 0.23
+2023-04-10 17:31:09,067 - train_clenshaw.py [line:138] - INFO: Epoch 00050 | Time(s) 0.1145 | Val Loss 0.2535 | Val Acc 0.9229 |  Train Acc 0.9599 | ETputs(KTEPS) 21476.69
+2023-04-10 17:31:14,842 - train_clenshaw.py [line:138] - INFO: Epoch 00100 | Time(s) 0.1149 | Val Loss 0.2332 | Val Acc 0.9405 |  Train Acc 0.9809 | ETputs(KTEPS) 21396.95
+2023-04-10 17:31:20,650 - train_clenshaw.py [line:138] - INFO: Epoch 00150 | Time(s) 0.1153 | Val Loss 0.2433 | Val Acc 0.9405 |  Train Acc 0.9846 | ETputs(KTEPS) 21323.22
+2023-04-10 17:31:26,380 - train_clenshaw.py [line:138] - INFO: Epoch 00200 | Time(s) 0.1151 | Val Loss 0.2489 | Val Acc 0.9451 |  Train Acc 0.9942 | ETputs(KTEPS) 21356.04
+2023-04-10 17:31:32,178 - train_clenshaw.py [line:138] - INFO: Epoch 00250 | Time(s) 0.1153 | Val Loss 0.2493 | Val Acc 0.9503 |  Train Acc 0.9947 | ETputs(KTEPS) 21326.04
+2023-04-10 17:31:37,942 - train_clenshaw.py [line:138] - INFO: Epoch 00300 | Time(s) 0.1153 | Val Loss 75.0956 | Val Acc 0.0000 |  Train Acc 0.0799 | ETputs(KTEPS) 21325.93
+2023-04-10 17:31:43,722 - train_clenshaw.py [line:138] - INFO: Epoch 00350 | Time(s) 0.1153 | Val Loss 1.9151 | Val Acc 0.3235 |  Train Acc 0.2251 | ETputs(KTEPS) 21317.66
+2023-04-10 17:31:49,473 - train_clenshaw.py [line:138] - INFO: Epoch 00400 | Time(s) 0.1153 | Val Loss 1.5263 | Val Acc 0.4784 |  Train Acc 0.4954 | ETputs(KTEPS) 21324.80
+2023-04-10 17:31:55,233 - train_clenshaw.py [line:138] - INFO: Epoch 00450 | Time(s) 0.1153 | Val Loss 0.8139 | Val Acc 0.7033 |  Train Acc 0.7606 | ETputs(KTEPS) 21326.79
+2023-04-10 17:32:00,975 - train_clenshaw.py [line:138] - INFO: Epoch 00500 | Time(s) 0.1152 | Val Loss 1.8966 | Val Acc 0.0980 |  Train Acc 0.2244 | ETputs(KTEPS) 21334.89
+2023-04-10 17:32:06,058 - train_clenshaw.py [line:149] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-10 17:32:06,093 - train_clenshaw.py [line:152] - INFO: [FINAL MODEL] Run 16 .\Val accuracy 95.29% \Val loss: 0.2
+2023-04-10 17:32:06,128 - train_clenshaw.py [line:154] - INFO: [FINAL MODEL] Run 16 .	Test accuracy 95.80% \Test loss: 0.2
+2023-04-10 17:32:11,962 - train_clenshaw.py [line:138] - INFO: Epoch 00050 | Time(s) 0.1140 | Val Loss 0.2165 | Val Acc 0.9399 |  Train Acc 0.9628 | ETputs(KTEPS) 21563.07
+2023-04-10 17:32:17,751 - train_clenshaw.py [line:138] - INFO: Epoch 00100 | Time(s) 0.1148 | Val Loss 0.2145 | Val Acc 0.9471 |  Train Acc 0.9797 | ETputs(KTEPS) 21420.36
+2023-04-10 17:32:23,525 - train_clenshaw.py [line:138] - INFO: Epoch 00150 | Time(s) 0.1150 | Val Loss 0.2033 | Val Acc 0.9523 |  Train Acc 0.9911 | ETputs(KTEPS) 21375.85
+2023-04-10 17:32:29,303 - train_clenshaw.py [line:138] - INFO: Epoch 00200 | Time(s) 0.1151 | Val Loss 0.2330 | Val Acc 0.9471 |  Train Acc 0.9937 | ETputs(KTEPS) 21352.65
+2023-04-10 17:32:35,109 - train_clenshaw.py [line:138] - INFO: Epoch 00250 | Time(s) 0.1153 | Val Loss 0.2142 | Val Acc 0.9503 |  Train Acc 0.9911 | ETputs(KTEPS) 21316.09
+2023-04-10 17:32:40,879 - train_clenshaw.py [line:138] - INFO: Epoch 00300 | Time(s) 0.1153 | Val Loss 0.2461 | Val Acc 0.9490 |  Train Acc 0.9986 | ETputs(KTEPS) 21314.04
+2023-04-10 17:32:46,640 - train_clenshaw.py [line:138] - INFO: Epoch 00350 | Time(s) 0.1153 | Val Loss 0.2364 | Val Acc 0.9529 |  Train Acc 0.9986 | ETputs(KTEPS) 21317.78
+2023-04-10 17:32:52,394 - train_clenshaw.py [line:138] - INFO: Epoch 00400 | Time(s) 0.1153 | Val Loss 0.2598 | Val Acc 0.9549 |  Train Acc 0.9988 | ETputs(KTEPS) 21323.24
+2023-04-10 17:32:58,130 - train_clenshaw.py [line:138] - INFO: Epoch 00450 | Time(s) 0.1152 | Val Loss 0.2926 | Val Acc 0.9425 |  Train Acc 0.9988 | ETputs(KTEPS) 21335.12
+2023-04-10 17:33:02,653 - train_clenshaw.py [line:149] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-10 17:33:02,687 - train_clenshaw.py [line:152] - INFO: [FINAL MODEL] Run 17 .\Val accuracy 96.21% \Val loss: 0.18
+2023-04-10 17:33:02,722 - train_clenshaw.py [line:154] - INFO: [FINAL MODEL] Run 17 .	Test accuracy 96.20% \Test loss: 0.2
+2023-04-10 17:33:08,538 - train_clenshaw.py [line:138] - INFO: Epoch 00050 | Time(s) 0.1138 | Val Loss 0.2234 | Val Acc 0.9366 |  Train Acc 0.9604 | ETputs(KTEPS) 21605.09
+2023-04-10 17:33:14,231 - train_clenshaw.py [line:138] - INFO: Epoch 00100 | Time(s) 0.1137 | Val Loss 0.2101 | Val Acc 0.9431 |  Train Acc 0.9788 | ETputs(KTEPS) 21615.56
+2023-04-10 17:33:20,034 - train_clenshaw.py [line:138] - INFO: Epoch 00150 | Time(s) 0.1145 | Val Loss 0.2261 | Val Acc 0.9412 |  Train Acc 0.9870 | ETputs(KTEPS) 21470.34
+2023-04-10 17:33:25,838 - train_clenshaw.py [line:138] - INFO: Epoch 00200 | Time(s) 0.1149 | Val Loss 0.2428 | Val Acc 0.9438 |  Train Acc 0.9906 | ETputs(KTEPS) 21397.03
+2023-04-10 17:33:31,596 - train_clenshaw.py [line:138] - INFO: Epoch 00250 | Time(s) 0.1149 | Val Loss 0.2386 | Val Acc 0.9399 |  Train Acc 0.9966 | ETputs(KTEPS) 21388.19
+2023-04-10 17:33:37,383 - train_clenshaw.py [line:138] - INFO: Epoch 00300 | Time(s) 0.1151 | Val Loss 0.2757 | Val Acc 0.9425 |  Train Acc 0.9964 | ETputs(KTEPS) 21364.02
+2023-04-10 17:33:43,146 - train_clenshaw.py [line:138] - INFO: Epoch 00350 | Time(s) 0.1151 | Val Loss 2.5710 | Val Acc 0.1222 |  Train Acc 0.1441 | ETputs(KTEPS) 21359.19
+2023-04-10 17:33:48,870 - train_clenshaw.py [line:138] - INFO: Epoch 00400 | Time(s) 0.1150 | Val Loss 2.0024 | Val Acc 0.3922 |  Train Acc 0.1385 | ETputs(KTEPS) 21373.34
+2023-04-10 17:33:54,642 - train_clenshaw.py [line:138] - INFO: Epoch 00450 | Time(s) 0.1151 | Val Loss 1.9913 | Val Acc 0.3922 |  Train Acc 0.1385 | ETputs(KTEPS) 21364.90
+2023-04-10 17:34:00,459 - train_clenshaw.py [line:138] - INFO: Epoch 00500 | Time(s) 0.1152 | Val Loss 1.9852 | Val Acc 0.0817 |  Train Acc 0.1385 | ETputs(KTEPS) 21341.35
+2023-04-10 17:34:01,448 - train_clenshaw.py [line:149] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-10 17:34:01,482 - train_clenshaw.py [line:152] - INFO: [FINAL MODEL] Run 18 .\Val accuracy 95.69% \Val loss: 0.19
+2023-04-10 17:34:01,516 - train_clenshaw.py [line:154] - INFO: [FINAL MODEL] Run 18 .	Test accuracy 96.05% \Test loss: 0.19
+2023-04-10 17:34:07,413 - train_clenshaw.py [line:138] - INFO: Epoch 00050 | Time(s) 0.1153 | Val Loss 0.2708 | Val Acc 0.9288 |  Train Acc 0.9587 | ETputs(KTEPS) 21310.54
+2023-04-10 17:34:13,174 - train_clenshaw.py [line:138] - INFO: Epoch 00100 | Time(s) 0.1151 | Val Loss 0.2378 | Val Acc 0.9373 |  Train Acc 0.9773 | ETputs(KTEPS) 21354.58
+2023-04-10 17:34:18,975 - train_clenshaw.py [line:138] - INFO: Epoch 00150 | Time(s) 0.1154 | Val Loss 0.2591 | Val Acc 0.9373 |  Train Acc 0.9887 | ETputs(KTEPS) 21300.90
+2023-04-10 17:34:24,727 - train_clenshaw.py [line:138] - INFO: Epoch 00200 | Time(s) 0.1153 | Val Loss 0.3107 | Val Acc 0.9268 |  Train Acc 0.9952 | ETputs(KTEPS) 21319.03
+2023-04-10 17:34:30,474 - train_clenshaw.py [line:138] - INFO: Epoch 00250 | Time(s) 0.1152 | Val Loss 0.3186 | Val Acc 0.9255 |  Train Acc 0.9964 | ETputs(KTEPS) 21332.97
+2023-04-10 17:34:36,259 - train_clenshaw.py [line:138] - INFO: Epoch 00300 | Time(s) 0.1153 | Val Loss 0.2335 | Val Acc 0.9444 |  Train Acc 0.9850 | ETputs(KTEPS) 21320.37
+2023-04-10 17:34:41,966 - train_clenshaw.py [line:138] - INFO: Epoch 00350 | Time(s) 0.1151 | Val Loss 0.3004 | Val Acc 0.9307 |  Train Acc 0.9983 | ETputs(KTEPS) 21351.17
+2023-04-10 17:34:47,655 - train_clenshaw.py [line:138] - INFO: Epoch 00400 | Time(s) 0.1150 | Val Loss 0.3228 | Val Acc 0.9275 |  Train Acc 0.9983 | ETputs(KTEPS) 21382.81
+2023-04-10 17:34:53,465 - train_clenshaw.py [line:138] - INFO: Epoch 00450 | Time(s) 0.1151 | Val Loss 0.3414 | Val Acc 0.9268 |  Train Acc 0.9981 | ETputs(KTEPS) 21357.54
+2023-04-10 17:34:59,247 - train_clenshaw.py [line:138] - INFO: Epoch 00500 | Time(s) 0.1151 | Val Loss 0.3305 | Val Acc 0.9209 |  Train Acc 0.9988 | ETputs(KTEPS) 21347.72
+2023-04-10 17:35:05,047 - train_clenshaw.py [line:138] - INFO: Epoch 00550 | Time(s) 0.1152 | Val Loss 0.3373 | Val Acc 0.9222 |  Train Acc 0.9988 | ETputs(KTEPS) 21333.78
+2023-04-10 17:35:10,359 - train_clenshaw.py [line:149] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-10 17:35:10,387 - train_clenshaw.py [line:152] - INFO: [FINAL MODEL] Run 19 .\Val accuracy 95.23% \Val loss: 0.21
+2023-04-10 17:35:10,422 - train_clenshaw.py [line:154] - INFO: [FINAL MODEL] Run 19 .	Test accuracy 95.34% \Test loss: 0.2
+2023-04-10 17:35:10,731 - train_clenshaw.py [line:186] - INFO: For Cross Validation: 0.9526, STDV: 0.0061, Uncertainty 0.0028
+2023-04-10 17:35:10,731 - train_clenshaw.py [line:188] - INFO: [0.9519230769230769, 0.9519230769230769, 0.9402834008097166, 0.9554655870445344, 0.9610323886639676, 0.9554655870445344, 0.951417004048583, 0.9539473684210527, 0.951417004048583, 0.9549595141700404, 0.9544534412955465, 0.9519230769230769, 0.9433198380566802, 0.9493927125506073, 0.937753036437247, 0.9524291497975709, 0.957995951417004, 0.9620445344129555, 0.9605263157894737, 0.9534412955465587]

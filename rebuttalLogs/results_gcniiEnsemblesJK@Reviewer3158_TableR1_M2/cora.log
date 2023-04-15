@@ -1,0 +1,621 @@
+2023-04-13 02:32:54,472 - train_ensemble_JK_GCNII.py [line:382] - INFO: Namespace(seed=42, gpu=0, dataset='corafull', n_hidden=64, n_layers_gcnii=0, n_layers_jk=4, wd1=0.001, wd2=1e-08, wd3=1e-08, lr1=0.03, lr2=0.001, lr3=0.04, dropout=0.0, dropout2=0.4, n_epochs=2000, loss='nll', self_loop=True, udgraph=True, alpha=0.6, lamda=2.0, jk_type='cat', early_stop=True, patience=300, es_ckpt='escora', n_cv=20, start_cv=0, logging=False, log_detail=True, log_detailedCh=True, id_log=0)
+2023-04-13 02:32:58,467 - train_ensemble_JK_GCNII.py [line:292] - INFO: Split_seeds:[1824, 409, 4506, 4012, 3657, 2286, 1679, 8935, 1424, 9674, 6912, 520, 488, 1535, 3582, 3811, 8279, 9863, 434, 9195]
+2023-04-13 02:32:58,467 - train_ensemble_JK_GCNII.py [line:293] - INFO: Model_seeds:[3257, 8928, 6873, 3611, 7359, 9654, 4557, 106, 2615, 6924, 5574, 4552, 2547, 3527, 5514, 1674, 1519, 6224, 1584, 5881]
+2023-04-13 02:33:00,250 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00050 | Time(s) 0.0349 | Val Loss 0.5362 | Val Acc 0.8545 |  Train Acc 0.9880 | ETputs(KTEPS) 3797.61
+2023-04-13 02:33:00,991 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00100 | Time(s) 0.0248 | Val Loss 0.6933 | Val Acc 0.8360 |  Train Acc 0.9952 | ETputs(KTEPS) 5345.65
+2023-04-13 02:33:01,676 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00150 | Time(s) 0.0211 | Val Loss 0.7863 | Val Acc 0.8568 |  Train Acc 0.9960 | ETputs(KTEPS) 6284.84
+2023-04-13 02:33:02,391 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00200 | Time(s) 0.0194 | Val Loss 0.5644 | Val Acc 0.8637 |  Train Acc 0.9992 | ETputs(KTEPS) 6838.00
+2023-04-13 02:33:03,108 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00250 | Time(s) 0.0184 | Val Loss 0.7076 | Val Acc 0.8453 |  Train Acc 1.0000 | ETputs(KTEPS) 7217.34
+2023-04-13 02:33:03,818 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00300 | Time(s) 0.0177 | Val Loss 0.8466 | Val Acc 0.8291 |  Train Acc 0.9622 | ETputs(KTEPS) 7503.38
+2023-04-13 02:33:04,540 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00350 | Time(s) 0.0172 | Val Loss 0.5306 | Val Acc 0.8383 |  Train Acc 0.9992 | ETputs(KTEPS) 7706.63
+2023-04-13 02:33:05,161 - train_ensemble_JK_GCNII.py [line:185] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-13 02:33:05,442 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00050 | Time(s) 0.0044 | Val Loss 1.1949 | Val Acc 0.6998 |  Train Acc 0.9382 | ETputs(KTEPS) 30430.95
+2023-04-13 02:33:05,722 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00100 | Time(s) 0.0044 | Val Loss 0.8958 | Val Acc 0.6952 |  Train Acc 0.9896 | ETputs(KTEPS) 30310.35
+2023-04-13 02:33:05,965 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00150 | Time(s) 0.0044 | Val Loss 0.8986 | Val Acc 0.6859 |  Train Acc 0.9984 | ETputs(KTEPS) 30398.72
+2023-04-13 02:33:06,182 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00200 | Time(s) 0.0044 | Val Loss 0.9413 | Val Acc 0.6744 |  Train Acc 0.9984 | ETputs(KTEPS) 30456.60
+2023-04-13 02:33:06,401 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00250 | Time(s) 0.0044 | Val Loss 0.9888 | Val Acc 0.6697 |  Train Acc 0.9992 | ETputs(KTEPS) 30455.14
+2023-04-13 02:33:06,622 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00300 | Time(s) 0.0044 | Val Loss 1.0346 | Val Acc 0.6697 |  Train Acc 1.0000 | ETputs(KTEPS) 30402.90
+2023-04-13 02:33:06,844 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00350 | Time(s) 0.0044 | Val Loss 1.0778 | Val Acc 0.6697 |  Train Acc 1.0000 | ETputs(KTEPS) 30365.47
+2023-04-13 02:33:07,064 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00400 | Time(s) 0.0044 | Val Loss 1.1181 | Val Acc 0.6651 |  Train Acc 1.0000 | ETputs(KTEPS) 30340.91
+2023-04-13 02:33:07,154 - train_ensemble_JK_GCNII.py [line:223] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-13 02:33:07,329 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00050 | Time(s) 0.0033 | Val Loss 0.5923 | Val Acc 0.8148 |  Train Acc 0.8778 | ETputs(KTEPS) 40135.03
+2023-04-13 02:33:07,496 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00100 | Time(s) 0.0033 | Val Loss 0.5655 | Val Acc 0.8426 |  Train Acc 0.8714 | ETputs(KTEPS) 40078.65
+2023-04-13 02:33:07,664 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00150 | Time(s) 0.0033 | Val Loss 0.5760 | Val Acc 0.8241 |  Train Acc 0.8650 | ETputs(KTEPS) 39932.35
+2023-04-13 02:33:07,830 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00200 | Time(s) 0.0033 | Val Loss 0.5693 | Val Acc 0.8333 |  Train Acc 0.8714 | ETputs(KTEPS) 39971.50
+2023-04-13 02:33:08,002 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00250 | Time(s) 0.0033 | Val Loss 0.5944 | Val Acc 0.8426 |  Train Acc 0.8585 | ETputs(KTEPS) 39730.68
+2023-04-13 02:33:08,172 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00300 | Time(s) 0.0033 | Val Loss 0.5931 | Val Acc 0.8241 |  Train Acc 0.8778 | ETputs(KTEPS) 39689.75
+2023-04-13 02:33:08,325 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00350 | Time(s) 0.0033 | Val Loss 0.6223 | Val Acc 0.8148 |  Train Acc 0.8746 | ETputs(KTEPS) 40212.21
+2023-04-13 02:33:08,471 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00400 | Time(s) 0.0032 | Val Loss 0.5568 | Val Acc 0.8241 |  Train Acc 0.8650 | ETputs(KTEPS) 40827.92
+2023-04-13 02:33:08,624 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00450 | Time(s) 0.0032 | Val Loss 0.5897 | Val Acc 0.8241 |  Train Acc 0.8746 | ETputs(KTEPS) 41158.59
+2023-04-13 02:33:08,784 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00500 | Time(s) 0.0032 | Val Loss 0.5684 | Val Acc 0.8333 |  Train Acc 0.8746 | ETputs(KTEPS) 41235.70
+2023-04-13 02:33:08,942 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00550 | Time(s) 0.0032 | Val Loss 0.5664 | Val Acc 0.8333 |  Train Acc 0.8682 | ETputs(KTEPS) 41308.49
+2023-04-13 02:33:09,102 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00600 | Time(s) 0.0032 | Val Loss 0.5721 | Val Acc 0.8333 |  Train Acc 0.8617 | ETputs(KTEPS) 41337.44
+2023-04-13 02:33:09,272 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00650 | Time(s) 0.0032 | Val Loss 0.5845 | Val Acc 0.8148 |  Train Acc 0.8746 | ETputs(KTEPS) 41175.10
+2023-04-13 02:33:09,439 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00700 | Time(s) 0.0032 | Val Loss 0.5846 | Val Acc 0.8426 |  Train Acc 0.8714 | ETputs(KTEPS) 41083.71
+2023-04-13 02:33:09,547 - train_ensemble_JK_GCNII.py [line:259] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-13 02:33:09,548 - train_ensemble_JK_GCNII.py [line:262] - INFO: [FINAL MODEL] Run 0 .\Val accuracy 83.95% \Val loss: 0.51
+2023-04-13 02:33:09,549 - train_ensemble_JK_GCNII.py [line:264] - INFO: [FINAL MODEL] Run 0 .	Test accuracy 82.10% \Test loss: 0.59
+2023-04-13 02:33:10,307 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00050 | Time(s) 0.0145 | Val Loss 0.8268 | Val Acc 0.7598 |  Train Acc 0.9944 | ETputs(KTEPS) 9141.14
+2023-04-13 02:33:11,008 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00100 | Time(s) 0.0143 | Val Loss 1.0087 | Val Acc 0.7760 |  Train Acc 0.9888 | ETputs(KTEPS) 9303.45
+2023-04-13 02:33:11,716 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00150 | Time(s) 0.0142 | Val Loss 0.7994 | Val Acc 0.7875 |  Train Acc 0.9976 | ETputs(KTEPS) 9331.19
+2023-04-13 02:33:12,449 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00200 | Time(s) 0.0143 | Val Loss 1.0077 | Val Acc 0.8060 |  Train Acc 1.0000 | ETputs(KTEPS) 9263.72
+2023-04-13 02:33:13,174 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00250 | Time(s) 0.0143 | Val Loss 0.7149 | Val Acc 0.7783 |  Train Acc 1.0000 | ETputs(KTEPS) 9243.93
+2023-04-13 02:33:13,895 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00300 | Time(s) 0.0144 | Val Loss 0.6817 | Val Acc 0.7968 |  Train Acc 0.9960 | ETputs(KTEPS) 9236.99
+2023-04-13 02:33:13,990 - train_ensemble_JK_GCNII.py [line:185] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-13 02:33:14,273 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00050 | Time(s) 0.0044 | Val Loss 1.1948 | Val Acc 0.7229 |  Train Acc 0.9309 | ETputs(KTEPS) 30287.25
+2023-04-13 02:33:14,559 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00100 | Time(s) 0.0044 | Val Loss 0.8770 | Val Acc 0.7182 |  Train Acc 0.9896 | ETputs(KTEPS) 30022.51
+2023-04-13 02:33:14,817 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00150 | Time(s) 0.0044 | Val Loss 0.8618 | Val Acc 0.7159 |  Train Acc 0.9976 | ETputs(KTEPS) 30032.60
+2023-04-13 02:33:15,037 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00200 | Time(s) 0.0044 | Val Loss 0.8955 | Val Acc 0.7067 |  Train Acc 0.9976 | ETputs(KTEPS) 30119.03
+2023-04-13 02:33:15,250 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00250 | Time(s) 0.0044 | Val Loss 0.9366 | Val Acc 0.6952 |  Train Acc 0.9984 | ETputs(KTEPS) 30336.50
+2023-04-13 02:33:15,471 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00300 | Time(s) 0.0044 | Val Loss 0.9772 | Val Acc 0.6905 |  Train Acc 0.9992 | ETputs(KTEPS) 30307.90
+2023-04-13 02:33:15,691 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00350 | Time(s) 0.0044 | Val Loss 1.0151 | Val Acc 0.6975 |  Train Acc 0.9992 | ETputs(KTEPS) 30295.01
+2023-04-13 02:33:15,916 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00400 | Time(s) 0.0044 | Val Loss 1.0499 | Val Acc 0.6905 |  Train Acc 0.9992 | ETputs(KTEPS) 30213.10
+2023-04-13 02:33:16,051 - train_ensemble_JK_GCNII.py [line:223] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-13 02:33:16,234 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00050 | Time(s) 0.0034 | Val Loss 0.3645 | Val Acc 0.8889 |  Train Acc 0.8907 | ETputs(KTEPS) 39226.80
+2023-04-13 02:33:16,399 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00100 | Time(s) 0.0033 | Val Loss 0.3861 | Val Acc 0.8704 |  Train Acc 0.8907 | ETputs(KTEPS) 39991.61
+2023-04-13 02:33:16,579 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00150 | Time(s) 0.0034 | Val Loss 0.3732 | Val Acc 0.8704 |  Train Acc 0.8875 | ETputs(KTEPS) 39233.92
+2023-04-13 02:33:16,801 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00200 | Time(s) 0.0036 | Val Loss 0.3965 | Val Acc 0.8981 |  Train Acc 0.9003 | ETputs(KTEPS) 36561.96
+2023-04-13 02:33:17,011 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00250 | Time(s) 0.0037 | Val Loss 0.3768 | Val Acc 0.8889 |  Train Acc 0.8939 | ETputs(KTEPS) 35491.09
+2023-04-13 02:33:17,218 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00300 | Time(s) 0.0038 | Val Loss 0.3825 | Val Acc 0.8889 |  Train Acc 0.9035 | ETputs(KTEPS) 34899.06
+2023-04-13 02:33:17,418 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00350 | Time(s) 0.0038 | Val Loss 0.3630 | Val Acc 0.8889 |  Train Acc 0.9003 | ETputs(KTEPS) 34709.48
+2023-04-13 02:33:17,601 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00400 | Time(s) 0.0038 | Val Loss 0.3770 | Val Acc 0.8981 |  Train Acc 0.9003 | ETputs(KTEPS) 34914.97
+2023-04-13 02:33:17,785 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00450 | Time(s) 0.0038 | Val Loss 0.3931 | Val Acc 0.8611 |  Train Acc 0.9003 | ETputs(KTEPS) 35048.55
+2023-04-13 02:33:17,965 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00500 | Time(s) 0.0038 | Val Loss 0.3609 | Val Acc 0.9167 |  Train Acc 0.8907 | ETputs(KTEPS) 35243.91
+2023-04-13 02:33:18,143 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00550 | Time(s) 0.0037 | Val Loss 0.4541 | Val Acc 0.8426 |  Train Acc 0.8907 | ETputs(KTEPS) 35442.61
+2023-04-13 02:33:18,313 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00600 | Time(s) 0.0037 | Val Loss 0.3554 | Val Acc 0.9167 |  Train Acc 0.8939 | ETputs(KTEPS) 35741.85
+2023-04-13 02:33:18,484 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00650 | Time(s) 0.0037 | Val Loss 0.3526 | Val Acc 0.9167 |  Train Acc 0.8907 | ETputs(KTEPS) 35971.64
+2023-04-13 02:33:18,653 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00700 | Time(s) 0.0037 | Val Loss 0.4012 | Val Acc 0.8611 |  Train Acc 0.8971 | ETputs(KTEPS) 36197.62
+2023-04-13 02:33:18,825 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00750 | Time(s) 0.0036 | Val Loss 0.3679 | Val Acc 0.8796 |  Train Acc 0.8939 | ETputs(KTEPS) 36371.14
+2023-04-13 02:33:18,982 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00800 | Time(s) 0.0036 | Val Loss 0.3737 | Val Acc 0.8981 |  Train Acc 0.8971 | ETputs(KTEPS) 36697.27
+2023-04-13 02:33:19,134 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00850 | Time(s) 0.0036 | Val Loss 0.4494 | Val Acc 0.8148 |  Train Acc 0.8907 | ETputs(KTEPS) 37061.53
+2023-04-13 02:33:19,294 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00900 | Time(s) 0.0036 | Val Loss 0.3616 | Val Acc 0.8981 |  Train Acc 0.8939 | ETputs(KTEPS) 37294.37
+2023-04-13 02:33:19,458 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00950 | Time(s) 0.0035 | Val Loss 0.3494 | Val Acc 0.9167 |  Train Acc 0.9003 | ETputs(KTEPS) 37464.29
+2023-04-13 02:33:19,622 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 01000 | Time(s) 0.0035 | Val Loss 0.3526 | Val Acc 0.9074 |  Train Acc 0.9003 | ETputs(KTEPS) 37619.05
+2023-04-13 02:33:19,788 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 01050 | Time(s) 0.0035 | Val Loss 0.3503 | Val Acc 0.9167 |  Train Acc 0.8939 | ETputs(KTEPS) 37736.48
+2023-04-13 02:33:19,954 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 01100 | Time(s) 0.0035 | Val Loss 0.4181 | Val Acc 0.8704 |  Train Acc 0.8907 | ETputs(KTEPS) 37840.90
+2023-04-13 02:33:20,117 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 01150 | Time(s) 0.0035 | Val Loss 0.3769 | Val Acc 0.8889 |  Train Acc 0.8907 | ETputs(KTEPS) 37963.30
+2023-04-13 02:33:20,148 - train_ensemble_JK_GCNII.py [line:259] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-13 02:33:20,148 - train_ensemble_JK_GCNII.py [line:262] - INFO: [FINAL MODEL] Run 1 .\Val accuracy 87.82% \Val loss: 0.41
+2023-04-13 02:33:20,149 - train_ensemble_JK_GCNII.py [line:264] - INFO: [FINAL MODEL] Run 1 .	Test accuracy 86.21% \Test loss: 0.44
+2023-04-13 02:33:20,890 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00050 | Time(s) 0.0141 | Val Loss 0.5283 | Val Acc 0.8545 |  Train Acc 0.9743 | ETputs(KTEPS) 9422.32
+2023-04-13 02:33:21,587 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00100 | Time(s) 0.0140 | Val Loss 0.8090 | Val Acc 0.7945 |  Train Acc 0.9863 | ETputs(KTEPS) 9480.96
+2023-04-13 02:33:22,320 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00150 | Time(s) 0.0142 | Val Loss 0.8075 | Val Acc 0.8568 |  Train Acc 0.9968 | ETputs(KTEPS) 9336.14
+2023-04-13 02:33:23,038 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00200 | Time(s) 0.0142 | Val Loss 0.7317 | Val Acc 0.8360 |  Train Acc 0.9992 | ETputs(KTEPS) 9312.72
+2023-04-13 02:33:23,747 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00250 | Time(s) 0.0142 | Val Loss 1.0220 | Val Acc 0.7021 |  Train Acc 0.9855 | ETputs(KTEPS) 9324.50
+2023-04-13 02:33:24,479 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00300 | Time(s) 0.0143 | Val Loss 2.2903 | Val Acc 0.5566 |  Train Acc 0.8594 | ETputs(KTEPS) 9282.00
+2023-04-13 02:33:24,602 - train_ensemble_JK_GCNII.py [line:185] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-13 02:33:24,891 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00050 | Time(s) 0.0045 | Val Loss 1.1726 | Val Acc 0.7113 |  Train Acc 0.9253 | ETputs(KTEPS) 29517.20
+2023-04-13 02:33:25,178 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00100 | Time(s) 0.0045 | Val Loss 0.9156 | Val Acc 0.6975 |  Train Acc 0.9904 | ETputs(KTEPS) 29421.88
+2023-04-13 02:33:25,413 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00150 | Time(s) 0.0045 | Val Loss 0.9358 | Val Acc 0.6651 |  Train Acc 0.9952 | ETputs(KTEPS) 29729.43
+2023-04-13 02:33:25,636 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00200 | Time(s) 0.0045 | Val Loss 0.9943 | Val Acc 0.6651 |  Train Acc 0.9984 | ETputs(KTEPS) 29777.96
+2023-04-13 02:33:25,859 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00250 | Time(s) 0.0045 | Val Loss 1.0569 | Val Acc 0.6582 |  Train Acc 0.9992 | ETputs(KTEPS) 29782.88
+2023-04-13 02:33:26,083 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00300 | Time(s) 0.0045 | Val Loss 1.1161 | Val Acc 0.6536 |  Train Acc 1.0000 | ETputs(KTEPS) 29774.62
+2023-04-13 02:33:26,301 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00350 | Time(s) 0.0044 | Val Loss 1.1710 | Val Acc 0.6536 |  Train Acc 1.0000 | ETputs(KTEPS) 29885.10
+2023-04-13 02:33:26,522 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00400 | Time(s) 0.0044 | Val Loss 1.2211 | Val Acc 0.6467 |  Train Acc 1.0000 | ETputs(KTEPS) 29923.37
+2023-04-13 02:33:26,578 - train_ensemble_JK_GCNII.py [line:223] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-13 02:33:26,759 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00050 | Time(s) 0.0034 | Val Loss 0.4271 | Val Acc 0.8981 |  Train Acc 0.9068 | ETputs(KTEPS) 38552.01
+2023-04-13 02:33:26,928 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00100 | Time(s) 0.0034 | Val Loss 0.4159 | Val Acc 0.8981 |  Train Acc 0.9164 | ETputs(KTEPS) 38999.96
+2023-04-13 02:33:27,098 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00150 | Time(s) 0.0034 | Val Loss 0.4167 | Val Acc 0.9074 |  Train Acc 0.9035 | ETputs(KTEPS) 39080.33
+2023-04-13 02:33:27,267 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00200 | Time(s) 0.0034 | Val Loss 0.4434 | Val Acc 0.8981 |  Train Acc 0.8971 | ETputs(KTEPS) 39165.33
+2023-04-13 02:33:27,431 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00250 | Time(s) 0.0034 | Val Loss 0.4156 | Val Acc 0.8889 |  Train Acc 0.9068 | ETputs(KTEPS) 39428.99
+2023-04-13 02:33:27,600 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00300 | Time(s) 0.0034 | Val Loss 0.4105 | Val Acc 0.9074 |  Train Acc 0.9035 | ETputs(KTEPS) 39459.11
+2023-04-13 02:33:27,648 - train_ensemble_JK_GCNII.py [line:259] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-13 02:33:27,649 - train_ensemble_JK_GCNII.py [line:262] - INFO: [FINAL MODEL] Run 2 .\Val accuracy 87.45% \Val loss: 0.41
+2023-04-13 02:33:27,649 - train_ensemble_JK_GCNII.py [line:264] - INFO: [FINAL MODEL] Run 2 .	Test accuracy 86.37% \Test loss: 0.45
+2023-04-13 02:33:28,499 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00050 | Time(s) 0.0151 | Val Loss 0.4933 | Val Acc 0.8568 |  Train Acc 0.9855 | ETputs(KTEPS) 8805.81
+2023-04-13 02:33:29,216 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00100 | Time(s) 0.0147 | Val Loss 0.6593 | Val Acc 0.8106 |  Train Acc 0.9976 | ETputs(KTEPS) 9029.22
+2023-04-13 02:33:29,928 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00150 | Time(s) 0.0145 | Val Loss 0.7858 | Val Acc 0.7714 |  Train Acc 1.0000 | ETputs(KTEPS) 9127.45
+2023-04-13 02:33:30,634 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00200 | Time(s) 0.0144 | Val Loss 0.5535 | Val Acc 0.8383 |  Train Acc 0.9960 | ETputs(KTEPS) 9197.21
+2023-04-13 02:33:31,330 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00250 | Time(s) 0.0143 | Val Loss 0.8936 | Val Acc 0.8083 |  Train Acc 0.9992 | ETputs(KTEPS) 9264.01
+2023-04-13 02:33:32,042 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00300 | Time(s) 0.0143 | Val Loss 0.9278 | Val Acc 0.7991 |  Train Acc 0.9831 | ETputs(KTEPS) 9275.31
+2023-04-13 02:33:32,685 - train_ensemble_JK_GCNII.py [line:185] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-13 02:33:32,960 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00050 | Time(s) 0.0042 | Val Loss 1.3594 | Val Acc 0.6351 |  Train Acc 0.9349 | ETputs(KTEPS) 31533.87
+2023-04-13 02:33:33,229 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00100 | Time(s) 0.0042 | Val Loss 1.0629 | Val Acc 0.6697 |  Train Acc 0.9904 | ETputs(KTEPS) 31618.84
+2023-04-13 02:33:33,451 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00150 | Time(s) 0.0042 | Val Loss 1.0966 | Val Acc 0.6513 |  Train Acc 0.9984 | ETputs(KTEPS) 31515.68
+2023-04-13 02:33:33,669 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00200 | Time(s) 0.0042 | Val Loss 1.1667 | Val Acc 0.6490 |  Train Acc 0.9992 | ETputs(KTEPS) 31241.97
+2023-04-13 02:33:33,893 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00250 | Time(s) 0.0043 | Val Loss 1.2368 | Val Acc 0.6513 |  Train Acc 1.0000 | ETputs(KTEPS) 30951.01
+2023-04-13 02:33:34,113 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00300 | Time(s) 0.0043 | Val Loss 1.3005 | Val Acc 0.6443 |  Train Acc 1.0000 | ETputs(KTEPS) 30826.79
+2023-04-13 02:33:34,333 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00350 | Time(s) 0.0043 | Val Loss 1.3570 | Val Acc 0.6443 |  Train Acc 1.0000 | ETputs(KTEPS) 30750.91
+2023-04-13 02:33:34,549 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00400 | Time(s) 0.0043 | Val Loss 1.4074 | Val Acc 0.6467 |  Train Acc 1.0000 | ETputs(KTEPS) 30771.02
+2023-04-13 02:33:34,577 - train_ensemble_JK_GCNII.py [line:223] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-13 02:33:34,754 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00050 | Time(s) 0.0033 | Val Loss 0.5039 | Val Acc 0.8333 |  Train Acc 0.8650 | ETputs(KTEPS) 40399.25
+2023-04-13 02:33:34,923 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00100 | Time(s) 0.0033 | Val Loss 0.5506 | Val Acc 0.7778 |  Train Acc 0.8682 | ETputs(KTEPS) 40002.31
+2023-04-13 02:33:35,088 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00150 | Time(s) 0.0033 | Val Loss 0.5580 | Val Acc 0.7963 |  Train Acc 0.8714 | ETputs(KTEPS) 40143.70
+2023-04-13 02:33:35,258 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00200 | Time(s) 0.0033 | Val Loss 0.5575 | Val Acc 0.7778 |  Train Acc 0.8746 | ETputs(KTEPS) 39885.35
+2023-04-13 02:33:35,426 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00250 | Time(s) 0.0033 | Val Loss 0.5239 | Val Acc 0.7963 |  Train Acc 0.8682 | ETputs(KTEPS) 39854.53
+2023-04-13 02:33:35,593 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00300 | Time(s) 0.0033 | Val Loss 0.5576 | Val Acc 0.7870 |  Train Acc 0.8714 | ETputs(KTEPS) 39861.61
+2023-04-13 02:33:35,695 - train_ensemble_JK_GCNII.py [line:259] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-13 02:33:35,695 - train_ensemble_JK_GCNII.py [line:262] - INFO: [FINAL MODEL] Run 3 .\Val accuracy 83.58% \Val loss: 0.5
+2023-04-13 02:33:35,696 - train_ensemble_JK_GCNII.py [line:264] - INFO: [FINAL MODEL] Run 3 .	Test accuracy 86.54% \Test loss: 0.44
+2023-04-13 02:33:36,470 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00050 | Time(s) 0.0149 | Val Loss 0.6546 | Val Acc 0.8014 |  Train Acc 0.9871 | ETputs(KTEPS) 8922.45
+2023-04-13 02:33:37,191 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00100 | Time(s) 0.0146 | Val Loss 0.7409 | Val Acc 0.7852 |  Train Acc 0.9992 | ETputs(KTEPS) 9064.05
+2023-04-13 02:33:37,916 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00150 | Time(s) 0.0146 | Val Loss 0.7545 | Val Acc 0.8083 |  Train Acc 0.9847 | ETputs(KTEPS) 9099.78
+2023-04-13 02:33:38,639 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00200 | Time(s) 0.0145 | Val Loss 0.7718 | Val Acc 0.7806 |  Train Acc 0.9992 | ETputs(KTEPS) 9120.62
+2023-04-13 02:33:39,352 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00250 | Time(s) 0.0145 | Val Loss 0.6899 | Val Acc 0.8176 |  Train Acc 1.0000 | ETputs(KTEPS) 9159.02
+2023-04-13 02:33:40,067 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00300 | Time(s) 0.0144 | Val Loss 0.7426 | Val Acc 0.7945 |  Train Acc 1.0000 | ETputs(KTEPS) 9182.21
+2023-04-13 02:33:40,160 - train_ensemble_JK_GCNII.py [line:185] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-13 02:33:40,424 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00050 | Time(s) 0.0040 | Val Loss 1.2472 | Val Acc 0.7136 |  Train Acc 0.9373 | ETputs(KTEPS) 33279.80
+2023-04-13 02:33:40,690 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00100 | Time(s) 0.0041 | Val Loss 0.9012 | Val Acc 0.7344 |  Train Acc 0.9880 | ETputs(KTEPS) 32712.36
+2023-04-13 02:33:40,931 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00150 | Time(s) 0.0041 | Val Loss 0.8927 | Val Acc 0.7298 |  Train Acc 0.9960 | ETputs(KTEPS) 32444.85
+2023-04-13 02:33:41,135 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00200 | Time(s) 0.0041 | Val Loss 0.9320 | Val Acc 0.7113 |  Train Acc 0.9968 | ETputs(KTEPS) 32499.47
+2023-04-13 02:33:41,338 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00250 | Time(s) 0.0041 | Val Loss 0.9779 | Val Acc 0.7021 |  Train Acc 0.9984 | ETputs(KTEPS) 32561.13
+2023-04-13 02:33:41,544 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00300 | Time(s) 0.0041 | Val Loss 1.0233 | Val Acc 0.6998 |  Train Acc 0.9984 | ETputs(KTEPS) 32519.40
+2023-04-13 02:33:41,750 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00350 | Time(s) 0.0041 | Val Loss 1.0667 | Val Acc 0.7021 |  Train Acc 0.9984 | ETputs(KTEPS) 32519.18
+2023-04-13 02:33:41,952 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00400 | Time(s) 0.0041 | Val Loss 1.1083 | Val Acc 0.6905 |  Train Acc 1.0000 | ETputs(KTEPS) 32565.52
+2023-04-13 02:33:42,056 - train_ensemble_JK_GCNII.py [line:223] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-13 02:33:42,237 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00050 | Time(s) 0.0032 | Val Loss 0.4210 | Val Acc 0.8426 |  Train Acc 0.9068 | ETputs(KTEPS) 41054.29
+2023-04-13 02:33:42,402 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00100 | Time(s) 0.0033 | Val Loss 0.4309 | Val Acc 0.8333 |  Train Acc 0.9164 | ETputs(KTEPS) 40768.76
+2023-04-13 02:33:42,566 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00150 | Time(s) 0.0033 | Val Loss 0.4428 | Val Acc 0.8241 |  Train Acc 0.9035 | ETputs(KTEPS) 40726.29
+2023-04-13 02:33:42,732 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00200 | Time(s) 0.0033 | Val Loss 0.4519 | Val Acc 0.8148 |  Train Acc 0.9068 | ETputs(KTEPS) 40656.58
+2023-04-13 02:33:42,888 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00250 | Time(s) 0.0032 | Val Loss 0.4343 | Val Acc 0.8333 |  Train Acc 0.9003 | ETputs(KTEPS) 41037.04
+2023-04-13 02:33:43,040 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00300 | Time(s) 0.0032 | Val Loss 0.4402 | Val Acc 0.8333 |  Train Acc 0.9100 | ETputs(KTEPS) 41502.96
+2023-04-13 02:33:43,180 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00350 | Time(s) 0.0031 | Val Loss 0.4588 | Val Acc 0.8426 |  Train Acc 0.9196 | ETputs(KTEPS) 42330.27
+2023-04-13 02:33:43,321 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00400 | Time(s) 0.0031 | Val Loss 0.4309 | Val Acc 0.8426 |  Train Acc 0.9132 | ETputs(KTEPS) 42956.34
+2023-04-13 02:33:43,462 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00450 | Time(s) 0.0031 | Val Loss 0.4473 | Val Acc 0.8148 |  Train Acc 0.9100 | ETputs(KTEPS) 43451.50
+2023-04-13 02:33:43,603 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00500 | Time(s) 0.0030 | Val Loss 0.4411 | Val Acc 0.8333 |  Train Acc 0.9068 | ETputs(KTEPS) 43823.17
+2023-04-13 02:33:43,741 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00550 | Time(s) 0.0030 | Val Loss 0.4285 | Val Acc 0.8426 |  Train Acc 0.9068 | ETputs(KTEPS) 44205.58
+2023-04-13 02:33:43,885 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00600 | Time(s) 0.0030 | Val Loss 0.4255 | Val Acc 0.8519 |  Train Acc 0.9100 | ETputs(KTEPS) 44383.55
+2023-04-13 02:33:44,042 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00650 | Time(s) 0.0030 | Val Loss 0.4508 | Val Acc 0.8333 |  Train Acc 0.9035 | ETputs(KTEPS) 44234.84
+2023-04-13 02:33:44,201 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00700 | Time(s) 0.0030 | Val Loss 0.4494 | Val Acc 0.8241 |  Train Acc 0.9035 | ETputs(KTEPS) 44055.71
+2023-04-13 02:33:44,264 - train_ensemble_JK_GCNII.py [line:259] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-13 02:33:44,264 - train_ensemble_JK_GCNII.py [line:262] - INFO: [FINAL MODEL] Run 4 .\Val accuracy 84.87% \Val loss: 0.44
+2023-04-13 02:33:44,265 - train_ensemble_JK_GCNII.py [line:264] - INFO: [FINAL MODEL] Run 4 .	Test accuracy 86.21% \Test loss: 0.46
+2023-04-13 02:33:45,014 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00050 | Time(s) 0.0144 | Val Loss 0.5891 | Val Acc 0.8337 |  Train Acc 0.9960 | ETputs(KTEPS) 9240.03
+2023-04-13 02:33:45,728 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00100 | Time(s) 0.0143 | Val Loss 0.5599 | Val Acc 0.8360 |  Train Acc 0.9871 | ETputs(KTEPS) 9270.25
+2023-04-13 02:33:46,443 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00150 | Time(s) 0.0143 | Val Loss 0.6198 | Val Acc 0.8060 |  Train Acc 0.9992 | ETputs(KTEPS) 9277.86
+2023-04-13 02:33:47,156 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00200 | Time(s) 0.0143 | Val Loss 0.6539 | Val Acc 0.7968 |  Train Acc 1.0000 | ETputs(KTEPS) 9284.97
+2023-04-13 02:33:47,867 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00250 | Time(s) 0.0143 | Val Loss 0.6822 | Val Acc 0.8222 |  Train Acc 0.9992 | ETputs(KTEPS) 9298.16
+2023-04-13 02:33:48,570 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00300 | Time(s) 0.0142 | Val Loss 0.7387 | Val Acc 0.7968 |  Train Acc 0.9920 | ETputs(KTEPS) 9322.11
+2023-04-13 02:33:48,663 - train_ensemble_JK_GCNII.py [line:185] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-13 02:33:48,943 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00050 | Time(s) 0.0044 | Val Loss 1.1962 | Val Acc 0.7275 |  Train Acc 0.9373 | ETputs(KTEPS) 30361.63
+2023-04-13 02:33:49,215 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00100 | Time(s) 0.0043 | Val Loss 0.8878 | Val Acc 0.7113 |  Train Acc 0.9896 | ETputs(KTEPS) 30883.55
+2023-04-13 02:33:49,443 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00150 | Time(s) 0.0042 | Val Loss 0.8978 | Val Acc 0.6998 |  Train Acc 0.9960 | ETputs(KTEPS) 31293.06
+2023-04-13 02:33:49,652 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00200 | Time(s) 0.0042 | Val Loss 0.9449 | Val Acc 0.6952 |  Train Acc 0.9968 | ETputs(KTEPS) 31423.38
+2023-04-13 02:33:49,863 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00250 | Time(s) 0.0042 | Val Loss 0.9950 | Val Acc 0.6998 |  Train Acc 0.9976 | ETputs(KTEPS) 31480.76
+2023-04-13 02:33:50,068 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00300 | Time(s) 0.0042 | Val Loss 1.0429 | Val Acc 0.7044 |  Train Acc 0.9976 | ETputs(KTEPS) 31636.11
+2023-04-13 02:33:50,268 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00350 | Time(s) 0.0042 | Val Loss 1.0880 | Val Acc 0.7021 |  Train Acc 0.9984 | ETputs(KTEPS) 31871.95
+2023-04-13 02:33:50,465 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00400 | Time(s) 0.0041 | Val Loss 1.1310 | Val Acc 0.6952 |  Train Acc 1.0000 | ETputs(KTEPS) 32093.94
+2023-04-13 02:33:50,530 - train_ensemble_JK_GCNII.py [line:223] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-13 02:33:50,694 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00050 | Time(s) 0.0031 | Val Loss 0.7296 | Val Acc 0.8426 |  Train Acc 0.8907 | ETputs(KTEPS) 42341.30
+2023-04-13 02:33:50,856 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00100 | Time(s) 0.0032 | Val Loss 0.6501 | Val Acc 0.8333 |  Train Acc 0.9003 | ETputs(KTEPS) 41956.33
+2023-04-13 02:33:51,010 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00150 | Time(s) 0.0031 | Val Loss 0.6481 | Val Acc 0.8333 |  Train Acc 0.9003 | ETputs(KTEPS) 42588.79
+2023-04-13 02:33:51,166 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00200 | Time(s) 0.0031 | Val Loss 0.6654 | Val Acc 0.8333 |  Train Acc 0.8939 | ETputs(KTEPS) 42654.83
+2023-04-13 02:33:51,325 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00250 | Time(s) 0.0031 | Val Loss 0.6742 | Val Acc 0.8241 |  Train Acc 0.8971 | ETputs(KTEPS) 42493.47
+2023-04-13 02:33:51,484 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00300 | Time(s) 0.0031 | Val Loss 0.6510 | Val Acc 0.8519 |  Train Acc 0.8939 | ETputs(KTEPS) 42425.45
+2023-04-13 02:33:51,645 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00350 | Time(s) 0.0031 | Val Loss 0.6313 | Val Acc 0.8426 |  Train Acc 0.9068 | ETputs(KTEPS) 42342.57
+2023-04-13 02:33:51,805 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00400 | Time(s) 0.0031 | Val Loss 0.6455 | Val Acc 0.8333 |  Train Acc 0.8939 | ETputs(KTEPS) 42234.60
+2023-04-13 02:33:51,963 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00450 | Time(s) 0.0031 | Val Loss 0.6216 | Val Acc 0.8426 |  Train Acc 0.9068 | ETputs(KTEPS) 42247.40
+2023-04-13 02:33:52,119 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00500 | Time(s) 0.0031 | Val Loss 0.6520 | Val Acc 0.8426 |  Train Acc 0.9035 | ETputs(KTEPS) 42289.51
+2023-04-13 02:33:52,281 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00550 | Time(s) 0.0031 | Val Loss 0.6845 | Val Acc 0.8241 |  Train Acc 0.9035 | ETputs(KTEPS) 42191.79
+2023-04-13 02:33:52,439 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00600 | Time(s) 0.0031 | Val Loss 0.6275 | Val Acc 0.8704 |  Train Acc 0.9164 | ETputs(KTEPS) 42190.44
+2023-04-13 02:33:52,581 - train_ensemble_JK_GCNII.py [line:259] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-13 02:33:52,582 - train_ensemble_JK_GCNII.py [line:262] - INFO: [FINAL MODEL] Run 5 .\Val accuracy 85.61% \Val loss: 0.49
+2023-04-13 02:33:52,582 - train_ensemble_JK_GCNII.py [line:264] - INFO: [FINAL MODEL] Run 5 .	Test accuracy 80.79% \Test loss: 0.57
+2023-04-13 02:33:53,354 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00050 | Time(s) 0.0141 | Val Loss 0.4944 | Val Acc 0.8476 |  Train Acc 0.9406 | ETputs(KTEPS) 9375.29
+2023-04-13 02:33:54,060 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00100 | Time(s) 0.0141 | Val Loss 0.6678 | Val Acc 0.8060 |  Train Acc 0.9783 | ETputs(KTEPS) 9414.06
+2023-04-13 02:33:54,760 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00150 | Time(s) 0.0141 | Val Loss 0.7945 | Val Acc 0.8360 |  Train Acc 0.9968 | ETputs(KTEPS) 9438.52
+2023-04-13 02:33:55,461 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00200 | Time(s) 0.0140 | Val Loss 0.7287 | Val Acc 0.8499 |  Train Acc 0.9896 | ETputs(KTEPS) 9447.90
+2023-04-13 02:33:56,171 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00250 | Time(s) 0.0141 | Val Loss 1.0902 | Val Acc 0.7968 |  Train Acc 0.9984 | ETputs(KTEPS) 9430.17
+2023-04-13 02:33:56,885 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00300 | Time(s) 0.0141 | Val Loss 0.8819 | Val Acc 0.8199 |  Train Acc 1.0000 | ETputs(KTEPS) 9408.34
+2023-04-13 02:33:57,594 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00350 | Time(s) 0.0141 | Val Loss 1.1168 | Val Acc 0.8499 |  Train Acc 0.9855 | ETputs(KTEPS) 9404.01
+2023-04-13 02:33:57,686 - train_ensemble_JK_GCNII.py [line:185] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-13 02:33:57,966 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00050 | Time(s) 0.0044 | Val Loss 1.1884 | Val Acc 0.7275 |  Train Acc 0.9277 | ETputs(KTEPS) 30460.47
+2023-04-13 02:33:58,242 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00100 | Time(s) 0.0044 | Val Loss 0.8370 | Val Acc 0.7298 |  Train Acc 0.9847 | ETputs(KTEPS) 30481.90
+2023-04-13 02:33:58,494 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00150 | Time(s) 0.0043 | Val Loss 0.8238 | Val Acc 0.7229 |  Train Acc 0.9976 | ETputs(KTEPS) 30580.42
+2023-04-13 02:33:58,712 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00200 | Time(s) 0.0043 | Val Loss 0.8558 | Val Acc 0.7136 |  Train Acc 0.9984 | ETputs(KTEPS) 30583.41
+2023-04-13 02:33:58,934 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00250 | Time(s) 0.0044 | Val Loss 0.8945 | Val Acc 0.7159 |  Train Acc 0.9992 | ETputs(KTEPS) 30474.57
+2023-04-13 02:33:59,146 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00300 | Time(s) 0.0043 | Val Loss 0.9329 | Val Acc 0.7067 |  Train Acc 0.9992 | ETputs(KTEPS) 30612.51
+2023-04-13 02:33:59,362 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00350 | Time(s) 0.0043 | Val Loss 0.9690 | Val Acc 0.6975 |  Train Acc 1.0000 | ETputs(KTEPS) 30660.34
+2023-04-13 02:33:59,580 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00400 | Time(s) 0.0043 | Val Loss 1.0022 | Val Acc 0.6882 |  Train Acc 1.0000 | ETputs(KTEPS) 30651.13
+2023-04-13 02:33:59,713 - train_ensemble_JK_GCNII.py [line:223] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-13 02:33:59,884 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00050 | Time(s) 0.0032 | Val Loss 0.6045 | Val Acc 0.8148 |  Train Acc 0.8875 | ETputs(KTEPS) 41004.49
+2023-04-13 02:34:00,050 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00100 | Time(s) 0.0033 | Val Loss 0.6073 | Val Acc 0.8241 |  Train Acc 0.8971 | ETputs(KTEPS) 40789.53
+2023-04-13 02:34:00,217 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00150 | Time(s) 0.0033 | Val Loss 0.5229 | Val Acc 0.8426 |  Train Acc 0.8842 | ETputs(KTEPS) 40546.34
+2023-04-13 02:34:00,381 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00200 | Time(s) 0.0033 | Val Loss 0.5158 | Val Acc 0.8333 |  Train Acc 0.8842 | ETputs(KTEPS) 40567.24
+2023-04-13 02:34:00,545 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00250 | Time(s) 0.0033 | Val Loss 0.5466 | Val Acc 0.8241 |  Train Acc 0.8842 | ETputs(KTEPS) 40651.88
+2023-04-13 02:34:00,696 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00300 | Time(s) 0.0032 | Val Loss 0.5461 | Val Acc 0.8241 |  Train Acc 0.8875 | ETputs(KTEPS) 41217.61
+2023-04-13 02:34:00,849 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00350 | Time(s) 0.0032 | Val Loss 0.5727 | Val Acc 0.8333 |  Train Acc 0.8939 | ETputs(KTEPS) 41566.67
+2023-04-13 02:34:01,012 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00400 | Time(s) 0.0032 | Val Loss 0.6572 | Val Acc 0.8148 |  Train Acc 0.8907 | ETputs(KTEPS) 41541.82
+2023-04-13 02:34:01,174 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00450 | Time(s) 0.0032 | Val Loss 0.5631 | Val Acc 0.8426 |  Train Acc 0.8907 | ETputs(KTEPS) 41498.60
+2023-04-13 02:34:01,334 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00500 | Time(s) 0.0032 | Val Loss 0.5958 | Val Acc 0.8148 |  Train Acc 0.8907 | ETputs(KTEPS) 41519.76
+2023-04-13 02:34:01,495 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00550 | Time(s) 0.0032 | Val Loss 0.6107 | Val Acc 0.8241 |  Train Acc 0.8907 | ETputs(KTEPS) 41507.99
+2023-04-13 02:34:01,656 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00600 | Time(s) 0.0032 | Val Loss 0.5706 | Val Acc 0.8241 |  Train Acc 0.8875 | ETputs(KTEPS) 41498.96
+2023-04-13 02:34:01,815 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00650 | Time(s) 0.0032 | Val Loss 0.5971 | Val Acc 0.8333 |  Train Acc 0.9003 | ETputs(KTEPS) 41535.94
+2023-04-13 02:34:01,920 - train_ensemble_JK_GCNII.py [line:259] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-13 02:34:01,921 - train_ensemble_JK_GCNII.py [line:262] - INFO: [FINAL MODEL] Run 6 .\Val accuracy 85.98% \Val loss: 0.43
+2023-04-13 02:34:01,922 - train_ensemble_JK_GCNII.py [line:264] - INFO: [FINAL MODEL] Run 6 .	Test accuracy 85.06% \Test loss: 0.48
+2023-04-13 02:34:02,651 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00050 | Time(s) 0.0140 | Val Loss 0.6551 | Val Acc 0.7945 |  Train Acc 0.9711 | ETputs(KTEPS) 9488.96
+2023-04-13 02:34:03,358 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00100 | Time(s) 0.0139 | Val Loss 0.7334 | Val Acc 0.7898 |  Train Acc 0.9928 | ETputs(KTEPS) 9552.47
+2023-04-13 02:34:04,064 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00150 | Time(s) 0.0140 | Val Loss 1.1357 | Val Acc 0.7806 |  Train Acc 0.9952 | ETputs(KTEPS) 9504.63
+2023-04-13 02:34:04,792 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00200 | Time(s) 0.0141 | Val Loss 0.5388 | Val Acc 0.8291 |  Train Acc 1.0000 | ETputs(KTEPS) 9416.16
+2023-04-13 02:34:05,518 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00250 | Time(s) 0.0142 | Val Loss 0.9051 | Val Acc 0.7945 |  Train Acc 1.0000 | ETputs(KTEPS) 9364.01
+2023-04-13 02:34:06,231 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00300 | Time(s) 0.0142 | Val Loss 0.9756 | Val Acc 0.7552 |  Train Acc 0.9984 | ETputs(KTEPS) 9355.40
+2023-04-13 02:34:06,936 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00350 | Time(s) 0.0142 | Val Loss 0.7125 | Val Acc 0.8060 |  Train Acc 0.9920 | ETputs(KTEPS) 9365.46
+2023-04-13 02:34:07,635 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00400 | Time(s) 0.0141 | Val Loss 0.8692 | Val Acc 0.7113 |  Train Acc 0.9992 | ETputs(KTEPS) 9381.56
+2023-04-13 02:34:08,350 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00450 | Time(s) 0.0142 | Val Loss 0.6545 | Val Acc 0.7921 |  Train Acc 1.0000 | ETputs(KTEPS) 9371.13
+2023-04-13 02:34:08,913 - train_ensemble_JK_GCNII.py [line:185] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-13 02:34:09,197 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00050 | Time(s) 0.0044 | Val Loss 1.2617 | Val Acc 0.6905 |  Train Acc 0.9261 | ETputs(KTEPS) 30017.44
+2023-04-13 02:34:09,475 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00100 | Time(s) 0.0044 | Val Loss 0.9715 | Val Acc 0.6790 |  Train Acc 0.9888 | ETputs(KTEPS) 30132.78
+2023-04-13 02:34:09,743 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00150 | Time(s) 0.0045 | Val Loss 0.9698 | Val Acc 0.6605 |  Train Acc 0.9960 | ETputs(KTEPS) 29396.05
+2023-04-13 02:34:09,980 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00200 | Time(s) 0.0046 | Val Loss 1.0106 | Val Acc 0.6559 |  Train Acc 0.9976 | ETputs(KTEPS) 29060.37
+2023-04-13 02:34:10,223 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00250 | Time(s) 0.0046 | Val Loss 1.0592 | Val Acc 0.6513 |  Train Acc 0.9984 | ETputs(KTEPS) 28716.95
+2023-04-13 02:34:10,462 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00300 | Time(s) 0.0046 | Val Loss 1.1078 | Val Acc 0.6443 |  Train Acc 0.9992 | ETputs(KTEPS) 28574.02
+2023-04-13 02:34:10,704 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00350 | Time(s) 0.0047 | Val Loss 1.1536 | Val Acc 0.6374 |  Train Acc 0.9992 | ETputs(KTEPS) 28432.81
+2023-04-13 02:34:10,945 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00400 | Time(s) 0.0047 | Val Loss 1.1965 | Val Acc 0.6328 |  Train Acc 1.0000 | ETputs(KTEPS) 28328.18
+2023-04-13 02:34:11,059 - train_ensemble_JK_GCNII.py [line:223] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-13 02:34:11,253 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00050 | Time(s) 0.0036 | Val Loss 0.6044 | Val Acc 0.8056 |  Train Acc 0.8939 | ETputs(KTEPS) 37044.67
+2023-04-13 02:34:11,424 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00100 | Time(s) 0.0035 | Val Loss 0.5638 | Val Acc 0.7963 |  Train Acc 0.8939 | ETputs(KTEPS) 38015.86
+2023-04-13 02:34:11,592 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00150 | Time(s) 0.0034 | Val Loss 0.5921 | Val Acc 0.8241 |  Train Acc 0.9003 | ETputs(KTEPS) 38734.46
+2023-04-13 02:34:11,763 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00200 | Time(s) 0.0034 | Val Loss 0.5507 | Val Acc 0.8056 |  Train Acc 0.9164 | ETputs(KTEPS) 38830.81
+2023-04-13 02:34:11,934 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00250 | Time(s) 0.0034 | Val Loss 0.5956 | Val Acc 0.7870 |  Train Acc 0.9100 | ETputs(KTEPS) 38854.46
+2023-04-13 02:34:12,108 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00300 | Time(s) 0.0034 | Val Loss 0.5860 | Val Acc 0.8056 |  Train Acc 0.9068 | ETputs(KTEPS) 38767.27
+2023-04-13 02:34:12,280 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00350 | Time(s) 0.0034 | Val Loss 0.5444 | Val Acc 0.8056 |  Train Acc 0.9068 | ETputs(KTEPS) 38780.74
+2023-04-13 02:34:12,458 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00400 | Time(s) 0.0034 | Val Loss 0.5742 | Val Acc 0.8056 |  Train Acc 0.9068 | ETputs(KTEPS) 38625.56
+2023-04-13 02:34:12,561 - train_ensemble_JK_GCNII.py [line:259] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-13 02:34:12,562 - train_ensemble_JK_GCNII.py [line:262] - INFO: [FINAL MODEL] Run 7 .\Val accuracy 82.84% \Val loss: 0.51
+2023-04-13 02:34:12,563 - train_ensemble_JK_GCNII.py [line:264] - INFO: [FINAL MODEL] Run 7 .	Test accuracy 83.74% \Test loss: 0.5
+2023-04-13 02:34:13,408 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00050 | Time(s) 0.0162 | Val Loss 0.6231 | Val Acc 0.8199 |  Train Acc 0.9639 | ETputs(KTEPS) 8210.14
+2023-04-13 02:34:14,227 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00100 | Time(s) 0.0163 | Val Loss 0.6864 | Val Acc 0.8060 |  Train Acc 0.9992 | ETputs(KTEPS) 8160.48
+2023-04-13 02:34:15,040 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00150 | Time(s) 0.0163 | Val Loss 0.6355 | Val Acc 0.8291 |  Train Acc 1.0000 | ETputs(KTEPS) 8162.14
+2023-04-13 02:34:15,835 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00200 | Time(s) 0.0162 | Val Loss 0.7816 | Val Acc 0.7667 |  Train Acc 1.0000 | ETputs(KTEPS) 8209.32
+2023-04-13 02:34:16,643 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00250 | Time(s) 0.0162 | Val Loss 0.5498 | Val Acc 0.8383 |  Train Acc 0.9976 | ETputs(KTEPS) 8211.85
+2023-04-13 02:34:17,438 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00300 | Time(s) 0.0161 | Val Loss 1.1007 | Val Acc 0.7691 |  Train Acc 0.9976 | ETputs(KTEPS) 8236.83
+2023-04-13 02:34:17,556 - train_ensemble_JK_GCNII.py [line:185] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-13 02:34:17,870 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00050 | Time(s) 0.0049 | Val Loss 1.2090 | Val Acc 0.7182 |  Train Acc 0.9277 | ETputs(KTEPS) 26801.21
+2023-04-13 02:34:18,173 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00100 | Time(s) 0.0048 | Val Loss 0.9232 | Val Acc 0.7113 |  Train Acc 0.9863 | ETputs(KTEPS) 27348.70
+2023-04-13 02:34:18,429 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00150 | Time(s) 0.0048 | Val Loss 0.9456 | Val Acc 0.7044 |  Train Acc 0.9952 | ETputs(KTEPS) 27403.50
+2023-04-13 02:34:18,670 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00200 | Time(s) 0.0048 | Val Loss 1.0081 | Val Acc 0.6952 |  Train Acc 0.9968 | ETputs(KTEPS) 27477.82
+2023-04-13 02:34:18,912 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00250 | Time(s) 0.0048 | Val Loss 1.0739 | Val Acc 0.6813 |  Train Acc 0.9984 | ETputs(KTEPS) 27490.33
+2023-04-13 02:34:19,153 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00300 | Time(s) 0.0048 | Val Loss 1.1369 | Val Acc 0.6767 |  Train Acc 0.9984 | ETputs(KTEPS) 27507.10
+2023-04-13 02:34:19,394 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00350 | Time(s) 0.0048 | Val Loss 1.1962 | Val Acc 0.6721 |  Train Acc 0.9992 | ETputs(KTEPS) 27535.05
+2023-04-13 02:34:19,632 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00400 | Time(s) 0.0048 | Val Loss 1.2520 | Val Acc 0.6651 |  Train Acc 1.0000 | ETputs(KTEPS) 27590.09
+2023-04-13 02:34:19,682 - train_ensemble_JK_GCNII.py [line:223] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-13 02:34:19,873 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00050 | Time(s) 0.0036 | Val Loss 0.6068 | Val Acc 0.7778 |  Train Acc 0.8875 | ETputs(KTEPS) 37039.45
+2023-04-13 02:34:20,048 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00100 | Time(s) 0.0035 | Val Loss 0.6003 | Val Acc 0.7685 |  Train Acc 0.9003 | ETputs(KTEPS) 37672.71
+2023-04-13 02:34:20,229 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00150 | Time(s) 0.0036 | Val Loss 0.5573 | Val Acc 0.8056 |  Train Acc 0.8971 | ETputs(KTEPS) 37349.57
+2023-04-13 02:34:20,411 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00200 | Time(s) 0.0036 | Val Loss 0.5937 | Val Acc 0.7778 |  Train Acc 0.9003 | ETputs(KTEPS) 37268.98
+2023-04-13 02:34:20,592 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00250 | Time(s) 0.0036 | Val Loss 0.5743 | Val Acc 0.7870 |  Train Acc 0.9003 | ETputs(KTEPS) 37224.00
+2023-04-13 02:34:20,775 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00300 | Time(s) 0.0036 | Val Loss 0.6023 | Val Acc 0.7778 |  Train Acc 0.8939 | ETputs(KTEPS) 37114.80
+2023-04-13 02:34:20,961 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00350 | Time(s) 0.0036 | Val Loss 0.5775 | Val Acc 0.7870 |  Train Acc 0.8939 | ETputs(KTEPS) 36933.42
+2023-04-13 02:34:21,107 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00400 | Time(s) 0.0035 | Val Loss 0.5376 | Val Acc 0.8426 |  Train Acc 0.8875 | ETputs(KTEPS) 37833.82
+2023-04-13 02:34:21,258 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00450 | Time(s) 0.0035 | Val Loss 0.5879 | Val Acc 0.7778 |  Train Acc 0.8842 | ETputs(KTEPS) 38438.54
+2023-04-13 02:34:21,413 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00500 | Time(s) 0.0034 | Val Loss 0.6031 | Val Acc 0.7778 |  Train Acc 0.8971 | ETputs(KTEPS) 38856.17
+2023-04-13 02:34:21,455 - train_ensemble_JK_GCNII.py [line:259] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-13 02:34:21,456 - train_ensemble_JK_GCNII.py [line:262] - INFO: [FINAL MODEL] Run 8 .\Val accuracy 84.32% \Val loss: 0.49
+2023-04-13 02:34:21,457 - train_ensemble_JK_GCNII.py [line:264] - INFO: [FINAL MODEL] Run 8 .	Test accuracy 88.34% \Test loss: 0.42
+2023-04-13 02:34:22,233 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00050 | Time(s) 0.0139 | Val Loss 0.4932 | Val Acc 0.8314 |  Train Acc 0.9606 | ETputs(KTEPS) 9547.75
+2023-04-13 02:34:22,975 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00100 | Time(s) 0.0143 | Val Loss 1.0796 | Val Acc 0.7829 |  Train Acc 0.9976 | ETputs(KTEPS) 9281.65
+2023-04-13 02:34:23,668 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00150 | Time(s) 0.0141 | Val Loss 0.9439 | Val Acc 0.8083 |  Train Acc 0.9952 | ETputs(KTEPS) 9385.34
+2023-04-13 02:34:24,376 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00200 | Time(s) 0.0141 | Val Loss 0.7451 | Val Acc 0.7737 |  Train Acc 0.9992 | ETputs(KTEPS) 9381.76
+2023-04-13 02:34:25,088 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00250 | Time(s) 0.0142 | Val Loss 0.7418 | Val Acc 0.7667 |  Train Acc 0.9992 | ETputs(KTEPS) 9372.48
+2023-04-13 02:34:25,789 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00300 | Time(s) 0.0141 | Val Loss 1.0808 | Val Acc 0.7529 |  Train Acc 0.9574 | ETputs(KTEPS) 9389.10
+2023-04-13 02:34:26,524 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00350 | Time(s) 0.0142 | Val Loss 0.7637 | Val Acc 0.7714 |  Train Acc 0.9984 | ETputs(KTEPS) 9337.57
+2023-04-13 02:34:26,574 - train_ensemble_JK_GCNII.py [line:185] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-13 02:34:26,857 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00050 | Time(s) 0.0044 | Val Loss 1.2464 | Val Acc 0.7090 |  Train Acc 0.9373 | ETputs(KTEPS) 30162.48
+2023-04-13 02:34:27,142 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00100 | Time(s) 0.0044 | Val Loss 0.9234 | Val Acc 0.7067 |  Train Acc 0.9896 | ETputs(KTEPS) 29853.43
+2023-04-13 02:34:27,394 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00150 | Time(s) 0.0044 | Val Loss 0.9195 | Val Acc 0.6767 |  Train Acc 0.9976 | ETputs(KTEPS) 29840.88
+2023-04-13 02:34:27,619 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00200 | Time(s) 0.0045 | Val Loss 0.9591 | Val Acc 0.6790 |  Train Acc 0.9984 | ETputs(KTEPS) 29784.06
+2023-04-13 02:34:27,838 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00250 | Time(s) 0.0044 | Val Loss 1.0043 | Val Acc 0.6721 |  Train Acc 0.9992 | ETputs(KTEPS) 29915.97
+2023-04-13 02:34:28,059 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00300 | Time(s) 0.0044 | Val Loss 1.0475 | Val Acc 0.6697 |  Train Acc 0.9992 | ETputs(KTEPS) 29940.21
+2023-04-13 02:34:28,279 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00350 | Time(s) 0.0044 | Val Loss 1.0876 | Val Acc 0.6582 |  Train Acc 0.9992 | ETputs(KTEPS) 29994.36
+2023-04-13 02:34:28,497 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00400 | Time(s) 0.0044 | Val Loss 1.1247 | Val Acc 0.6513 |  Train Acc 1.0000 | ETputs(KTEPS) 30069.72
+2023-04-13 02:34:28,598 - train_ensemble_JK_GCNII.py [line:223] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-13 02:34:28,780 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00050 | Time(s) 0.0035 | Val Loss 0.4306 | Val Acc 0.8426 |  Train Acc 0.8521 | ETputs(KTEPS) 38328.74
+2023-04-13 02:34:28,951 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00100 | Time(s) 0.0034 | Val Loss 0.4472 | Val Acc 0.8611 |  Train Acc 0.8521 | ETputs(KTEPS) 38980.15
+2023-04-13 02:34:29,122 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00150 | Time(s) 0.0034 | Val Loss 0.4309 | Val Acc 0.8704 |  Train Acc 0.8489 | ETputs(KTEPS) 38932.90
+2023-04-13 02:34:29,289 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00200 | Time(s) 0.0034 | Val Loss 0.4275 | Val Acc 0.8796 |  Train Acc 0.8521 | ETputs(KTEPS) 39174.10
+2023-04-13 02:34:29,459 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00250 | Time(s) 0.0034 | Val Loss 0.4564 | Val Acc 0.8426 |  Train Acc 0.8424 | ETputs(KTEPS) 39221.63
+2023-04-13 02:34:29,629 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00300 | Time(s) 0.0034 | Val Loss 0.4527 | Val Acc 0.8241 |  Train Acc 0.8585 | ETputs(KTEPS) 39279.62
+2023-04-13 02:34:29,796 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00350 | Time(s) 0.0034 | Val Loss 0.4468 | Val Acc 0.8611 |  Train Acc 0.8521 | ETputs(KTEPS) 39381.67
+2023-04-13 02:34:29,965 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00400 | Time(s) 0.0034 | Val Loss 0.4555 | Val Acc 0.8426 |  Train Acc 0.8585 | ETputs(KTEPS) 39394.70
+2023-04-13 02:34:30,137 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00450 | Time(s) 0.0034 | Val Loss 0.4535 | Val Acc 0.8426 |  Train Acc 0.8617 | ETputs(KTEPS) 39315.48
+2023-04-13 02:34:30,305 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00500 | Time(s) 0.0034 | Val Loss 0.4492 | Val Acc 0.8519 |  Train Acc 0.8553 | ETputs(KTEPS) 39357.88
+2023-04-13 02:34:30,473 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00550 | Time(s) 0.0034 | Val Loss 0.4168 | Val Acc 0.8704 |  Train Acc 0.8650 | ETputs(KTEPS) 39396.31
+2023-04-13 02:34:30,564 - train_ensemble_JK_GCNII.py [line:259] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-13 02:34:30,565 - train_ensemble_JK_GCNII.py [line:262] - INFO: [FINAL MODEL] Run 9 .\Val accuracy 88.01% \Val loss: 0.4
+2023-04-13 02:34:30,566 - train_ensemble_JK_GCNII.py [line:264] - INFO: [FINAL MODEL] Run 9 .	Test accuracy 84.89% \Test loss: 0.48
+2023-04-13 02:34:31,305 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00050 | Time(s) 0.0140 | Val Loss 0.5462 | Val Acc 0.8476 |  Train Acc 0.9847 | ETputs(KTEPS) 9441.14
+2023-04-13 02:34:32,004 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00100 | Time(s) 0.0140 | Val Loss 0.6944 | Val Acc 0.8060 |  Train Acc 0.9992 | ETputs(KTEPS) 9493.15
+2023-04-13 02:34:32,703 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00150 | Time(s) 0.0140 | Val Loss 0.6260 | Val Acc 0.8268 |  Train Acc 0.9944 | ETputs(KTEPS) 9498.20
+2023-04-13 02:34:33,395 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00200 | Time(s) 0.0139 | Val Loss 0.7741 | Val Acc 0.8383 |  Train Acc 0.9976 | ETputs(KTEPS) 9523.58
+2023-04-13 02:34:34,089 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00250 | Time(s) 0.0139 | Val Loss 0.8993 | Val Acc 0.7737 |  Train Acc 0.9871 | ETputs(KTEPS) 9532.42
+2023-04-13 02:34:34,794 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00300 | Time(s) 0.0139 | Val Loss 1.0977 | Val Acc 0.6836 |  Train Acc 0.9880 | ETputs(KTEPS) 9515.07
+2023-04-13 02:34:35,498 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00350 | Time(s) 0.0140 | Val Loss 0.5764 | Val Acc 0.8291 |  Train Acc 0.9960 | ETputs(KTEPS) 9502.43
+2023-04-13 02:34:35,618 - train_ensemble_JK_GCNII.py [line:185] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-13 02:34:35,892 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00050 | Time(s) 0.0042 | Val Loss 1.1900 | Val Acc 0.7206 |  Train Acc 0.9454 | ETputs(KTEPS) 31525.83
+2023-04-13 02:34:36,172 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00100 | Time(s) 0.0043 | Val Loss 0.9109 | Val Acc 0.7206 |  Train Acc 0.9904 | ETputs(KTEPS) 30877.58
+2023-04-13 02:34:36,417 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00150 | Time(s) 0.0043 | Val Loss 0.9204 | Val Acc 0.7067 |  Train Acc 0.9960 | ETputs(KTEPS) 30540.75
+2023-04-13 02:34:36,638 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00200 | Time(s) 0.0044 | Val Loss 0.9700 | Val Acc 0.6975 |  Train Acc 0.9968 | ETputs(KTEPS) 30421.64
+2023-04-13 02:34:36,861 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00250 | Time(s) 0.0044 | Val Loss 1.0242 | Val Acc 0.7021 |  Train Acc 0.9984 | ETputs(KTEPS) 30308.62
+2023-04-13 02:34:37,084 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00300 | Time(s) 0.0044 | Val Loss 1.0761 | Val Acc 0.6905 |  Train Acc 1.0000 | ETputs(KTEPS) 30244.06
+2023-04-13 02:34:37,310 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00350 | Time(s) 0.0044 | Val Loss 1.1237 | Val Acc 0.6882 |  Train Acc 1.0000 | ETputs(KTEPS) 30128.15
+2023-04-13 02:34:37,532 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00400 | Time(s) 0.0044 | Val Loss 1.1671 | Val Acc 0.6859 |  Train Acc 1.0000 | ETputs(KTEPS) 30119.88
+2023-04-13 02:34:37,609 - train_ensemble_JK_GCNII.py [line:223] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-13 02:34:37,798 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00050 | Time(s) 0.0034 | Val Loss 0.4145 | Val Acc 0.8611 |  Train Acc 0.8617 | ETputs(KTEPS) 38797.80
+2023-04-13 02:34:37,965 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00100 | Time(s) 0.0034 | Val Loss 0.4041 | Val Acc 0.8704 |  Train Acc 0.8489 | ETputs(KTEPS) 39275.18
+2023-04-13 02:34:38,133 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00150 | Time(s) 0.0034 | Val Loss 0.3954 | Val Acc 0.8704 |  Train Acc 0.8585 | ETputs(KTEPS) 39473.67
+2023-04-13 02:34:38,300 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00200 | Time(s) 0.0034 | Val Loss 0.4106 | Val Acc 0.8796 |  Train Acc 0.8682 | ETputs(KTEPS) 39588.52
+2023-04-13 02:34:38,469 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00250 | Time(s) 0.0034 | Val Loss 0.4057 | Val Acc 0.8796 |  Train Acc 0.8682 | ETputs(KTEPS) 39550.92
+2023-04-13 02:34:38,637 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00300 | Time(s) 0.0034 | Val Loss 0.3981 | Val Acc 0.8981 |  Train Acc 0.8553 | ETputs(KTEPS) 39565.74
+2023-04-13 02:34:38,805 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00350 | Time(s) 0.0033 | Val Loss 0.4068 | Val Acc 0.8889 |  Train Acc 0.8617 | ETputs(KTEPS) 39604.59
+2023-04-13 02:34:38,974 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00400 | Time(s) 0.0034 | Val Loss 0.3758 | Val Acc 0.8796 |  Train Acc 0.8521 | ETputs(KTEPS) 39589.85
+2023-04-13 02:34:39,141 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00450 | Time(s) 0.0033 | Val Loss 0.3928 | Val Acc 0.8704 |  Train Acc 0.8585 | ETputs(KTEPS) 39641.19
+2023-04-13 02:34:39,311 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00500 | Time(s) 0.0033 | Val Loss 0.4036 | Val Acc 0.8704 |  Train Acc 0.8553 | ETputs(KTEPS) 39602.91
+2023-04-13 02:34:39,481 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00550 | Time(s) 0.0034 | Val Loss 0.3976 | Val Acc 0.8889 |  Train Acc 0.8553 | ETputs(KTEPS) 39562.03
+2023-04-13 02:34:39,647 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00600 | Time(s) 0.0033 | Val Loss 0.4019 | Val Acc 0.8796 |  Train Acc 0.8682 | ETputs(KTEPS) 39613.61
+2023-04-13 02:34:39,754 - train_ensemble_JK_GCNII.py [line:259] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-13 02:34:39,755 - train_ensemble_JK_GCNII.py [line:262] - INFO: [FINAL MODEL] Run 10 .\Val accuracy 87.82% \Val loss: 0.43
+2023-04-13 02:34:39,756 - train_ensemble_JK_GCNII.py [line:264] - INFO: [FINAL MODEL] Run 10 .	Test accuracy 82.76% \Test loss: 0.5
+2023-04-13 02:34:40,501 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00050 | Time(s) 0.0144 | Val Loss 0.7298 | Val Acc 0.7945 |  Train Acc 0.9960 | ETputs(KTEPS) 9228.70
+2023-04-13 02:34:41,215 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00100 | Time(s) 0.0143 | Val Loss 0.7861 | Val Acc 0.8222 |  Train Acc 1.0000 | ETputs(KTEPS) 9268.64
+2023-04-13 02:34:41,911 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00150 | Time(s) 0.0142 | Val Loss 0.7266 | Val Acc 0.7714 |  Train Acc 0.9920 | ETputs(KTEPS) 9359.40
+2023-04-13 02:34:42,609 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00200 | Time(s) 0.0141 | Val Loss 0.7124 | Val Acc 0.8060 |  Train Acc 1.0000 | ETputs(KTEPS) 9397.19
+2023-04-13 02:34:43,303 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00250 | Time(s) 0.0141 | Val Loss 0.6050 | Val Acc 0.8222 |  Train Acc 0.9992 | ETputs(KTEPS) 9432.09
+2023-04-13 02:34:43,996 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00300 | Time(s) 0.0140 | Val Loss 0.9940 | Val Acc 0.7829 |  Train Acc 0.9189 | ETputs(KTEPS) 9463.41
+2023-04-13 02:34:44,693 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00350 | Time(s) 0.0140 | Val Loss 0.6504 | Val Acc 0.8199 |  Train Acc 1.0000 | ETputs(KTEPS) 9473.56
+2023-04-13 02:34:45,394 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00400 | Time(s) 0.0140 | Val Loss 0.8195 | Val Acc 0.7783 |  Train Acc 1.0000 | ETputs(KTEPS) 9473.69
+2023-04-13 02:34:46,130 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00450 | Time(s) 0.0141 | Val Loss 0.8386 | Val Acc 0.8060 |  Train Acc 1.0000 | ETputs(KTEPS) 9422.19
+2023-04-13 02:34:46,845 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00500 | Time(s) 0.0141 | Val Loss 0.8669 | Val Acc 0.7783 |  Train Acc 1.0000 | ETputs(KTEPS) 9409.29
+2023-04-13 02:34:47,558 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00550 | Time(s) 0.0141 | Val Loss 1.1004 | Val Acc 0.7714 |  Train Acc 1.0000 | ETputs(KTEPS) 9401.10
+2023-04-13 02:34:47,580 - train_ensemble_JK_GCNII.py [line:185] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-13 02:34:47,857 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00050 | Time(s) 0.0043 | Val Loss 1.2061 | Val Acc 0.7367 |  Train Acc 0.9349 | ETputs(KTEPS) 30872.89
+2023-04-13 02:34:48,146 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00100 | Time(s) 0.0044 | Val Loss 0.8939 | Val Acc 0.7182 |  Train Acc 0.9912 | ETputs(KTEPS) 29885.19
+2023-04-13 02:34:48,402 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00150 | Time(s) 0.0045 | Val Loss 0.8903 | Val Acc 0.7159 |  Train Acc 0.9968 | ETputs(KTEPS) 29740.01
+2023-04-13 02:34:48,626 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00200 | Time(s) 0.0045 | Val Loss 0.9317 | Val Acc 0.7113 |  Train Acc 0.9976 | ETputs(KTEPS) 29729.41
+2023-04-13 02:34:48,851 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00250 | Time(s) 0.0045 | Val Loss 0.9801 | Val Acc 0.7090 |  Train Acc 0.9992 | ETputs(KTEPS) 29703.19
+2023-04-13 02:34:49,082 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00300 | Time(s) 0.0045 | Val Loss 1.0276 | Val Acc 0.7021 |  Train Acc 1.0000 | ETputs(KTEPS) 29566.07
+2023-04-13 02:34:49,308 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00350 | Time(s) 0.0045 | Val Loss 1.0720 | Val Acc 0.6905 |  Train Acc 1.0000 | ETputs(KTEPS) 29541.59
+2023-04-13 02:34:49,536 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00400 | Time(s) 0.0045 | Val Loss 1.1130 | Val Acc 0.6813 |  Train Acc 1.0000 | ETputs(KTEPS) 29503.98
+2023-04-13 02:34:49,647 - train_ensemble_JK_GCNII.py [line:223] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-13 02:34:49,825 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00050 | Time(s) 0.0033 | Val Loss 0.5645 | Val Acc 0.7870 |  Train Acc 0.8907 | ETputs(KTEPS) 39699.64
+2023-04-13 02:34:49,999 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00100 | Time(s) 0.0034 | Val Loss 0.5823 | Val Acc 0.7685 |  Train Acc 0.8746 | ETputs(KTEPS) 39070.02
+2023-04-13 02:34:50,165 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00150 | Time(s) 0.0034 | Val Loss 0.5808 | Val Acc 0.7963 |  Train Acc 0.8810 | ETputs(KTEPS) 39456.56
+2023-04-13 02:34:50,331 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00200 | Time(s) 0.0033 | Val Loss 0.5919 | Val Acc 0.7685 |  Train Acc 0.8842 | ETputs(KTEPS) 39689.75
+2023-04-13 02:34:50,495 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00250 | Time(s) 0.0033 | Val Loss 0.5963 | Val Acc 0.7593 |  Train Acc 0.8746 | ETputs(KTEPS) 39850.33
+2023-04-13 02:34:50,662 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00300 | Time(s) 0.0033 | Val Loss 0.5976 | Val Acc 0.7685 |  Train Acc 0.8810 | ETputs(KTEPS) 39874.20
+2023-04-13 02:34:50,829 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00350 | Time(s) 0.0033 | Val Loss 0.5488 | Val Acc 0.7870 |  Train Acc 0.8907 | ETputs(KTEPS) 39926.45
+2023-04-13 02:34:50,996 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00400 | Time(s) 0.0033 | Val Loss 0.6017 | Val Acc 0.7685 |  Train Acc 0.8810 | ETputs(KTEPS) 39940.98
+2023-04-13 02:34:51,161 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00450 | Time(s) 0.0033 | Val Loss 0.5690 | Val Acc 0.7963 |  Train Acc 0.8746 | ETputs(KTEPS) 40039.78
+2023-04-13 02:34:51,326 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00500 | Time(s) 0.0033 | Val Loss 0.5652 | Val Acc 0.7870 |  Train Acc 0.8875 | ETputs(KTEPS) 40075.68
+2023-04-13 02:34:51,489 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00550 | Time(s) 0.0033 | Val Loss 0.5534 | Val Acc 0.7870 |  Train Acc 0.8714 | ETputs(KTEPS) 40137.83
+2023-04-13 02:34:51,654 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00600 | Time(s) 0.0033 | Val Loss 0.6115 | Val Acc 0.7870 |  Train Acc 0.8778 | ETputs(KTEPS) 40161.32
+2023-04-13 02:34:51,820 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00650 | Time(s) 0.0033 | Val Loss 0.6055 | Val Acc 0.7778 |  Train Acc 0.8842 | ETputs(KTEPS) 40163.32
+2023-04-13 02:34:51,988 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00700 | Time(s) 0.0033 | Val Loss 0.5730 | Val Acc 0.7870 |  Train Acc 0.8842 | ETputs(KTEPS) 40141.95
+2023-04-13 02:34:52,055 - train_ensemble_JK_GCNII.py [line:259] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-13 02:34:52,056 - train_ensemble_JK_GCNII.py [line:262] - INFO: [FINAL MODEL] Run 11 .\Val accuracy 81.92% \Val loss: 0.59
+2023-04-13 02:34:52,057 - train_ensemble_JK_GCNII.py [line:264] - INFO: [FINAL MODEL] Run 11 .	Test accuracy 83.09% \Test loss: 0.57
+2023-04-13 02:34:52,866 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00050 | Time(s) 0.0144 | Val Loss 0.6109 | Val Acc 0.8199 |  Train Acc 0.9880 | ETputs(KTEPS) 9188.53
+2023-04-13 02:34:53,591 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00100 | Time(s) 0.0143 | Val Loss 0.6811 | Val Acc 0.8406 |  Train Acc 1.0000 | ETputs(KTEPS) 9276.57
+2023-04-13 02:34:54,287 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00150 | Time(s) 0.0142 | Val Loss 0.6124 | Val Acc 0.8176 |  Train Acc 0.9976 | ETputs(KTEPS) 9364.72
+2023-04-13 02:34:54,984 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00200 | Time(s) 0.0141 | Val Loss 0.5933 | Val Acc 0.8176 |  Train Acc 0.9976 | ETputs(KTEPS) 9405.13
+2023-04-13 02:34:55,682 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00250 | Time(s) 0.0141 | Val Loss 1.0936 | Val Acc 0.8037 |  Train Acc 0.8369 | ETputs(KTEPS) 9426.73
+2023-04-13 02:34:56,375 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00300 | Time(s) 0.0140 | Val Loss 0.9801 | Val Acc 0.7182 |  Train Acc 0.9799 | ETputs(KTEPS) 9453.30
+2023-04-13 02:34:57,093 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00350 | Time(s) 0.0141 | Val Loss 0.5924 | Val Acc 0.8199 |  Train Acc 0.9984 | ETputs(KTEPS) 9424.57
+2023-04-13 02:34:57,341 - train_ensemble_JK_GCNII.py [line:185] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-13 02:34:57,622 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00050 | Time(s) 0.0044 | Val Loss 1.2620 | Val Acc 0.6905 |  Train Acc 0.9317 | ETputs(KTEPS) 30341.92
+2023-04-13 02:34:57,895 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00100 | Time(s) 0.0043 | Val Loss 0.9647 | Val Acc 0.6952 |  Train Acc 0.9888 | ETputs(KTEPS) 30695.22
+2023-04-13 02:34:58,131 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00150 | Time(s) 0.0043 | Val Loss 0.9701 | Val Acc 0.7044 |  Train Acc 0.9968 | ETputs(KTEPS) 30855.37
+2023-04-13 02:34:58,345 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00200 | Time(s) 0.0043 | Val Loss 1.0128 | Val Acc 0.6859 |  Train Acc 0.9968 | ETputs(KTEPS) 30930.41
+2023-04-13 02:34:58,555 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00250 | Time(s) 0.0043 | Val Loss 1.0614 | Val Acc 0.6836 |  Train Acc 0.9984 | ETputs(KTEPS) 31090.49
+2023-04-13 02:34:58,774 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00300 | Time(s) 0.0043 | Val Loss 1.1102 | Val Acc 0.6790 |  Train Acc 0.9992 | ETputs(KTEPS) 30959.70
+2023-04-13 02:34:58,998 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00350 | Time(s) 0.0043 | Val Loss 1.1564 | Val Acc 0.6790 |  Train Acc 0.9992 | ETputs(KTEPS) 30788.87
+2023-04-13 02:34:59,218 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00400 | Time(s) 0.0043 | Val Loss 1.2000 | Val Acc 0.6721 |  Train Acc 0.9992 | ETputs(KTEPS) 30724.15
+2023-04-13 02:34:59,294 - train_ensemble_JK_GCNII.py [line:223] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-13 02:34:59,477 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00050 | Time(s) 0.0034 | Val Loss 0.6503 | Val Acc 0.7963 |  Train Acc 0.8682 | ETputs(KTEPS) 38862.57
+2023-04-13 02:34:59,648 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00100 | Time(s) 0.0034 | Val Loss 0.5687 | Val Acc 0.8148 |  Train Acc 0.8778 | ETputs(KTEPS) 39336.77
+2023-04-13 02:34:59,817 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00150 | Time(s) 0.0034 | Val Loss 0.5647 | Val Acc 0.8148 |  Train Acc 0.8714 | ETputs(KTEPS) 39557.84
+2023-04-13 02:34:59,982 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00200 | Time(s) 0.0033 | Val Loss 0.5777 | Val Acc 0.8333 |  Train Acc 0.8714 | ETputs(KTEPS) 39727.63
+2023-04-13 02:35:00,147 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00250 | Time(s) 0.0033 | Val Loss 0.5820 | Val Acc 0.8241 |  Train Acc 0.8585 | ETputs(KTEPS) 39858.80
+2023-04-13 02:35:00,315 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00300 | Time(s) 0.0033 | Val Loss 0.5636 | Val Acc 0.8056 |  Train Acc 0.8650 | ETputs(KTEPS) 39853.26
+2023-04-13 02:35:00,479 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00350 | Time(s) 0.0033 | Val Loss 0.5924 | Val Acc 0.8056 |  Train Acc 0.8650 | ETputs(KTEPS) 39959.43
+2023-04-13 02:35:00,645 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00400 | Time(s) 0.0033 | Val Loss 0.5765 | Val Acc 0.8148 |  Train Acc 0.8810 | ETputs(KTEPS) 40000.27
+2023-04-13 02:35:00,659 - train_ensemble_JK_GCNII.py [line:259] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-13 02:35:00,660 - train_ensemble_JK_GCNII.py [line:262] - INFO: [FINAL MODEL] Run 12 .\Val accuracy 85.06% \Val loss: 0.49
+2023-04-13 02:35:00,660 - train_ensemble_JK_GCNII.py [line:264] - INFO: [FINAL MODEL] Run 12 .	Test accuracy 86.70% \Test loss: 0.47
+2023-04-13 02:35:01,408 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00050 | Time(s) 0.0142 | Val Loss 0.6550 | Val Acc 0.7875 |  Train Acc 0.9558 | ETputs(KTEPS) 9362.62
+2023-04-13 02:35:02,116 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00100 | Time(s) 0.0141 | Val Loss 0.7000 | Val Acc 0.8383 |  Train Acc 0.9992 | ETputs(KTEPS) 9375.80
+2023-04-13 02:35:02,834 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00150 | Time(s) 0.0142 | Val Loss 0.7533 | Val Acc 0.8060 |  Train Acc 1.0000 | ETputs(KTEPS) 9334.84
+2023-04-13 02:35:03,550 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00200 | Time(s) 0.0142 | Val Loss 0.7810 | Val Acc 0.7852 |  Train Acc 1.0000 | ETputs(KTEPS) 9319.41
+2023-04-13 02:35:04,256 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00250 | Time(s) 0.0142 | Val Loss 0.9955 | Val Acc 0.8129 |  Train Acc 0.9976 | ETputs(KTEPS) 9337.05
+2023-04-13 02:35:04,956 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00300 | Time(s) 0.0142 | Val Loss 0.8234 | Val Acc 0.7852 |  Train Acc 0.9960 | ETputs(KTEPS) 9362.63
+2023-04-13 02:35:05,621 - train_ensemble_JK_GCNII.py [line:185] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-13 02:35:05,897 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00050 | Time(s) 0.0043 | Val Loss 1.2212 | Val Acc 0.6998 |  Train Acc 0.9341 | ETputs(KTEPS) 31073.53
+2023-04-13 02:35:06,168 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00100 | Time(s) 0.0042 | Val Loss 0.9220 | Val Acc 0.7067 |  Train Acc 0.9896 | ETputs(KTEPS) 31242.59
+2023-04-13 02:35:06,394 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00150 | Time(s) 0.0042 | Val Loss 0.9350 | Val Acc 0.7044 |  Train Acc 0.9984 | ETputs(KTEPS) 31581.74
+2023-04-13 02:35:06,599 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00200 | Time(s) 0.0042 | Val Loss 0.9923 | Val Acc 0.6859 |  Train Acc 0.9992 | ETputs(KTEPS) 31809.81
+2023-04-13 02:35:06,807 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00250 | Time(s) 0.0042 | Val Loss 1.0517 | Val Acc 0.6882 |  Train Acc 0.9992 | ETputs(KTEPS) 31848.80
+2023-04-13 02:35:07,019 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00300 | Time(s) 0.0042 | Val Loss 1.1063 | Val Acc 0.6790 |  Train Acc 0.9992 | ETputs(KTEPS) 31784.65
+2023-04-13 02:35:07,224 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00350 | Time(s) 0.0042 | Val Loss 1.1551 | Val Acc 0.6767 |  Train Acc 0.9992 | ETputs(KTEPS) 31890.02
+2023-04-13 02:35:07,430 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00400 | Time(s) 0.0042 | Val Loss 1.1988 | Val Acc 0.6767 |  Train Acc 1.0000 | ETputs(KTEPS) 31954.87
+2023-04-13 02:35:07,494 - train_ensemble_JK_GCNII.py [line:223] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-13 02:35:07,657 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00050 | Time(s) 0.0031 | Val Loss 0.6331 | Val Acc 0.8333 |  Train Acc 0.8875 | ETputs(KTEPS) 42785.59
+2023-04-13 02:35:07,814 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00100 | Time(s) 0.0031 | Val Loss 0.6476 | Val Acc 0.8704 |  Train Acc 0.8875 | ETputs(KTEPS) 42805.51
+2023-04-13 02:35:07,971 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00150 | Time(s) 0.0031 | Val Loss 0.6508 | Val Acc 0.8426 |  Train Acc 0.8875 | ETputs(KTEPS) 42754.62
+2023-04-13 02:35:08,131 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00200 | Time(s) 0.0031 | Val Loss 0.5906 | Val Acc 0.8333 |  Train Acc 0.8810 | ETputs(KTEPS) 42512.64
+2023-04-13 02:35:08,290 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00250 | Time(s) 0.0031 | Val Loss 0.6346 | Val Acc 0.8519 |  Train Acc 0.8810 | ETputs(KTEPS) 42410.31
+2023-04-13 02:35:08,455 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00300 | Time(s) 0.0031 | Val Loss 0.6320 | Val Acc 0.8611 |  Train Acc 0.8746 | ETputs(KTEPS) 42155.90
+2023-04-13 02:35:08,612 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00350 | Time(s) 0.0031 | Val Loss 0.6432 | Val Acc 0.8519 |  Train Acc 0.8810 | ETputs(KTEPS) 42186.99
+2023-04-13 02:35:08,767 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00400 | Time(s) 0.0031 | Val Loss 0.5986 | Val Acc 0.8611 |  Train Acc 0.8810 | ETputs(KTEPS) 42305.31
+2023-04-13 02:35:08,923 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00450 | Time(s) 0.0031 | Val Loss 0.5942 | Val Acc 0.8333 |  Train Acc 0.8842 | ETputs(KTEPS) 42364.74
+2023-04-13 02:35:09,080 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00500 | Time(s) 0.0031 | Val Loss 0.6388 | Val Acc 0.8426 |  Train Acc 0.8746 | ETputs(KTEPS) 42361.99
+2023-04-13 02:35:09,237 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00550 | Time(s) 0.0031 | Val Loss 0.6406 | Val Acc 0.8704 |  Train Acc 0.8778 | ETputs(KTEPS) 42390.32
+2023-04-13 02:35:09,366 - train_ensemble_JK_GCNII.py [line:259] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-13 02:35:09,366 - train_ensemble_JK_GCNII.py [line:262] - INFO: [FINAL MODEL] Run 13 .\Val accuracy 84.87% \Val loss: 0.48
+2023-04-13 02:35:09,367 - train_ensemble_JK_GCNII.py [line:264] - INFO: [FINAL MODEL] Run 13 .	Test accuracy 84.73% \Test loss: 0.49
+2023-04-13 02:35:10,151 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00050 | Time(s) 0.0150 | Val Loss 0.8071 | Val Acc 0.7390 |  Train Acc 0.9406 | ETputs(KTEPS) 8825.03
+2023-04-13 02:35:10,904 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00100 | Time(s) 0.0150 | Val Loss 0.7209 | Val Acc 0.7875 |  Train Acc 0.9968 | ETputs(KTEPS) 8822.19
+2023-04-13 02:35:11,657 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00150 | Time(s) 0.0150 | Val Loss 0.7130 | Val Acc 0.8453 |  Train Acc 0.9855 | ETputs(KTEPS) 8819.88
+2023-04-13 02:35:12,418 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00200 | Time(s) 0.0151 | Val Loss 0.6915 | Val Acc 0.7991 |  Train Acc 0.9912 | ETputs(KTEPS) 8796.14
+2023-04-13 02:35:13,171 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00250 | Time(s) 0.0151 | Val Loss 0.8406 | Val Acc 0.8176 |  Train Acc 0.9992 | ETputs(KTEPS) 8801.85
+2023-04-13 02:35:13,889 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00300 | Time(s) 0.0149 | Val Loss 0.8126 | Val Acc 0.7875 |  Train Acc 0.9992 | ETputs(KTEPS) 8874.60
+2023-04-13 02:35:13,995 - train_ensemble_JK_GCNII.py [line:185] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-13 02:35:14,282 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00050 | Time(s) 0.0045 | Val Loss 1.2475 | Val Acc 0.7575 |  Train Acc 0.9373 | ETputs(KTEPS) 29754.86
+2023-04-13 02:35:14,569 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00100 | Time(s) 0.0045 | Val Loss 0.8612 | Val Acc 0.7737 |  Train Acc 0.9871 | ETputs(KTEPS) 29516.90
+2023-04-13 02:35:14,836 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00150 | Time(s) 0.0045 | Val Loss 0.8339 | Val Acc 0.7436 |  Train Acc 0.9984 | ETputs(KTEPS) 29710.10
+2023-04-13 02:35:15,049 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00200 | Time(s) 0.0044 | Val Loss 0.8587 | Val Acc 0.7321 |  Train Acc 0.9984 | ETputs(KTEPS) 30098.66
+2023-04-13 02:35:15,256 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00250 | Time(s) 0.0043 | Val Loss 0.8943 | Val Acc 0.7367 |  Train Acc 0.9992 | ETputs(KTEPS) 30500.98
+2023-04-13 02:35:15,464 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00300 | Time(s) 0.0043 | Val Loss 0.9316 | Val Acc 0.7275 |  Train Acc 0.9992 | ETputs(KTEPS) 30727.07
+2023-04-13 02:35:15,676 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00350 | Time(s) 0.0043 | Val Loss 0.9682 | Val Acc 0.7229 |  Train Acc 0.9992 | ETputs(KTEPS) 30827.51
+2023-04-13 02:35:15,888 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00400 | Time(s) 0.0043 | Val Loss 1.0031 | Val Acc 0.7229 |  Train Acc 0.9992 | ETputs(KTEPS) 30906.29
+2023-04-13 02:35:16,050 - train_ensemble_JK_GCNII.py [line:223] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-13 02:35:16,219 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00050 | Time(s) 0.0032 | Val Loss 0.5398 | Val Acc 0.8426 |  Train Acc 0.8971 | ETputs(KTEPS) 41843.48
+2023-04-13 02:35:16,381 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00100 | Time(s) 0.0032 | Val Loss 0.5140 | Val Acc 0.8426 |  Train Acc 0.8939 | ETputs(KTEPS) 41844.52
+2023-04-13 02:35:16,545 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00150 | Time(s) 0.0032 | Val Loss 0.4861 | Val Acc 0.8519 |  Train Acc 0.8971 | ETputs(KTEPS) 41939.71
+2023-04-13 02:35:16,704 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00200 | Time(s) 0.0032 | Val Loss 0.5428 | Val Acc 0.8333 |  Train Acc 0.8939 | ETputs(KTEPS) 41912.41
+2023-04-13 02:35:16,870 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00250 | Time(s) 0.0032 | Val Loss 0.5631 | Val Acc 0.8241 |  Train Acc 0.8971 | ETputs(KTEPS) 41620.97
+2023-04-13 02:35:17,025 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00300 | Time(s) 0.0032 | Val Loss 0.5111 | Val Acc 0.8519 |  Train Acc 0.8907 | ETputs(KTEPS) 41881.52
+2023-04-13 02:35:17,181 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00350 | Time(s) 0.0032 | Val Loss 0.5224 | Val Acc 0.8333 |  Train Acc 0.8971 | ETputs(KTEPS) 41980.30
+2023-04-13 02:35:17,338 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00400 | Time(s) 0.0032 | Val Loss 0.5482 | Val Acc 0.8426 |  Train Acc 0.8907 | ETputs(KTEPS) 42074.20
+2023-04-13 02:35:17,499 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00450 | Time(s) 0.0032 | Val Loss 0.4684 | Val Acc 0.8426 |  Train Acc 0.8907 | ETputs(KTEPS) 42055.92
+2023-04-13 02:35:17,657 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00500 | Time(s) 0.0032 | Val Loss 0.4980 | Val Acc 0.8426 |  Train Acc 0.9003 | ETputs(KTEPS) 42053.49
+2023-04-13 02:35:17,813 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00550 | Time(s) 0.0031 | Val Loss 0.5500 | Val Acc 0.8333 |  Train Acc 0.9003 | ETputs(KTEPS) 42117.52
+2023-04-13 02:35:17,970 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00600 | Time(s) 0.0031 | Val Loss 0.5733 | Val Acc 0.8333 |  Train Acc 0.8939 | ETputs(KTEPS) 42157.14
+2023-04-13 02:35:18,126 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00650 | Time(s) 0.0031 | Val Loss 0.5217 | Val Acc 0.8426 |  Train Acc 0.8971 | ETputs(KTEPS) 42212.49
+2023-04-13 02:35:18,284 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00700 | Time(s) 0.0031 | Val Loss 0.4819 | Val Acc 0.8611 |  Train Acc 0.8939 | ETputs(KTEPS) 42214.51
+2023-04-13 02:35:18,308 - train_ensemble_JK_GCNII.py [line:259] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-13 02:35:18,309 - train_ensemble_JK_GCNII.py [line:262] - INFO: [FINAL MODEL] Run 14 .\Val accuracy 87.45% \Val loss: 0.42
+2023-04-13 02:35:18,310 - train_ensemble_JK_GCNII.py [line:264] - INFO: [FINAL MODEL] Run 14 .	Test accuracy 83.25% \Test loss: 0.49
+2023-04-13 02:35:19,121 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00050 | Time(s) 0.0145 | Val Loss 0.5885 | Val Acc 0.8199 |  Train Acc 0.9847 | ETputs(KTEPS) 9138.84
+2023-04-13 02:35:19,832 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00100 | Time(s) 0.0144 | Val Loss 0.7804 | Val Acc 0.8129 |  Train Acc 0.9992 | ETputs(KTEPS) 9242.82
+2023-04-13 02:35:20,547 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00150 | Time(s) 0.0143 | Val Loss 0.8333 | Val Acc 0.7737 |  Train Acc 1.0000 | ETputs(KTEPS) 9256.83
+2023-04-13 02:35:21,264 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00200 | Time(s) 0.0143 | Val Loss 0.7436 | Val Acc 0.7829 |  Train Acc 0.9944 | ETputs(KTEPS) 9257.10
+2023-04-13 02:35:21,986 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00250 | Time(s) 0.0143 | Val Loss 0.7382 | Val Acc 0.7875 |  Train Acc 0.9992 | ETputs(KTEPS) 9245.61
+2023-04-13 02:35:22,702 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00300 | Time(s) 0.0143 | Val Loss 0.8657 | Val Acc 0.7598 |  Train Acc 0.9968 | ETputs(KTEPS) 9251.25
+2023-04-13 02:35:23,379 - train_ensemble_JK_GCNII.py [line:185] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-13 02:35:23,663 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00050 | Time(s) 0.0044 | Val Loss 1.2174 | Val Acc 0.7275 |  Train Acc 0.9349 | ETputs(KTEPS) 29894.95
+2023-04-13 02:35:23,945 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00100 | Time(s) 0.0044 | Val Loss 0.9735 | Val Acc 0.7136 |  Train Acc 0.9880 | ETputs(KTEPS) 29845.30
+2023-04-13 02:35:24,187 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00150 | Time(s) 0.0045 | Val Loss 0.9875 | Val Acc 0.7021 |  Train Acc 0.9952 | ETputs(KTEPS) 29800.12
+2023-04-13 02:35:24,408 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00200 | Time(s) 0.0044 | Val Loss 1.0335 | Val Acc 0.7021 |  Train Acc 0.9976 | ETputs(KTEPS) 29874.69
+2023-04-13 02:35:24,627 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00250 | Time(s) 0.0044 | Val Loss 1.0826 | Val Acc 0.6952 |  Train Acc 0.9984 | ETputs(KTEPS) 29975.68
+2023-04-13 02:35:24,850 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00300 | Time(s) 0.0044 | Val Loss 1.1301 | Val Acc 0.6928 |  Train Acc 0.9992 | ETputs(KTEPS) 29971.25
+2023-04-13 02:35:25,071 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00350 | Time(s) 0.0044 | Val Loss 1.1745 | Val Acc 0.6928 |  Train Acc 0.9992 | ETputs(KTEPS) 29995.65
+2023-04-13 02:35:25,276 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00400 | Time(s) 0.0044 | Val Loss 1.2156 | Val Acc 0.6859 |  Train Acc 1.0000 | ETputs(KTEPS) 30290.90
+2023-04-13 02:35:25,329 - train_ensemble_JK_GCNII.py [line:223] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-13 02:35:25,495 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00050 | Time(s) 0.0032 | Val Loss 0.4276 | Val Acc 0.8796 |  Train Acc 0.8810 | ETputs(KTEPS) 41993.95
+2023-04-13 02:35:25,656 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00100 | Time(s) 0.0032 | Val Loss 0.4573 | Val Acc 0.8704 |  Train Acc 0.8875 | ETputs(KTEPS) 41823.85
+2023-04-13 02:35:25,816 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00150 | Time(s) 0.0032 | Val Loss 0.4408 | Val Acc 0.8611 |  Train Acc 0.8907 | ETputs(KTEPS) 41772.75
+2023-04-13 02:35:25,973 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00200 | Time(s) 0.0032 | Val Loss 0.4147 | Val Acc 0.8981 |  Train Acc 0.8907 | ETputs(KTEPS) 41894.07
+2023-04-13 02:35:26,134 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00250 | Time(s) 0.0032 | Val Loss 0.4317 | Val Acc 0.8796 |  Train Acc 0.8714 | ETputs(KTEPS) 41797.73
+2023-04-13 02:35:26,299 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00300 | Time(s) 0.0032 | Val Loss 0.3954 | Val Acc 0.8981 |  Train Acc 0.8907 | ETputs(KTEPS) 41642.94
+2023-04-13 02:35:26,457 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00350 | Time(s) 0.0032 | Val Loss 0.4195 | Val Acc 0.8796 |  Train Acc 0.8875 | ETputs(KTEPS) 41697.98
+2023-04-13 02:35:26,619 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00400 | Time(s) 0.0032 | Val Loss 0.4417 | Val Acc 0.8796 |  Train Acc 0.8842 | ETputs(KTEPS) 41654.65
+2023-04-13 02:35:26,777 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00450 | Time(s) 0.0032 | Val Loss 0.4323 | Val Acc 0.8796 |  Train Acc 0.8810 | ETputs(KTEPS) 41700.49
+2023-04-13 02:35:26,932 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00500 | Time(s) 0.0032 | Val Loss 0.4251 | Val Acc 0.8611 |  Train Acc 0.8682 | ETputs(KTEPS) 41830.28
+2023-04-13 02:35:27,089 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00550 | Time(s) 0.0032 | Val Loss 0.4170 | Val Acc 0.8889 |  Train Acc 0.8907 | ETputs(KTEPS) 41901.35
+2023-04-13 02:35:27,237 - train_ensemble_JK_GCNII.py [line:259] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-13 02:35:27,237 - train_ensemble_JK_GCNII.py [line:262] - INFO: [FINAL MODEL] Run 15 .\Val accuracy 85.06% \Val loss: 0.47
+2023-04-13 02:35:27,238 - train_ensemble_JK_GCNII.py [line:264] - INFO: [FINAL MODEL] Run 15 .	Test accuracy 86.54% \Test loss: 0.39
+2023-04-13 02:35:27,969 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00050 | Time(s) 0.0139 | Val Loss 0.7460 | Val Acc 0.7898 |  Train Acc 0.9823 | ETputs(KTEPS) 9569.41
+2023-04-13 02:35:28,677 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00100 | Time(s) 0.0138 | Val Loss 0.5197 | Val Acc 0.8291 |  Train Acc 0.9952 | ETputs(KTEPS) 9584.82
+2023-04-13 02:35:29,378 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00150 | Time(s) 0.0139 | Val Loss 0.5154 | Val Acc 0.8360 |  Train Acc 0.9952 | ETputs(KTEPS) 9562.98
+2023-04-13 02:35:30,093 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00200 | Time(s) 0.0139 | Val Loss 0.7133 | Val Acc 0.7737 |  Train Acc 0.9984 | ETputs(KTEPS) 9516.18
+2023-04-13 02:35:30,796 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00250 | Time(s) 0.0140 | Val Loss 0.9667 | Val Acc 0.8129 |  Train Acc 0.9855 | ETputs(KTEPS) 9500.62
+2023-04-13 02:35:31,511 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00300 | Time(s) 0.0140 | Val Loss 0.8660 | Val Acc 0.7436 |  Train Acc 0.9992 | ETputs(KTEPS) 9466.45
+2023-04-13 02:35:32,220 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00350 | Time(s) 0.0140 | Val Loss 0.6432 | Val Acc 0.8083 |  Train Acc 0.9992 | ETputs(KTEPS) 9451.57
+2023-04-13 02:35:32,933 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00400 | Time(s) 0.0141 | Val Loss 0.8334 | Val Acc 0.7829 |  Train Acc 0.9992 | ETputs(KTEPS) 9435.65
+2023-04-13 02:35:33,643 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00450 | Time(s) 0.0141 | Val Loss 0.9812 | Val Acc 0.7783 |  Train Acc 0.9984 | ETputs(KTEPS) 9425.98
+2023-04-13 02:35:33,664 - train_ensemble_JK_GCNII.py [line:185] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-13 02:35:33,943 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00050 | Time(s) 0.0044 | Val Loss 1.1930 | Val Acc 0.7275 |  Train Acc 0.9309 | ETputs(KTEPS) 30427.68
+2023-04-13 02:35:34,225 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00100 | Time(s) 0.0044 | Val Loss 0.9173 | Val Acc 0.6975 |  Train Acc 0.9880 | ETputs(KTEPS) 30131.38
+2023-04-13 02:35:34,470 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00150 | Time(s) 0.0044 | Val Loss 0.9268 | Val Acc 0.6998 |  Train Acc 0.9952 | ETputs(KTEPS) 29956.17
+2023-04-13 02:35:34,697 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00200 | Time(s) 0.0045 | Val Loss 0.9773 | Val Acc 0.6905 |  Train Acc 0.9968 | ETputs(KTEPS) 29793.88
+2023-04-13 02:35:34,920 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00250 | Time(s) 0.0045 | Val Loss 1.0326 | Val Acc 0.6859 |  Train Acc 0.9968 | ETputs(KTEPS) 29799.85
+2023-04-13 02:35:35,141 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00300 | Time(s) 0.0044 | Val Loss 1.0870 | Val Acc 0.6744 |  Train Acc 0.9984 | ETputs(KTEPS) 29866.60
+2023-04-13 02:35:35,362 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00350 | Time(s) 0.0044 | Val Loss 1.1381 | Val Acc 0.6582 |  Train Acc 0.9984 | ETputs(KTEPS) 29906.37
+2023-04-13 02:35:35,581 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00400 | Time(s) 0.0044 | Val Loss 1.1863 | Val Acc 0.6490 |  Train Acc 0.9992 | ETputs(KTEPS) 29969.02
+2023-04-13 02:35:35,649 - train_ensemble_JK_GCNII.py [line:223] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-13 02:35:35,825 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00050 | Time(s) 0.0033 | Val Loss 0.7212 | Val Acc 0.8148 |  Train Acc 0.8682 | ETputs(KTEPS) 40313.60
+2023-04-13 02:35:35,984 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00100 | Time(s) 0.0032 | Val Loss 0.7395 | Val Acc 0.8241 |  Train Acc 0.8778 | ETputs(KTEPS) 41119.53
+2023-04-13 02:35:36,135 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00150 | Time(s) 0.0031 | Val Loss 0.7230 | Val Acc 0.7870 |  Train Acc 0.8650 | ETputs(KTEPS) 42148.59
+2023-04-13 02:35:36,293 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00200 | Time(s) 0.0031 | Val Loss 0.7098 | Val Acc 0.8148 |  Train Acc 0.8617 | ETputs(KTEPS) 42227.05
+2023-04-13 02:35:36,457 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00250 | Time(s) 0.0032 | Val Loss 0.7413 | Val Acc 0.7870 |  Train Acc 0.8585 | ETputs(KTEPS) 41918.09
+2023-04-13 02:35:36,621 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00300 | Time(s) 0.0032 | Val Loss 0.7153 | Val Acc 0.7870 |  Train Acc 0.8650 | ETputs(KTEPS) 41736.76
+2023-04-13 02:35:36,784 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00350 | Time(s) 0.0032 | Val Loss 0.6671 | Val Acc 0.8333 |  Train Acc 0.8746 | ETputs(KTEPS) 41635.65
+2023-04-13 02:35:36,945 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00400 | Time(s) 0.0032 | Val Loss 0.7277 | Val Acc 0.7685 |  Train Acc 0.8617 | ETputs(KTEPS) 41599.07
+2023-04-13 02:35:37,108 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00450 | Time(s) 0.0032 | Val Loss 0.7240 | Val Acc 0.8056 |  Train Acc 0.8682 | ETputs(KTEPS) 41546.89
+2023-04-13 02:35:37,272 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00500 | Time(s) 0.0032 | Val Loss 0.7524 | Val Acc 0.7778 |  Train Acc 0.8617 | ETputs(KTEPS) 41454.85
+2023-04-13 02:35:37,428 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00550 | Time(s) 0.0032 | Val Loss 0.6625 | Val Acc 0.8056 |  Train Acc 0.8553 | ETputs(KTEPS) 41558.68
+2023-04-13 02:35:37,609 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00600 | Time(s) 0.0032 | Val Loss 0.7595 | Val Acc 0.7685 |  Train Acc 0.8682 | ETputs(KTEPS) 41140.88
+2023-04-13 02:35:37,745 - train_ensemble_JK_GCNII.py [line:259] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-13 02:35:37,745 - train_ensemble_JK_GCNII.py [line:262] - INFO: [FINAL MODEL] Run 16 .\Val accuracy 85.98% \Val loss: 0.53
+2023-04-13 02:35:37,746 - train_ensemble_JK_GCNII.py [line:264] - INFO: [FINAL MODEL] Run 16 .	Test accuracy 84.89% \Test loss: 0.54
+2023-04-13 02:35:38,624 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00050 | Time(s) 0.0164 | Val Loss 0.4374 | Val Acc 0.8707 |  Train Acc 0.9888 | ETputs(KTEPS) 8090.00
+2023-04-13 02:35:39,431 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00100 | Time(s) 0.0163 | Val Loss 0.7742 | Val Acc 0.8406 |  Train Acc 1.0000 | ETputs(KTEPS) 8158.78
+2023-04-13 02:35:40,239 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00150 | Time(s) 0.0162 | Val Loss 0.6707 | Val Acc 0.8199 |  Train Acc 1.0000 | ETputs(KTEPS) 8181.18
+2023-04-13 02:35:40,966 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00200 | Time(s) 0.0158 | Val Loss 0.5668 | Val Acc 0.8383 |  Train Acc 1.0000 | ETputs(KTEPS) 8402.02
+2023-04-13 02:35:41,705 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00250 | Time(s) 0.0156 | Val Loss 0.7215 | Val Acc 0.8199 |  Train Acc 1.0000 | ETputs(KTEPS) 8513.61
+2023-04-13 02:35:42,440 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00300 | Time(s) 0.0154 | Val Loss 0.6636 | Val Acc 0.8199 |  Train Acc 1.0000 | ETputs(KTEPS) 8596.17
+2023-04-13 02:35:43,138 - train_ensemble_JK_GCNII.py [line:185] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-13 02:35:43,429 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00050 | Time(s) 0.0045 | Val Loss 1.1691 | Val Acc 0.7506 |  Train Acc 0.9382 | ETputs(KTEPS) 29493.63
+2023-04-13 02:35:43,723 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00100 | Time(s) 0.0045 | Val Loss 0.9130 | Val Acc 0.7136 |  Train Acc 0.9888 | ETputs(KTEPS) 29207.85
+2023-04-13 02:35:43,957 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00150 | Time(s) 0.0045 | Val Loss 0.9416 | Val Acc 0.6998 |  Train Acc 0.9952 | ETputs(KTEPS) 29315.84
+2023-04-13 02:35:44,181 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00200 | Time(s) 0.0045 | Val Loss 0.9976 | Val Acc 0.6836 |  Train Acc 0.9968 | ETputs(KTEPS) 29437.11
+2023-04-13 02:35:44,402 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00250 | Time(s) 0.0045 | Val Loss 1.0546 | Val Acc 0.6651 |  Train Acc 0.9976 | ETputs(KTEPS) 29573.01
+2023-04-13 02:35:44,634 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00300 | Time(s) 0.0045 | Val Loss 1.1083 | Val Acc 0.6674 |  Train Acc 0.9984 | ETputs(KTEPS) 29426.71
+2023-04-13 02:35:44,857 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00350 | Time(s) 0.0045 | Val Loss 1.1591 | Val Acc 0.6628 |  Train Acc 0.9992 | ETputs(KTEPS) 29506.29
+2023-04-13 02:35:45,081 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00400 | Time(s) 0.0045 | Val Loss 1.2069 | Val Acc 0.6513 |  Train Acc 1.0000 | ETputs(KTEPS) 29531.44
+2023-04-13 02:35:45,110 - train_ensemble_JK_GCNII.py [line:223] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-13 02:35:45,293 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00050 | Time(s) 0.0034 | Val Loss 0.3863 | Val Acc 0.8704 |  Train Acc 0.8842 | ETputs(KTEPS) 38690.14
+2023-04-13 02:35:45,464 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00100 | Time(s) 0.0034 | Val Loss 0.2631 | Val Acc 0.9352 |  Train Acc 0.8875 | ETputs(KTEPS) 38845.40
+2023-04-13 02:35:45,620 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00150 | Time(s) 0.0033 | Val Loss 0.3355 | Val Acc 0.8981 |  Train Acc 0.8810 | ETputs(KTEPS) 40082.59
+2023-04-13 02:35:45,782 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00200 | Time(s) 0.0033 | Val Loss 0.3618 | Val Acc 0.8981 |  Train Acc 0.8939 | ETputs(KTEPS) 40380.12
+2023-04-13 02:35:45,946 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00250 | Time(s) 0.0033 | Val Loss 0.3373 | Val Acc 0.9167 |  Train Acc 0.8875 | ETputs(KTEPS) 40450.34
+2023-04-13 02:35:46,110 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00300 | Time(s) 0.0033 | Val Loss 0.3234 | Val Acc 0.9074 |  Train Acc 0.8907 | ETputs(KTEPS) 40460.75
+2023-04-13 02:35:46,203 - train_ensemble_JK_GCNII.py [line:259] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-13 02:35:46,204 - train_ensemble_JK_GCNII.py [line:262] - INFO: [FINAL MODEL] Run 17 .\Val accuracy 88.01% \Val loss: 0.37
+2023-04-13 02:35:46,205 - train_ensemble_JK_GCNII.py [line:264] - INFO: [FINAL MODEL] Run 17 .	Test accuracy 84.07% \Test loss: 0.48
+2023-04-13 02:35:46,997 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00050 | Time(s) 0.0146 | Val Loss 0.4706 | Val Acc 0.8707 |  Train Acc 0.9920 | ETputs(KTEPS) 9086.96
+2023-04-13 02:35:47,708 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00100 | Time(s) 0.0143 | Val Loss 0.6031 | Val Acc 0.8383 |  Train Acc 1.0000 | ETputs(KTEPS) 9275.56
+2023-04-13 02:35:48,426 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00150 | Time(s) 0.0143 | Val Loss 0.5578 | Val Acc 0.8499 |  Train Acc 0.9984 | ETputs(KTEPS) 9267.71
+2023-04-13 02:35:49,149 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00200 | Time(s) 0.0143 | Val Loss 0.6559 | Val Acc 0.8245 |  Train Acc 0.9984 | ETputs(KTEPS) 9247.32
+2023-04-13 02:35:49,866 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00250 | Time(s) 0.0143 | Val Loss 2.6765 | Val Acc 0.5127 |  Train Acc 0.7896 | ETputs(KTEPS) 9249.93
+2023-04-13 02:35:50,576 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00300 | Time(s) 0.0143 | Val Loss 0.5686 | Val Acc 0.8684 |  Train Acc 1.0000 | ETputs(KTEPS) 9268.74
+2023-04-13 02:35:51,291 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00350 | Time(s) 0.0143 | Val Loss 0.8167 | Val Acc 0.8245 |  Train Acc 0.9944 | ETputs(KTEPS) 9272.79
+2023-04-13 02:35:51,326 - train_ensemble_JK_GCNII.py [line:185] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-13 02:35:51,605 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00050 | Time(s) 0.0044 | Val Loss 1.1807 | Val Acc 0.7206 |  Train Acc 0.9365 | ETputs(KTEPS) 30381.19
+2023-04-13 02:35:51,881 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00100 | Time(s) 0.0044 | Val Loss 0.9085 | Val Acc 0.7229 |  Train Acc 0.9880 | ETputs(KTEPS) 30410.15
+2023-04-13 02:35:52,113 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00150 | Time(s) 0.0043 | Val Loss 0.9234 | Val Acc 0.7067 |  Train Acc 0.9960 | ETputs(KTEPS) 30511.42
+2023-04-13 02:35:52,329 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00200 | Time(s) 0.0043 | Val Loss 0.9735 | Val Acc 0.6975 |  Train Acc 0.9960 | ETputs(KTEPS) 30585.89
+2023-04-13 02:35:52,545 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00250 | Time(s) 0.0043 | Val Loss 1.0281 | Val Acc 0.6882 |  Train Acc 0.9984 | ETputs(KTEPS) 30650.27
+2023-04-13 02:35:52,763 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00300 | Time(s) 0.0043 | Val Loss 1.0809 | Val Acc 0.6767 |  Train Acc 1.0000 | ETputs(KTEPS) 30636.78
+2023-04-13 02:35:52,981 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00350 | Time(s) 0.0043 | Val Loss 1.1304 | Val Acc 0.6744 |  Train Acc 1.0000 | ETputs(KTEPS) 30629.27
+2023-04-13 02:35:53,202 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00400 | Time(s) 0.0043 | Val Loss 1.1762 | Val Acc 0.6697 |  Train Acc 1.0000 | ETputs(KTEPS) 30562.92
+2023-04-13 02:35:53,255 - train_ensemble_JK_GCNII.py [line:223] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-13 02:35:53,430 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00050 | Time(s) 0.0033 | Val Loss 0.5062 | Val Acc 0.8148 |  Train Acc 0.8971 | ETputs(KTEPS) 39947.70
+2023-04-13 02:35:53,596 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00100 | Time(s) 0.0033 | Val Loss 0.6078 | Val Acc 0.7685 |  Train Acc 0.9035 | ETputs(KTEPS) 40109.45
+2023-04-13 02:35:53,762 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00150 | Time(s) 0.0033 | Val Loss 0.5748 | Val Acc 0.7685 |  Train Acc 0.8939 | ETputs(KTEPS) 40079.88
+2023-04-13 02:35:53,926 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00200 | Time(s) 0.0033 | Val Loss 0.6019 | Val Acc 0.7963 |  Train Acc 0.9068 | ETputs(KTEPS) 40252.78
+2023-04-13 02:35:54,090 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00250 | Time(s) 0.0033 | Val Loss 0.5546 | Val Acc 0.8056 |  Train Acc 0.9003 | ETputs(KTEPS) 40305.35
+2023-04-13 02:35:54,255 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00300 | Time(s) 0.0033 | Val Loss 0.5475 | Val Acc 0.8056 |  Train Acc 0.8907 | ETputs(KTEPS) 40347.57
+2023-04-13 02:35:54,312 - train_ensemble_JK_GCNII.py [line:259] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-13 02:35:54,313 - train_ensemble_JK_GCNII.py [line:262] - INFO: [FINAL MODEL] Run 18 .\Val accuracy 85.61% \Val loss: 0.45
+2023-04-13 02:35:54,314 - train_ensemble_JK_GCNII.py [line:264] - INFO: [FINAL MODEL] Run 18 .	Test accuracy 86.04% \Test loss: 0.48
+2023-04-13 02:35:55,075 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00050 | Time(s) 0.0144 | Val Loss 0.4516 | Val Acc 0.8684 |  Train Acc 0.9526 | ETputs(KTEPS) 9191.36
+2023-04-13 02:35:55,794 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00100 | Time(s) 0.0143 | Val Loss 0.4606 | Val Acc 0.8730 |  Train Acc 0.9767 | ETputs(KTEPS) 9255.23
+2023-04-13 02:35:56,499 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00150 | Time(s) 0.0142 | Val Loss 0.9168 | Val Acc 0.8268 |  Train Acc 0.9968 | ETputs(KTEPS) 9336.59
+2023-04-13 02:35:57,201 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00200 | Time(s) 0.0142 | Val Loss 0.6812 | Val Acc 0.8222 |  Train Acc 1.0000 | ETputs(KTEPS) 9370.33
+2023-04-13 02:35:57,902 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00250 | Time(s) 0.0141 | Val Loss 0.9171 | Val Acc 0.8129 |  Train Acc 0.9984 | ETputs(KTEPS) 9391.58
+2023-04-13 02:35:58,601 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00300 | Time(s) 0.0141 | Val Loss 0.5475 | Val Acc 0.8499 |  Train Acc 1.0000 | ETputs(KTEPS) 9408.32
+2023-04-13 02:35:59,297 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00350 | Time(s) 0.0141 | Val Loss 0.7789 | Val Acc 0.8199 |  Train Acc 1.0000 | ETputs(KTEPS) 9428.74
+2023-04-13 02:35:59,998 - train_ensemble_JK_GCNII.py [line:176] - INFO: Epoch 00400 | Time(s) 0.0141 | Val Loss 1.0822 | Val Acc 0.8106 |  Train Acc 0.9920 | ETputs(KTEPS) 9434.40
+2023-04-13 02:36:00,033 - train_ensemble_JK_GCNII.py [line:185] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-13 02:36:00,307 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00050 | Time(s) 0.0042 | Val Loss 1.2444 | Val Acc 0.6952 |  Train Acc 0.9438 | ETputs(KTEPS) 31409.28
+2023-04-13 02:36:00,574 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00100 | Time(s) 0.0042 | Val Loss 0.9440 | Val Acc 0.7275 |  Train Acc 0.9904 | ETputs(KTEPS) 31518.20
+2023-04-13 02:36:00,815 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00150 | Time(s) 0.0043 | Val Loss 0.9483 | Val Acc 0.7136 |  Train Acc 0.9984 | ETputs(KTEPS) 31188.01
+2023-04-13 02:36:01,033 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00200 | Time(s) 0.0043 | Val Loss 0.9951 | Val Acc 0.7044 |  Train Acc 0.9984 | ETputs(KTEPS) 31037.00
+2023-04-13 02:36:01,259 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00250 | Time(s) 0.0043 | Val Loss 1.0486 | Val Acc 0.6998 |  Train Acc 0.9992 | ETputs(KTEPS) 30706.64
+2023-04-13 02:36:01,482 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00300 | Time(s) 0.0043 | Val Loss 1.1005 | Val Acc 0.6928 |  Train Acc 1.0000 | ETputs(KTEPS) 30566.32
+2023-04-13 02:36:01,706 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00350 | Time(s) 0.0044 | Val Loss 1.1485 | Val Acc 0.6882 |  Train Acc 1.0000 | ETputs(KTEPS) 30454.83
+2023-04-13 02:36:01,928 - train_ensemble_JK_GCNII.py [line:214] - INFO: Epoch 00400 | Time(s) 0.0044 | Val Loss 1.1923 | Val Acc 0.6767 |  Train Acc 1.0000 | ETputs(KTEPS) 30399.93
+2023-04-13 02:36:02,012 - train_ensemble_JK_GCNII.py [line:223] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-13 02:36:02,178 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00050 | Time(s) 0.0031 | Val Loss 0.3825 | Val Acc 0.8333 |  Train Acc 0.8682 | ETputs(KTEPS) 42710.44
+2023-04-13 02:36:02,332 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00100 | Time(s) 0.0031 | Val Loss 0.4223 | Val Acc 0.8519 |  Train Acc 0.8553 | ETputs(KTEPS) 43009.56
+2023-04-13 02:36:02,488 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00150 | Time(s) 0.0031 | Val Loss 0.4153 | Val Acc 0.8611 |  Train Acc 0.8585 | ETputs(KTEPS) 42903.76
+2023-04-13 02:36:02,645 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00200 | Time(s) 0.0031 | Val Loss 0.4058 | Val Acc 0.8704 |  Train Acc 0.8489 | ETputs(KTEPS) 42840.28
+2023-04-13 02:36:02,802 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00250 | Time(s) 0.0031 | Val Loss 0.4184 | Val Acc 0.8611 |  Train Acc 0.8392 | ETputs(KTEPS) 42763.03
+2023-04-13 02:36:02,963 - train_ensemble_JK_GCNII.py [line:250] - INFO: Epoch 00300 | Time(s) 0.0031 | Val Loss 0.4155 | Val Acc 0.8796 |  Train Acc 0.8521 | ETputs(KTEPS) 42529.38
+2023-04-13 02:36:03,043 - train_ensemble_JK_GCNII.py [line:259] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-13 02:36:03,043 - train_ensemble_JK_GCNII.py [line:262] - INFO: [FINAL MODEL] Run 19 .\Val accuracy 86.90% \Val loss: 0.45
+2023-04-13 02:36:03,044 - train_ensemble_JK_GCNII.py [line:264] - INFO: [FINAL MODEL] Run 19 .	Test accuracy 83.91% \Test loss: 0.51
+2023-04-13 02:36:03,044 - train_ensemble_JK_GCNII.py [line:308] - INFO: Mean Acc For Cross Validation: 0.8481, STDV: 0.0181
+2023-04-13 02:36:03,045 - train_ensemble_JK_GCNII.py [line:309] - INFO: [0.8210180623973727, 0.8620689655172413, 0.8637110016420362, 0.8653530377668309, 0.8620689655172413, 0.8078817733990148, 0.8505747126436781, 0.8374384236453202, 0.8834154351395731, 0.8489326765188834, 0.8275862068965517, 0.8308702791461412, 0.8669950738916257, 0.8472906403940886, 0.8325123152709359, 0.8653530377668309, 0.8489326765188834, 0.8407224958949097, 0.8604269293924466, 0.8390804597701149]

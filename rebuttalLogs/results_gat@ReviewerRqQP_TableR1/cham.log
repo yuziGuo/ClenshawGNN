@@ -1,0 +1,724 @@
+2023-04-10 03:42:29,553 - train_gat.py [line:236] - INFO: Namespace(seed=42, model='GAT', gpu=0, dataset='geom-chameleon', n_hidden=64, n_layers=4, heads=8, out_heads=1, wd1=1e-06, wd2=0.0005, lr1=0.02, lr2=0.01, momentum=0.9, dropout=0.5, n_epochs=10000, loss='nll', self_loop=True, udgraph=True, early_stop=True, patience=300, es_ckpt='e0cham', n_cv=20, start_cv=0, logging=False, log_detail=True, log_detailedCh=True, id_log=0)
+2023-04-10 03:42:33,153 - train_gat.py [line:149] - INFO: Split_seeds:[1824, 409, 4506, 4012, 3657, 2286, 1679, 8935, 1424, 9674, 6912, 520, 488, 1535, 3582, 3811, 8279, 9863, 434, 9195]
+2023-04-10 03:42:33,154 - train_gat.py [line:150] - INFO: Model_seeds:[3257, 8928, 6873, 3611, 7359, 9654, 4557, 106, 2615, 6924, 5574, 4552, 2547, 3527, 5514, 1674, 1519, 6224, 1584, 5881]
+2023-04-10 03:42:36,588 - train_gat.py [line:124] - INFO: Epoch 00050 | Time(s) 0.0661 | Val Loss 1.1158 | Val Acc 0.5626 |  Train Acc 0.7253 | ETputs(KTEPS) 9837.04
+2023-04-10 03:42:38,651 - train_gat.py [line:124] - INFO: Epoch 00100 | Time(s) 0.0537 | Val Loss 1.1858 | Val Acc 0.5934 |  Train Acc 0.7758 | ETputs(KTEPS) 12116.06
+2023-04-10 03:42:41,015 - train_gat.py [line:124] - INFO: Epoch 00150 | Time(s) 0.0515 | Val Loss 1.1767 | Val Acc 0.5912 |  Train Acc 0.7927 | ETputs(KTEPS) 12619.45
+2023-04-10 03:42:44,021 - train_gat.py [line:124] - INFO: Epoch 00200 | Time(s) 0.0537 | Val Loss 1.1709 | Val Acc 0.6198 |  Train Acc 0.8125 | ETputs(KTEPS) 12115.30
+2023-04-10 03:42:47,008 - train_gat.py [line:124] - INFO: Epoch 00250 | Time(s) 0.0549 | Val Loss 1.2255 | Val Acc 0.6044 |  Train Acc 0.8278 | ETputs(KTEPS) 11849.04
+2023-04-10 03:42:49,997 - train_gat.py [line:124] - INFO: Epoch 00300 | Time(s) 0.0557 | Val Loss 1.2152 | Val Acc 0.6330 |  Train Acc 0.8344 | ETputs(KTEPS) 11676.19
+2023-04-10 03:42:52,957 - train_gat.py [line:135] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-10 03:42:52,971 - train_gat.py [line:138] - INFO: [FINAL MODEL] Run 0 .\Val accuracy 57.36% \Val loss: 1.1
+2023-04-10 03:42:52,994 - train_gat.py [line:140] - INFO: [FINAL MODEL] Run 0 .	Test accuracy 62.58% \Test loss: 1.0
+2023-04-10 03:42:55,632 - train_gat.py [line:124] - INFO: Epoch 00050 | Time(s) 0.0500 | Val Loss 1.1617 | Val Acc 0.5846 |  Train Acc 0.7231 | ETputs(KTEPS) 13002.33
+2023-04-10 03:42:58,036 - train_gat.py [line:124] - INFO: Epoch 00100 | Time(s) 0.0487 | Val Loss 1.1361 | Val Acc 0.5956 |  Train Acc 0.7810 | ETputs(KTEPS) 13337.84
+2023-04-10 03:43:00,877 - train_gat.py [line:124] - INFO: Epoch 00150 | Time(s) 0.0514 | Val Loss 1.1606 | Val Acc 0.6198 |  Train Acc 0.8051 | ETputs(KTEPS) 12643.29
+2023-04-10 03:43:03,732 - train_gat.py [line:124] - INFO: Epoch 00200 | Time(s) 0.0528 | Val Loss 1.1784 | Val Acc 0.6286 |  Train Acc 0.8249 | ETputs(KTEPS) 12305.43
+2023-04-10 03:43:06,730 - train_gat.py [line:124] - INFO: Epoch 00250 | Time(s) 0.0543 | Val Loss 1.1733 | Val Acc 0.6220 |  Train Acc 0.8330 | ETputs(KTEPS) 11983.68
+2023-04-10 03:43:09,725 - train_gat.py [line:124] - INFO: Epoch 00300 | Time(s) 0.0552 | Val Loss 1.1619 | Val Acc 0.6418 |  Train Acc 0.8469 | ETputs(KTEPS) 11780.86
+2023-04-10 03:43:12,678 - train_gat.py [line:124] - INFO: Epoch 00350 | Time(s) 0.0557 | Val Loss 1.1852 | Val Acc 0.6286 |  Train Acc 0.8403 | ETputs(KTEPS) 11664.91
+2023-04-10 03:43:14,569 - train_gat.py [line:135] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-10 03:43:14,581 - train_gat.py [line:138] - INFO: [FINAL MODEL] Run 1 .\Val accuracy 58.90% \Val loss: 1.1
+2023-04-10 03:43:14,603 - train_gat.py [line:140] - INFO: [FINAL MODEL] Run 1 .	Test accuracy 67.61% \Test loss: 1.0
+2023-04-10 03:43:17,673 - train_gat.py [line:124] - INFO: Epoch 00050 | Time(s) 0.0588 | Val Loss 0.9613 | Val Acc 0.6374 |  Train Acc 0.6967 | ETputs(KTEPS) 11060.80
+2023-04-10 03:43:20,686 - train_gat.py [line:124] - INFO: Epoch 00100 | Time(s) 0.0594 | Val Loss 1.0174 | Val Acc 0.6264 |  Train Acc 0.7297 | ETputs(KTEPS) 10950.35
+2023-04-10 03:43:23,702 - train_gat.py [line:124] - INFO: Epoch 00150 | Time(s) 0.0596 | Val Loss 0.9149 | Val Acc 0.6901 |  Train Acc 0.7978 | ETputs(KTEPS) 10902.97
+2023-04-10 03:43:26,693 - train_gat.py [line:124] - INFO: Epoch 00200 | Time(s) 0.0597 | Val Loss 0.9856 | Val Acc 0.6901 |  Train Acc 0.7941 | ETputs(KTEPS) 10895.53
+2023-04-10 03:43:29,703 - train_gat.py [line:124] - INFO: Epoch 00250 | Time(s) 0.0598 | Val Loss 1.0181 | Val Acc 0.6593 |  Train Acc 0.8000 | ETputs(KTEPS) 10877.28
+2023-04-10 03:43:32,777 - train_gat.py [line:124] - INFO: Epoch 00300 | Time(s) 0.0601 | Val Loss 0.9548 | Val Acc 0.6835 |  Train Acc 0.8344 | ETputs(KTEPS) 10827.10
+2023-04-10 03:43:35,842 - train_gat.py [line:124] - INFO: Epoch 00350 | Time(s) 0.0602 | Val Loss 0.9649 | Val Acc 0.6835 |  Train Acc 0.8352 | ETputs(KTEPS) 10795.92
+2023-04-10 03:43:37,514 - train_gat.py [line:124] - INFO: Epoch 00400 | Time(s) 0.0569 | Val Loss 0.9484 | Val Acc 0.6857 |  Train Acc 0.8454 | ETputs(KTEPS) 11432.23
+2023-04-10 03:43:38,294 - train_gat.py [line:135] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-10 03:43:38,320 - train_gat.py [line:138] - INFO: [FINAL MODEL] Run 2 .\Val accuracy 67.25% \Val loss: 0.91
+2023-04-10 03:43:38,341 - train_gat.py [line:140] - INFO: [FINAL MODEL] Run 2 .	Test accuracy 63.68% \Test loss: 0.98
+2023-04-10 03:43:41,898 - train_gat.py [line:124] - INFO: Epoch 00050 | Time(s) 0.0609 | Val Loss 1.0769 | Val Acc 0.5978 |  Train Acc 0.7392 | ETputs(KTEPS) 10678.16
+2023-04-10 03:43:44,989 - train_gat.py [line:124] - INFO: Epoch 00100 | Time(s) 0.0611 | Val Loss 1.0761 | Val Acc 0.6154 |  Train Acc 0.7780 | ETputs(KTEPS) 10635.35
+2023-04-10 03:43:48,066 - train_gat.py [line:124] - INFO: Epoch 00150 | Time(s) 0.0613 | Val Loss 1.0730 | Val Acc 0.6132 |  Train Acc 0.8183 | ETputs(KTEPS) 10614.26
+2023-04-10 03:43:51,157 - train_gat.py [line:124] - INFO: Epoch 00200 | Time(s) 0.0614 | Val Loss 1.1134 | Val Acc 0.6374 |  Train Acc 0.8242 | ETputs(KTEPS) 10590.79
+2023-04-10 03:43:54,220 - train_gat.py [line:124] - INFO: Epoch 00250 | Time(s) 0.0614 | Val Loss 1.1034 | Val Acc 0.6352 |  Train Acc 0.8352 | ETputs(KTEPS) 10596.62
+2023-04-10 03:43:57,281 - train_gat.py [line:124] - INFO: Epoch 00300 | Time(s) 0.0613 | Val Loss 1.0827 | Val Acc 0.6308 |  Train Acc 0.8542 | ETputs(KTEPS) 10601.53
+2023-04-10 03:44:00,384 - train_gat.py [line:124] - INFO: Epoch 00350 | Time(s) 0.0614 | Val Loss 1.1482 | Val Acc 0.6462 |  Train Acc 0.8549 | ETputs(KTEPS) 10584.38
+2023-04-10 03:44:02,698 - train_gat.py [line:135] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-10 03:44:02,719 - train_gat.py [line:138] - INFO: [FINAL MODEL] Run 3 .\Val accuracy 63.74% \Val loss: 1.0
+2023-04-10 03:44:02,736 - train_gat.py [line:140] - INFO: [FINAL MODEL] Run 3 .	Test accuracy 62.36% \Test loss: 1.0
+2023-04-10 03:44:05,934 - train_gat.py [line:124] - INFO: Epoch 00050 | Time(s) 0.0613 | Val Loss 1.0229 | Val Acc 0.5934 |  Train Acc 0.7099 | ETputs(KTEPS) 10600.20
+2023-04-10 03:44:09,078 - train_gat.py [line:124] - INFO: Epoch 00100 | Time(s) 0.0619 | Val Loss 1.0011 | Val Acc 0.6418 |  Train Acc 0.7751 | ETputs(KTEPS) 10510.15
+2023-04-10 03:44:12,178 - train_gat.py [line:124] - INFO: Epoch 00150 | Time(s) 0.0619 | Val Loss 1.0438 | Val Acc 0.6198 |  Train Acc 0.7897 | ETputs(KTEPS) 10508.08
+2023-04-10 03:44:15,291 - train_gat.py [line:124] - INFO: Epoch 00200 | Time(s) 0.0620 | Val Loss 1.0291 | Val Acc 0.6330 |  Train Acc 0.8154 | ETputs(KTEPS) 10493.34
+2023-04-10 03:44:18,425 - train_gat.py [line:124] - INFO: Epoch 00250 | Time(s) 0.0621 | Val Loss 1.0145 | Val Acc 0.6681 |  Train Acc 0.8234 | ETputs(KTEPS) 10470.59
+2023-04-10 03:44:21,550 - train_gat.py [line:124] - INFO: Epoch 00300 | Time(s) 0.0622 | Val Loss 1.0180 | Val Acc 0.6857 |  Train Acc 0.8388 | ETputs(KTEPS) 10459.96
+2023-04-10 03:44:24,678 - train_gat.py [line:124] - INFO: Epoch 00350 | Time(s) 0.0622 | Val Loss 1.0408 | Val Acc 0.6374 |  Train Acc 0.8403 | ETputs(KTEPS) 10451.08
+2023-04-10 03:44:27,530 - train_gat.py [line:124] - INFO: Epoch 00400 | Time(s) 0.0616 | Val Loss 1.0498 | Val Acc 0.6681 |  Train Acc 0.8542 | ETputs(KTEPS) 10561.75
+2023-04-10 03:44:27,602 - train_gat.py [line:135] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-10 03:44:27,609 - train_gat.py [line:138] - INFO: [FINAL MODEL] Run 4 .\Val accuracy 65.93% \Val loss: 0.97
+2023-04-10 03:44:27,616 - train_gat.py [line:140] - INFO: [FINAL MODEL] Run 4 .	Test accuracy 64.99% \Test loss: 1.0
+2023-04-10 03:44:29,888 - train_gat.py [line:124] - INFO: Epoch 00050 | Time(s) 0.0430 | Val Loss 1.0316 | Val Acc 0.5934 |  Train Acc 0.7084 | ETputs(KTEPS) 15134.66
+2023-04-10 03:44:33,027 - train_gat.py [line:124] - INFO: Epoch 00100 | Time(s) 0.0526 | Val Loss 0.9981 | Val Acc 0.6440 |  Train Acc 0.7597 | ETputs(KTEPS) 12365.97
+2023-04-10 03:44:36,149 - train_gat.py [line:124] - INFO: Epoch 00150 | Time(s) 0.0558 | Val Loss 0.9945 | Val Acc 0.6505 |  Train Acc 0.7751 | ETputs(KTEPS) 11648.25
+2023-04-10 03:44:39,223 - train_gat.py [line:124] - INFO: Epoch 00200 | Time(s) 0.0572 | Val Loss 1.0162 | Val Acc 0.6615 |  Train Acc 0.8000 | ETputs(KTEPS) 11361.44
+2023-04-10 03:44:42,337 - train_gat.py [line:124] - INFO: Epoch 00250 | Time(s) 0.0582 | Val Loss 0.9851 | Val Acc 0.6879 |  Train Acc 0.8205 | ETputs(KTEPS) 11165.74
+2023-04-10 03:44:45,450 - train_gat.py [line:124] - INFO: Epoch 00300 | Time(s) 0.0589 | Val Loss 1.0067 | Val Acc 0.6703 |  Train Acc 0.8330 | ETputs(KTEPS) 11039.28
+2023-04-10 03:44:48,560 - train_gat.py [line:124] - INFO: Epoch 00350 | Time(s) 0.0594 | Val Loss 0.9936 | Val Acc 0.7033 |  Train Acc 0.8454 | ETputs(KTEPS) 10952.31
+2023-04-10 03:44:51,662 - train_gat.py [line:124] - INFO: Epoch 00400 | Time(s) 0.0597 | Val Loss 0.9962 | Val Acc 0.6725 |  Train Acc 0.8396 | ETputs(KTEPS) 10891.68
+2023-04-10 03:44:53,180 - train_gat.py [line:135] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-10 03:44:53,198 - train_gat.py [line:138] - INFO: [FINAL MODEL] Run 5 .\Val accuracy 66.15% \Val loss: 0.97
+2023-04-10 03:44:53,226 - train_gat.py [line:140] - INFO: [FINAL MODEL] Run 5 .	Test accuracy 63.46% \Test loss: 1.0
+2023-04-10 03:44:56,437 - train_gat.py [line:124] - INFO: Epoch 00050 | Time(s) 0.0616 | Val Loss 1.0922 | Val Acc 0.6022 |  Train Acc 0.7026 | ETputs(KTEPS) 10556.36
+2023-04-10 03:44:59,557 - train_gat.py [line:124] - INFO: Epoch 00100 | Time(s) 0.0618 | Val Loss 1.0703 | Val Acc 0.6615 |  Train Acc 0.7495 | ETputs(KTEPS) 10515.66
+2023-04-10 03:45:02,657 - train_gat.py [line:124] - INFO: Epoch 00150 | Time(s) 0.0619 | Val Loss 1.0956 | Val Acc 0.6352 |  Train Acc 0.7941 | ETputs(KTEPS) 10507.23
+2023-04-10 03:45:05,741 - train_gat.py [line:124] - INFO: Epoch 00200 | Time(s) 0.0618 | Val Loss 1.0861 | Val Acc 0.6659 |  Train Acc 0.8212 | ETputs(KTEPS) 10517.98
+2023-04-10 03:45:08,851 - train_gat.py [line:124] - INFO: Epoch 00250 | Time(s) 0.0619 | Val Loss 1.0922 | Val Acc 0.6527 |  Train Acc 0.8161 | ETputs(KTEPS) 10506.06
+2023-04-10 03:45:11,981 - train_gat.py [line:124] - INFO: Epoch 00300 | Time(s) 0.0620 | Val Loss 1.0998 | Val Acc 0.6659 |  Train Acc 0.8234 | ETputs(KTEPS) 10486.78
+2023-04-10 03:45:15,097 - train_gat.py [line:124] - INFO: Epoch 00350 | Time(s) 0.0620 | Val Loss 1.0971 | Val Acc 0.6659 |  Train Acc 0.8300 | ETputs(KTEPS) 10480.02
+2023-04-10 03:45:16,172 - train_gat.py [line:135] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-10 03:45:16,185 - train_gat.py [line:138] - INFO: [FINAL MODEL] Run 6 .\Val accuracy 63.30% \Val loss: 1.1
+2023-04-10 03:45:16,191 - train_gat.py [line:140] - INFO: [FINAL MODEL] Run 6 .	Test accuracy 62.58% \Test loss: 1.1
+2023-04-10 03:45:18,548 - train_gat.py [line:124] - INFO: Epoch 00050 | Time(s) 0.0449 | Val Loss 1.0479 | Val Acc 0.6286 |  Train Acc 0.7282 | ETputs(KTEPS) 14473.95
+2023-04-10 03:45:21,693 - train_gat.py [line:124] - INFO: Epoch 00100 | Time(s) 0.0538 | Val Loss 1.0639 | Val Acc 0.6352 |  Train Acc 0.7832 | ETputs(KTEPS) 12081.49
+2023-04-10 03:45:24,829 - train_gat.py [line:124] - INFO: Epoch 00150 | Time(s) 0.0568 | Val Loss 1.1060 | Val Acc 0.6396 |  Train Acc 0.8044 | ETputs(KTEPS) 11452.70
+2023-04-10 03:45:27,912 - train_gat.py [line:124] - INFO: Epoch 00200 | Time(s) 0.0580 | Val Loss 1.1531 | Val Acc 0.6264 |  Train Acc 0.8007 | ETputs(KTEPS) 11212.48
+2023-04-10 03:45:30,965 - train_gat.py [line:124] - INFO: Epoch 00250 | Time(s) 0.0586 | Val Loss 1.1564 | Val Acc 0.6286 |  Train Acc 0.8161 | ETputs(KTEPS) 11096.53
+2023-04-10 03:45:34,064 - train_gat.py [line:124] - INFO: Epoch 00300 | Time(s) 0.0592 | Val Loss 1.1946 | Val Acc 0.6330 |  Train Acc 0.8139 | ETputs(KTEPS) 10991.99
+2023-04-10 03:45:37,160 - train_gat.py [line:124] - INFO: Epoch 00350 | Time(s) 0.0595 | Val Loss 1.2060 | Val Acc 0.6505 |  Train Acc 0.8381 | ETputs(KTEPS) 10919.50
+2023-04-10 03:45:38,150 - train_gat.py [line:135] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-10 03:45:38,170 - train_gat.py [line:138] - INFO: [FINAL MODEL] Run 7 .\Val accuracy 62.64% \Val loss: 1.0
+2023-04-10 03:45:38,191 - train_gat.py [line:140] - INFO: [FINAL MODEL] Run 7 .	Test accuracy 64.55% \Test loss: 1.0
+2023-04-10 03:45:41,419 - train_gat.py [line:124] - INFO: Epoch 00050 | Time(s) 0.0618 | Val Loss 1.1014 | Val Acc 0.5626 |  Train Acc 0.6857 | ETputs(KTEPS) 10526.14
+2023-04-10 03:45:44,487 - train_gat.py [line:124] - INFO: Epoch 00100 | Time(s) 0.0614 | Val Loss 1.0882 | Val Acc 0.6549 |  Train Acc 0.7692 | ETputs(KTEPS) 10580.93
+2023-04-10 03:45:47,593 - train_gat.py [line:124] - INFO: Epoch 00150 | Time(s) 0.0617 | Val Loss 1.1131 | Val Acc 0.6132 |  Train Acc 0.7626 | ETputs(KTEPS) 10544.87
+2023-04-10 03:45:50,661 - train_gat.py [line:124] - INFO: Epoch 00200 | Time(s) 0.0616 | Val Loss 1.0994 | Val Acc 0.6571 |  Train Acc 0.7883 | ETputs(KTEPS) 10563.17
+2023-04-10 03:45:53,795 - train_gat.py [line:124] - INFO: Epoch 00250 | Time(s) 0.0618 | Val Loss 1.1376 | Val Acc 0.6440 |  Train Acc 0.7927 | ETputs(KTEPS) 10526.25
+2023-04-10 03:45:56,905 - train_gat.py [line:124] - INFO: Epoch 00300 | Time(s) 0.0618 | Val Loss 1.1308 | Val Acc 0.6549 |  Train Acc 0.8168 | ETputs(KTEPS) 10514.60
+2023-04-10 03:46:00,045 - train_gat.py [line:124] - INFO: Epoch 00350 | Time(s) 0.0620 | Val Loss 1.1394 | Val Acc 0.6462 |  Train Acc 0.8125 | ETputs(KTEPS) 10492.15
+2023-04-10 03:46:02,185 - train_gat.py [line:124] - INFO: Epoch 00400 | Time(s) 0.0596 | Val Loss 1.1375 | Val Acc 0.6484 |  Train Acc 0.8286 | ETputs(KTEPS) 10914.98
+2023-04-10 03:46:04,977 - train_gat.py [line:124] - INFO: Epoch 00450 | Time(s) 0.0592 | Val Loss 1.1309 | Val Acc 0.6505 |  Train Acc 0.8447 | ETputs(KTEPS) 10991.92
+2023-04-10 03:46:05,869 - train_gat.py [line:135] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-10 03:46:05,893 - train_gat.py [line:138] - INFO: [FINAL MODEL] Run 8 .\Val accuracy 64.40% \Val loss: 1.0
+2023-04-10 03:46:05,913 - train_gat.py [line:140] - INFO: [FINAL MODEL] Run 8 .	Test accuracy 66.96% \Test loss: 1.0
+2023-04-10 03:46:09,126 - train_gat.py [line:124] - INFO: Epoch 00050 | Time(s) 0.0617 | Val Loss 1.0361 | Val Acc 0.6110 |  Train Acc 0.7253 | ETputs(KTEPS) 10542.42
+2023-04-10 03:46:12,241 - train_gat.py [line:124] - INFO: Epoch 00100 | Time(s) 0.0618 | Val Loss 1.0123 | Val Acc 0.6484 |  Train Acc 0.7912 | ETputs(KTEPS) 10526.93
+2023-04-10 03:46:15,306 - train_gat.py [line:124] - INFO: Epoch 00150 | Time(s) 0.0615 | Val Loss 0.9716 | Val Acc 0.6549 |  Train Acc 0.8029 | ETputs(KTEPS) 10580.37
+2023-04-10 03:46:18,348 - train_gat.py [line:124] - INFO: Epoch 00200 | Time(s) 0.0613 | Val Loss 1.0156 | Val Acc 0.6571 |  Train Acc 0.8139 | ETputs(KTEPS) 10607.69
+2023-04-10 03:46:21,436 - train_gat.py [line:124] - INFO: Epoch 00250 | Time(s) 0.0614 | Val Loss 1.0249 | Val Acc 0.6615 |  Train Acc 0.8212 | ETputs(KTEPS) 10592.36
+2023-04-10 03:46:24,504 - train_gat.py [line:124] - INFO: Epoch 00300 | Time(s) 0.0614 | Val Loss 1.0303 | Val Acc 0.6527 |  Train Acc 0.8198 | ETputs(KTEPS) 10594.32
+2023-04-10 03:46:27,642 - train_gat.py [line:124] - INFO: Epoch 00350 | Time(s) 0.0616 | Val Loss 1.0075 | Val Acc 0.6549 |  Train Acc 0.8322 | ETputs(KTEPS) 10561.12
+2023-04-10 03:46:30,717 - train_gat.py [line:124] - INFO: Epoch 00400 | Time(s) 0.0616 | Val Loss 0.9956 | Val Acc 0.6703 |  Train Acc 0.8396 | ETputs(KTEPS) 10563.00
+2023-04-10 03:46:33,354 - train_gat.py [line:135] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-10 03:46:33,369 - train_gat.py [line:138] - INFO: [FINAL MODEL] Run 9 .\Val accuracy 67.03% \Val loss: 0.97
+2023-04-10 03:46:33,391 - train_gat.py [line:140] - INFO: [FINAL MODEL] Run 9 .	Test accuracy 65.43% \Test loss: 1.0
+2023-04-10 03:46:36,618 - train_gat.py [line:124] - INFO: Epoch 00050 | Time(s) 0.0615 | Val Loss 0.9606 | Val Acc 0.6571 |  Train Acc 0.7238 | ETputs(KTEPS) 10565.33
+2023-04-10 03:46:39,784 - train_gat.py [line:124] - INFO: Epoch 00100 | Time(s) 0.0622 | Val Loss 0.9274 | Val Acc 0.6593 |  Train Acc 0.7868 | ETputs(KTEPS) 10457.45
+2023-04-10 03:46:42,698 - train_gat.py [line:124] - INFO: Epoch 00150 | Time(s) 0.0607 | Val Loss 0.9128 | Val Acc 0.6769 |  Train Acc 0.7941 | ETputs(KTEPS) 10707.31
+2023-04-10 03:46:44,653 - train_gat.py [line:124] - INFO: Epoch 00200 | Time(s) 0.0553 | Val Loss 0.9428 | Val Acc 0.6725 |  Train Acc 0.8249 | ETputs(KTEPS) 11755.15
+2023-04-10 03:46:47,801 - train_gat.py [line:124] - INFO: Epoch 00250 | Time(s) 0.0568 | Val Loss 0.9395 | Val Acc 0.6615 |  Train Acc 0.8271 | ETputs(KTEPS) 11440.72
+2023-04-10 03:46:50,894 - train_gat.py [line:124] - INFO: Epoch 00300 | Time(s) 0.0577 | Val Loss 0.9362 | Val Acc 0.6813 |  Train Acc 0.8366 | ETputs(KTEPS) 11275.47
+2023-04-10 03:46:53,992 - train_gat.py [line:124] - INFO: Epoch 00350 | Time(s) 0.0583 | Val Loss 0.9390 | Val Acc 0.6901 |  Train Acc 0.8447 | ETputs(KTEPS) 11157.65
+2023-04-10 03:46:57,125 - train_gat.py [line:124] - INFO: Epoch 00400 | Time(s) 0.0588 | Val Loss 0.9570 | Val Acc 0.6659 |  Train Acc 0.8447 | ETputs(KTEPS) 11054.75
+2023-04-10 03:46:59,684 - train_gat.py [line:135] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-10 03:46:59,700 - train_gat.py [line:138] - INFO: [FINAL MODEL] Run 10 .\Val accuracy 66.15% \Val loss: 0.91
+2023-04-10 03:46:59,717 - train_gat.py [line:140] - INFO: [FINAL MODEL] Run 10 .	Test accuracy 63.02% \Test loss: 1.0
+2023-04-10 03:47:02,900 - train_gat.py [line:124] - INFO: Epoch 00050 | Time(s) 0.0615 | Val Loss 1.1164 | Val Acc 0.5714 |  Train Acc 0.7040 | ETputs(KTEPS) 10567.51
+2023-04-10 03:47:06,051 - train_gat.py [line:124] - INFO: Epoch 00100 | Time(s) 0.0621 | Val Loss 1.1591 | Val Acc 0.6066 |  Train Acc 0.7480 | ETputs(KTEPS) 10466.40
+2023-04-10 03:47:09,168 - train_gat.py [line:124] - INFO: Epoch 00150 | Time(s) 0.0622 | Val Loss 1.1303 | Val Acc 0.6352 |  Train Acc 0.7707 | ETputs(KTEPS) 10456.30
+2023-04-10 03:47:12,278 - train_gat.py [line:124] - INFO: Epoch 00200 | Time(s) 0.0622 | Val Loss 1.1426 | Val Acc 0.6374 |  Train Acc 0.7956 | ETputs(KTEPS) 10456.19
+2023-04-10 03:47:15,408 - train_gat.py [line:124] - INFO: Epoch 00250 | Time(s) 0.0623 | Val Loss 1.1169 | Val Acc 0.6484 |  Train Acc 0.8029 | ETputs(KTEPS) 10443.48
+2023-04-10 03:47:18,501 - train_gat.py [line:124] - INFO: Epoch 00300 | Time(s) 0.0622 | Val Loss 1.1743 | Val Acc 0.6462 |  Train Acc 0.8271 | ETputs(KTEPS) 10455.48
+2023-04-10 03:47:21,639 - train_gat.py [line:124] - INFO: Epoch 00350 | Time(s) 0.0623 | Val Loss 1.1554 | Val Acc 0.6462 |  Train Acc 0.7919 | ETputs(KTEPS) 10442.29
+2023-04-10 03:47:23,530 - train_gat.py [line:135] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-10 03:47:23,545 - train_gat.py [line:138] - INFO: [FINAL MODEL] Run 11 .\Val accuracy 61.54% \Val loss: 1.1
+2023-04-10 03:47:23,568 - train_gat.py [line:140] - INFO: [FINAL MODEL] Run 11 .	Test accuracy 65.65% \Test loss: 0.99
+2023-04-10 03:47:26,782 - train_gat.py [line:124] - INFO: Epoch 00050 | Time(s) 0.0616 | Val Loss 1.0436 | Val Acc 0.6154 |  Train Acc 0.7333 | ETputs(KTEPS) 10559.39
+2023-04-10 03:47:29,924 - train_gat.py [line:124] - INFO: Epoch 00100 | Time(s) 0.0620 | Val Loss 1.0266 | Val Acc 0.6308 |  Train Acc 0.7941 | ETputs(KTEPS) 10478.79
+2023-04-10 03:47:31,615 - train_gat.py [line:124] - INFO: Epoch 00150 | Time(s) 0.0526 | Val Loss 1.0876 | Val Acc 0.6000 |  Train Acc 0.7875 | ETputs(KTEPS) 12353.78
+2023-04-10 03:47:34,740 - train_gat.py [line:124] - INFO: Epoch 00200 | Time(s) 0.0551 | Val Loss 1.0865 | Val Acc 0.6440 |  Train Acc 0.8300 | ETputs(KTEPS) 11801.68
+2023-04-10 03:47:37,821 - train_gat.py [line:124] - INFO: Epoch 00250 | Time(s) 0.0564 | Val Loss 1.1269 | Val Acc 0.6308 |  Train Acc 0.8322 | ETputs(KTEPS) 11530.09
+2023-04-10 03:47:40,931 - train_gat.py [line:124] - INFO: Epoch 00300 | Time(s) 0.0574 | Val Loss 1.1039 | Val Acc 0.6374 |  Train Acc 0.8491 | ETputs(KTEPS) 11336.79
+2023-04-10 03:47:44,041 - train_gat.py [line:124] - INFO: Epoch 00350 | Time(s) 0.0580 | Val Loss 1.1293 | Val Acc 0.6308 |  Train Acc 0.8542 | ETputs(KTEPS) 11202.19
+2023-04-10 03:47:46,912 - train_gat.py [line:135] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-10 03:47:46,929 - train_gat.py [line:138] - INFO: [FINAL MODEL] Run 12 .\Val accuracy 61.98% \Val loss: 1.0
+2023-04-10 03:47:46,951 - train_gat.py [line:140] - INFO: [FINAL MODEL] Run 12 .	Test accuracy 61.71% \Test loss: 1.1
+2023-04-10 03:47:50,132 - train_gat.py [line:124] - INFO: Epoch 00050 | Time(s) 0.0610 | Val Loss 1.1039 | Val Acc 0.5824 |  Train Acc 0.7209 | ETputs(KTEPS) 10650.90
+2023-04-10 03:47:53,260 - train_gat.py [line:124] - INFO: Epoch 00100 | Time(s) 0.0617 | Val Loss 1.0939 | Val Acc 0.6264 |  Train Acc 0.7795 | ETputs(KTEPS) 10544.24
+2023-04-10 03:47:56,400 - train_gat.py [line:124] - INFO: Epoch 00150 | Time(s) 0.0620 | Val Loss 1.1002 | Val Acc 0.6505 |  Train Acc 0.7993 | ETputs(KTEPS) 10481.87
+2023-04-10 03:47:59,526 - train_gat.py [line:124] - INFO: Epoch 00200 | Time(s) 0.0621 | Val Loss 1.1678 | Val Acc 0.6374 |  Train Acc 0.8073 | ETputs(KTEPS) 10463.31
+2023-04-10 03:48:02,640 - train_gat.py [line:124] - INFO: Epoch 00250 | Time(s) 0.0622 | Val Loss 1.1771 | Val Acc 0.6462 |  Train Acc 0.8198 | ETputs(KTEPS) 10459.46
+2023-04-10 03:48:05,756 - train_gat.py [line:124] - INFO: Epoch 00300 | Time(s) 0.0622 | Val Loss 1.2359 | Val Acc 0.6352 |  Train Acc 0.8344 | ETputs(KTEPS) 10456.39
+2023-04-10 03:48:08,866 - train_gat.py [line:124] - INFO: Epoch 00350 | Time(s) 0.0622 | Val Loss 1.2610 | Val Acc 0.6088 |  Train Acc 0.8337 | ETputs(KTEPS) 10456.18
+2023-04-10 03:48:09,946 - train_gat.py [line:135] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-10 03:48:09,970 - train_gat.py [line:138] - INFO: [FINAL MODEL] Run 13 .\Val accuracy 61.32% \Val loss: 1.1
+2023-04-10 03:48:09,988 - train_gat.py [line:140] - INFO: [FINAL MODEL] Run 13 .	Test accuracy 61.71% \Test loss: 1.1
+2023-04-10 03:48:13,196 - train_gat.py [line:124] - INFO: Epoch 00050 | Time(s) 0.0614 | Val Loss 1.0039 | Val Acc 0.6154 |  Train Acc 0.7158 | ETputs(KTEPS) 10588.12
+2023-04-10 03:48:16,316 - train_gat.py [line:124] - INFO: Epoch 00100 | Time(s) 0.0616 | Val Loss 0.9543 | Val Acc 0.6769 |  Train Acc 0.7817 | ETputs(KTEPS) 10553.18
+2023-04-10 03:48:19,426 - train_gat.py [line:124] - INFO: Epoch 00150 | Time(s) 0.0618 | Val Loss 0.9404 | Val Acc 0.6813 |  Train Acc 0.8007 | ETputs(KTEPS) 10526.27
+2023-04-10 03:48:21,192 - train_gat.py [line:124] - INFO: Epoch 00200 | Time(s) 0.0551 | Val Loss 0.9579 | Val Acc 0.7011 |  Train Acc 0.8168 | ETputs(KTEPS) 11790.38
+2023-04-10 03:48:24,334 - train_gat.py [line:124] - INFO: Epoch 00250 | Time(s) 0.0567 | Val Loss 0.9702 | Val Acc 0.6769 |  Train Acc 0.8132 | ETputs(KTEPS) 11470.81
+2023-04-10 03:48:27,470 - train_gat.py [line:124] - INFO: Epoch 00300 | Time(s) 0.0577 | Val Loss 0.9554 | Val Acc 0.7055 |  Train Acc 0.8308 | ETputs(KTEPS) 11271.77
+2023-04-10 03:48:30,541 - train_gat.py [line:124] - INFO: Epoch 00350 | Time(s) 0.0582 | Val Loss 0.9793 | Val Acc 0.6901 |  Train Acc 0.8484 | ETputs(KTEPS) 11169.64
+2023-04-10 03:48:33,621 - train_gat.py [line:124] - INFO: Epoch 00400 | Time(s) 0.0586 | Val Loss 0.9900 | Val Acc 0.6835 |  Train Acc 0.8593 | ETputs(KTEPS) 11089.41
+2023-04-10 03:48:34,006 - train_gat.py [line:135] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-10 03:48:34,029 - train_gat.py [line:138] - INFO: [FINAL MODEL] Run 14 .\Val accuracy 68.79% \Val loss: 0.93
+2023-04-10 03:48:34,044 - train_gat.py [line:140] - INFO: [FINAL MODEL] Run 14 .	Test accuracy 61.71% \Test loss: 1.1
+2023-04-10 03:48:37,225 - train_gat.py [line:124] - INFO: Epoch 00050 | Time(s) 0.0611 | Val Loss 1.0597 | Val Acc 0.6154 |  Train Acc 0.6989 | ETputs(KTEPS) 10640.25
+2023-04-10 03:48:40,361 - train_gat.py [line:124] - INFO: Epoch 00100 | Time(s) 0.0618 | Val Loss 1.0231 | Val Acc 0.6264 |  Train Acc 0.7516 | ETputs(KTEPS) 10524.54
+2023-04-10 03:48:43,381 - train_gat.py [line:124] - INFO: Epoch 00150 | Time(s) 0.0613 | Val Loss 1.0232 | Val Acc 0.6220 |  Train Acc 0.7392 | ETputs(KTEPS) 10605.83
+2023-04-10 03:48:46,410 - train_gat.py [line:124] - INFO: Epoch 00200 | Time(s) 0.0611 | Val Loss 1.0274 | Val Acc 0.6659 |  Train Acc 0.7978 | ETputs(KTEPS) 10638.15
+2023-04-10 03:48:49,455 - train_gat.py [line:124] - INFO: Epoch 00250 | Time(s) 0.0611 | Val Loss 1.0359 | Val Acc 0.6593 |  Train Acc 0.8168 | ETputs(KTEPS) 10646.76
+2023-04-10 03:48:52,534 - train_gat.py [line:124] - INFO: Epoch 00300 | Time(s) 0.0611 | Val Loss 1.0225 | Val Acc 0.6769 |  Train Acc 0.8366 | ETputs(KTEPS) 10632.98
+2023-04-10 03:48:55,661 - train_gat.py [line:124] - INFO: Epoch 00350 | Time(s) 0.0613 | Val Loss 1.0112 | Val Acc 0.6967 |  Train Acc 0.8462 | ETputs(KTEPS) 10599.35
+2023-04-10 03:48:58,777 - train_gat.py [line:124] - INFO: Epoch 00400 | Time(s) 0.0614 | Val Loss 1.0333 | Val Acc 0.6879 |  Train Acc 0.8549 | ETputs(KTEPS) 10582.24
+2023-04-10 03:49:01,916 - train_gat.py [line:124] - INFO: Epoch 00450 | Time(s) 0.0616 | Val Loss 1.0082 | Val Acc 0.6945 |  Train Acc 0.8659 | ETputs(KTEPS) 10557.08
+2023-04-10 03:49:04,249 - train_gat.py [line:124] - INFO: Epoch 00500 | Time(s) 0.0601 | Val Loss 1.0632 | Val Acc 0.6593 |  Train Acc 0.8645 | ETputs(KTEPS) 10820.10
+2023-04-10 03:49:06,704 - train_gat.py [line:124] - INFO: Epoch 00550 | Time(s) 0.0591 | Val Loss 1.0724 | Val Acc 0.6769 |  Train Acc 0.8806 | ETputs(KTEPS) 11003.78
+2023-04-10 03:49:09,828 - train_gat.py [line:124] - INFO: Epoch 00600 | Time(s) 0.0594 | Val Loss 1.0380 | Val Acc 0.6835 |  Train Acc 0.8791 | ETputs(KTEPS) 10951.87
+2023-04-10 03:49:12,932 - train_gat.py [line:124] - INFO: Epoch 00650 | Time(s) 0.0596 | Val Loss 1.0297 | Val Acc 0.6967 |  Train Acc 0.8960 | ETputs(KTEPS) 10914.08
+2023-04-10 03:49:13,138 - train_gat.py [line:135] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-10 03:49:13,152 - train_gat.py [line:138] - INFO: [FINAL MODEL] Run 15 .\Val accuracy 69.23% \Val loss: 0.99
+2023-04-10 03:49:13,179 - train_gat.py [line:140] - INFO: [FINAL MODEL] Run 15 .	Test accuracy 69.80% \Test loss: 0.94
+2023-04-10 03:49:16,342 - train_gat.py [line:124] - INFO: Epoch 00050 | Time(s) 0.0607 | Val Loss 1.1223 | Val Acc 0.5780 |  Train Acc 0.7099 | ETputs(KTEPS) 10720.02
+2023-04-10 03:49:19,480 - train_gat.py [line:124] - INFO: Epoch 00100 | Time(s) 0.0616 | Val Loss 1.1206 | Val Acc 0.6066 |  Train Acc 0.7722 | ETputs(KTEPS) 10562.44
+2023-04-10 03:49:22,611 - train_gat.py [line:124] - INFO: Epoch 00150 | Time(s) 0.0618 | Val Loss 1.1371 | Val Acc 0.6242 |  Train Acc 0.8147 | ETputs(KTEPS) 10516.39
+2023-04-10 03:49:25,693 - train_gat.py [line:124] - INFO: Epoch 00200 | Time(s) 0.0618 | Val Loss 1.1516 | Val Acc 0.6418 |  Train Acc 0.8168 | ETputs(KTEPS) 10525.83
+2023-04-10 03:49:28,793 - train_gat.py [line:124] - INFO: Epoch 00250 | Time(s) 0.0618 | Val Loss 1.1374 | Val Acc 0.6418 |  Train Acc 0.8220 | ETputs(KTEPS) 10519.39
+2023-04-10 03:49:31,866 - train_gat.py [line:124] - INFO: Epoch 00300 | Time(s) 0.0617 | Val Loss 1.1561 | Val Acc 0.6242 |  Train Acc 0.8205 | ETputs(KTEPS) 10529.86
+2023-04-10 03:49:34,955 - train_gat.py [line:124] - INFO: Epoch 00350 | Time(s) 0.0617 | Val Loss 1.1489 | Val Acc 0.6462 |  Train Acc 0.8513 | ETputs(KTEPS) 10529.90
+2023-04-10 03:49:38,039 - train_gat.py [line:124] - INFO: Epoch 00400 | Time(s) 0.0617 | Val Loss 1.1767 | Val Acc 0.6462 |  Train Acc 0.8432 | ETputs(KTEPS) 10531.83
+2023-04-10 03:49:38,554 - train_gat.py [line:135] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-10 03:49:38,577 - train_gat.py [line:138] - INFO: [FINAL MODEL] Run 16 .\Val accuracy 62.20% \Val loss: 1.1
+2023-04-10 03:49:38,599 - train_gat.py [line:140] - INFO: [FINAL MODEL] Run 16 .	Test accuracy 63.89% \Test loss: 0.99
+2023-04-10 03:49:41,765 - train_gat.py [line:124] - INFO: Epoch 00050 | Time(s) 0.0607 | Val Loss 1.0276 | Val Acc 0.6352 |  Train Acc 0.7319 | ETputs(KTEPS) 10703.09
+2023-04-10 03:49:44,867 - train_gat.py [line:124] - INFO: Epoch 00100 | Time(s) 0.0612 | Val Loss 1.0165 | Val Acc 0.6440 |  Train Acc 0.7861 | ETputs(KTEPS) 10616.85
+2023-04-10 03:49:47,999 - train_gat.py [line:124] - INFO: Epoch 00150 | Time(s) 0.0617 | Val Loss 1.0151 | Val Acc 0.6352 |  Train Acc 0.7963 | ETputs(KTEPS) 10544.92
+2023-04-10 03:49:51,138 - train_gat.py [line:124] - INFO: Epoch 00200 | Time(s) 0.0619 | Val Loss 1.0055 | Val Acc 0.6615 |  Train Acc 0.8081 | ETputs(KTEPS) 10501.43
+2023-04-10 03:49:54,023 - train_gat.py [line:124] - INFO: Epoch 00250 | Time(s) 0.0611 | Val Loss 0.9983 | Val Acc 0.6615 |  Train Acc 0.8491 | ETputs(KTEPS) 10649.27
+2023-04-10 03:49:56,113 - train_gat.py [line:124] - INFO: Epoch 00300 | Time(s) 0.0578 | Val Loss 1.0218 | Val Acc 0.6637 |  Train Acc 0.8549 | ETputs(KTEPS) 11241.17
+2023-04-10 03:49:59,198 - train_gat.py [line:124] - INFO: Epoch 00350 | Time(s) 0.0584 | Val Loss 1.0681 | Val Acc 0.6637 |  Train Acc 0.8527 | ETputs(KTEPS) 11136.34
+2023-04-10 03:50:02,314 - train_gat.py [line:124] - INFO: Epoch 00400 | Time(s) 0.0589 | Val Loss 1.0354 | Val Acc 0.6681 |  Train Acc 0.8637 | ETputs(KTEPS) 11044.52
+2023-04-10 03:50:05,379 - train_gat.py [line:124] - INFO: Epoch 00450 | Time(s) 0.0591 | Val Loss 1.0476 | Val Acc 0.6637 |  Train Acc 0.8813 | ETputs(KTEPS) 10994.48
+2023-04-10 03:50:08,452 - train_gat.py [line:124] - INFO: Epoch 00500 | Time(s) 0.0594 | Val Loss 1.0187 | Val Acc 0.6791 |  Train Acc 0.8806 | ETputs(KTEPS) 10952.06
+2023-04-10 03:50:08,963 - train_gat.py [line:135] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-10 03:50:08,981 - train_gat.py [line:138] - INFO: [FINAL MODEL] Run 17 .\Val accuracy 66.37% \Val loss: 0.99
+2023-04-10 03:50:09,000 - train_gat.py [line:140] - INFO: [FINAL MODEL] Run 17 .	Test accuracy 61.27% \Test loss: 1.1
+2023-04-10 03:50:12,168 - train_gat.py [line:124] - INFO: Epoch 00050 | Time(s) 0.0609 | Val Loss 1.0363 | Val Acc 0.6264 |  Train Acc 0.7282 | ETputs(KTEPS) 10674.59
+2023-04-10 03:50:15,284 - train_gat.py [line:124] - INFO: Epoch 00100 | Time(s) 0.0614 | Val Loss 1.0290 | Val Acc 0.6198 |  Train Acc 0.7516 | ETputs(KTEPS) 10592.07
+2023-04-10 03:50:18,408 - train_gat.py [line:124] - INFO: Epoch 00150 | Time(s) 0.0617 | Val Loss 1.0135 | Val Acc 0.6571 |  Train Acc 0.7941 | ETputs(KTEPS) 10531.46
+2023-04-10 03:50:21,473 - train_gat.py [line:124] - INFO: Epoch 00200 | Time(s) 0.0616 | Val Loss 1.0163 | Val Acc 0.6725 |  Train Acc 0.8037 | ETputs(KTEPS) 10551.54
+2023-04-10 03:50:24,588 - train_gat.py [line:124] - INFO: Epoch 00250 | Time(s) 0.0618 | Val Loss 1.0248 | Val Acc 0.6791 |  Train Acc 0.8125 | ETputs(KTEPS) 10529.10
+2023-04-10 03:50:27,713 - train_gat.py [line:124] - INFO: Epoch 00300 | Time(s) 0.0619 | Val Loss 1.0153 | Val Acc 0.6791 |  Train Acc 0.8286 | ETputs(KTEPS) 10509.14
+2023-04-10 03:50:30,841 - train_gat.py [line:124] - INFO: Epoch 00350 | Time(s) 0.0619 | Val Loss 1.0168 | Val Acc 0.6791 |  Train Acc 0.8381 | ETputs(KTEPS) 10496.40
+2023-04-10 03:50:33,978 - train_gat.py [line:124] - INFO: Epoch 00400 | Time(s) 0.0620 | Val Loss 1.0226 | Val Acc 0.6989 |  Train Acc 0.8469 | ETputs(KTEPS) 10480.44
+2023-04-10 03:50:36,564 - train_gat.py [line:124] - INFO: Epoch 00450 | Time(s) 0.0609 | Val Loss 1.0311 | Val Acc 0.6901 |  Train Acc 0.8557 | ETputs(KTEPS) 10678.34
+2023-04-10 03:50:38,976 - train_gat.py [line:124] - INFO: Epoch 00500 | Time(s) 0.0596 | Val Loss 1.0654 | Val Acc 0.6967 |  Train Acc 0.8667 | ETputs(KTEPS) 10905.35
+2023-04-10 03:50:42,050 - train_gat.py [line:124] - INFO: Epoch 00550 | Time(s) 0.0598 | Val Loss 1.0407 | Val Acc 0.7011 |  Train Acc 0.8777 | ETputs(KTEPS) 10875.15
+2023-04-10 03:50:45,148 - train_gat.py [line:124] - INFO: Epoch 00600 | Time(s) 0.0600 | Val Loss 1.0588 | Val Acc 0.7121 |  Train Acc 0.8842 | ETputs(KTEPS) 10842.69
+2023-04-10 03:50:47,580 - train_gat.py [line:135] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-10 03:50:47,601 - train_gat.py [line:138] - INFO: [FINAL MODEL] Run 18 .\Val accuracy 69.23% \Val loss: 0.98
+2023-04-10 03:50:47,621 - train_gat.py [line:140] - INFO: [FINAL MODEL] Run 18 .	Test accuracy 68.49% \Test loss: 0.95
+2023-04-10 03:50:50,817 - train_gat.py [line:124] - INFO: Epoch 00050 | Time(s) 0.0613 | Val Loss 1.0444 | Val Acc 0.6198 |  Train Acc 0.7194 | ETputs(KTEPS) 10601.02
+2023-04-10 03:50:53,894 - train_gat.py [line:124] - INFO: Epoch 00100 | Time(s) 0.0612 | Val Loss 0.9682 | Val Acc 0.6791 |  Train Acc 0.7736 | ETputs(KTEPS) 10624.10
+2023-04-10 03:50:56,974 - train_gat.py [line:124] - INFO: Epoch 00150 | Time(s) 0.0612 | Val Loss 1.0259 | Val Acc 0.6681 |  Train Acc 0.7875 | ETputs(KTEPS) 10616.14
+2023-04-10 03:51:00,064 - train_gat.py [line:124] - INFO: Epoch 00200 | Time(s) 0.0614 | Val Loss 0.9683 | Val Acc 0.6879 |  Train Acc 0.8212 | ETputs(KTEPS) 10593.16
+2023-04-10 03:51:03,201 - train_gat.py [line:124] - INFO: Epoch 00250 | Time(s) 0.0616 | Val Loss 0.9934 | Val Acc 0.6901 |  Train Acc 0.8234 | ETputs(KTEPS) 10548.06
+2023-04-10 03:51:06,313 - train_gat.py [line:124] - INFO: Epoch 00300 | Time(s) 0.0617 | Val Loss 0.9801 | Val Acc 0.6967 |  Train Acc 0.8352 | ETputs(KTEPS) 10531.68
+2023-04-10 03:51:09,437 - train_gat.py [line:124] - INFO: Epoch 00350 | Time(s) 0.0618 | Val Loss 0.9824 | Val Acc 0.7033 |  Train Acc 0.8388 | ETputs(KTEPS) 10514.49
+2023-04-10 03:51:12,587 - train_gat.py [line:124] - INFO: Epoch 00400 | Time(s) 0.0620 | Val Loss 1.0092 | Val Acc 0.7055 |  Train Acc 0.8359 | ETputs(KTEPS) 10490.62
+2023-04-10 03:51:14,879 - train_gat.py [line:135] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-10 03:51:14,900 - train_gat.py [line:138] - INFO: [FINAL MODEL] Run 19 .\Val accuracy 70.11% \Val loss: 0.95
+2023-04-10 03:51:14,921 - train_gat.py [line:140] - INFO: [FINAL MODEL] Run 19 .	Test accuracy 67.61% \Test loss: 0.95
+2023-04-10 03:51:14,921 - train_gat.py [line:165] - INFO: Mean Acc For Cross Validation: 0.6445, STDV: 0.0247
+2023-04-10 03:51:14,922 - train_gat.py [line:166] - INFO: [0.6258205689277899, 0.6761487964989059, 0.6367614879649891, 0.6236323851203501, 0.649890590809628, 0.6345733041575492, 0.6258205689277899, 0.6455142231947484, 0.6695842450765864, 0.6542669584245077, 0.6301969365426696, 0.6564551422319475, 0.6170678336980306, 0.6170678336980306, 0.6170678336980306, 0.6980306345733042, 0.6389496717724289, 0.612691466083151, 0.6849015317286652, 0.6761487964989059]
+2023-04-10 03:51:18,237 - train_gatV2.py [line:251] - INFO: Namespace(seed=42, model='GAT', gpu=0, dataset='geom-chameleon', n_hidden=64, n_layers=2, heads=8, out_heads=1, with_negative_residual=True, with_initial_residual=False, wd1=1e-08, wd2=1e-07, wd3=0.0005, lr1=0.02, lr2=0.03, lr3=0.01, momentum=0.9, dropout=0.6, dropout2=0.4, n_epochs=10000, loss='nll', self_loop=True, udgraph=True, early_stop=True, patience=300, es_ckpt='e0cham', n_cv=20, start_cv=0, logging=False, log_detail=True, log_detailedCh=True, id_log=0)
+2023-04-10 03:51:22,194 - train_gatV2.py [line:159] - INFO: Split_seeds:[1824, 409, 4506, 4012, 3657, 2286, 1679, 8935, 1424, 9674, 6912, 520, 488, 1535, 3582, 3811, 8279, 9863, 434, 9195]
+2023-04-10 03:51:22,194 - train_gatV2.py [line:160] - INFO: Model_seeds:[3257, 8928, 6873, 3611, 7359, 9654, 4557, 106, 2615, 6924, 5574, 4552, 2547, 3527, 5514, 1674, 1519, 6224, 1584, 5881]
+2023-04-10 03:51:26,423 - train_gatV2.py [line:134] - INFO: Epoch 00050 | Time(s) 0.0831 | Val Loss 1.2035 | Val Acc 0.5956 |  Train Acc 0.7956 | ETputs(KTEPS) 7828.36
+2023-04-10 03:51:29,411 - train_gatV2.py [line:134] - INFO: Epoch 00100 | Time(s) 0.0713 | Val Loss 1.2161 | Val Acc 0.5780 |  Train Acc 0.8227 | ETputs(KTEPS) 9121.79
+2023-04-10 03:51:32,526 - train_gatV2.py [line:134] - INFO: Epoch 00150 | Time(s) 0.0683 | Val Loss 1.3128 | Val Acc 0.6132 |  Train Acc 0.8645 | ETputs(KTEPS) 9523.29
+2023-04-10 03:51:35,698 - train_gatV2.py [line:134] - INFO: Epoch 00200 | Time(s) 0.0671 | Val Loss 1.1890 | Val Acc 0.6044 |  Train Acc 0.9077 | ETputs(KTEPS) 9696.56
+2023-04-10 03:51:38,831 - train_gatV2.py [line:134] - INFO: Epoch 00250 | Time(s) 0.0662 | Val Loss 1.1510 | Val Acc 0.6769 |  Train Acc 0.9392 | ETputs(KTEPS) 9826.40
+2023-04-10 03:51:41,963 - train_gatV2.py [line:134] - INFO: Epoch 00300 | Time(s) 0.0656 | Val Loss 1.2598 | Val Acc 0.6286 |  Train Acc 0.9158 | ETputs(KTEPS) 9915.39
+2023-04-10 03:51:45,091 - train_gatV2.py [line:134] - INFO: Epoch 00350 | Time(s) 0.0651 | Val Loss 1.2396 | Val Acc 0.6374 |  Train Acc 0.9707 | ETputs(KTEPS) 9981.65
+2023-04-10 03:51:46,178 - train_gatV2.py [line:145] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-10 03:51:46,196 - train_gatV2.py [line:148] - INFO: [FINAL MODEL] Run 0 .\Val accuracy 63.30% \Val loss: 1.1
+2023-04-10 03:51:46,209 - train_gatV2.py [line:150] - INFO: [FINAL MODEL] Run 0 .	Test accuracy 64.77% \Test loss: 1.0
+2023-04-10 03:51:49,443 - train_gatV2.py [line:134] - INFO: Epoch 00050 | Time(s) 0.0626 | Val Loss 1.2602 | Val Acc 0.5516 |  Train Acc 0.7355 | ETputs(KTEPS) 10379.03
+2023-04-10 03:51:52,597 - train_gatV2.py [line:134] - INFO: Epoch 00100 | Time(s) 0.0628 | Val Loss 1.1846 | Val Acc 0.6264 |  Train Acc 0.8535 | ETputs(KTEPS) 10360.93
+2023-04-10 03:51:55,722 - train_gatV2.py [line:134] - INFO: Epoch 00150 | Time(s) 0.0627 | Val Loss 1.2438 | Val Acc 0.6198 |  Train Acc 0.8842 | ETputs(KTEPS) 10377.09
+2023-04-10 03:51:58,839 - train_gatV2.py [line:134] - INFO: Epoch 00200 | Time(s) 0.0626 | Val Loss 1.2004 | Val Acc 0.6352 |  Train Acc 0.9311 | ETputs(KTEPS) 10391.76
+2023-04-10 03:52:00,784 - train_gatV2.py [line:134] - INFO: Epoch 00250 | Time(s) 0.0578 | Val Loss 1.3395 | Val Acc 0.6242 |  Train Acc 0.9245 | ETputs(KTEPS) 11243.16
+2023-04-10 03:52:03,835 - train_gatV2.py [line:134] - INFO: Epoch 00300 | Time(s) 0.0584 | Val Loss 1.1600 | Val Acc 0.6418 |  Train Acc 0.9626 | ETputs(KTEPS) 11142.02
+2023-04-10 03:52:06,941 - train_gatV2.py [line:134] - INFO: Epoch 00350 | Time(s) 0.0589 | Val Loss 1.2478 | Val Acc 0.6154 |  Train Acc 0.9575 | ETputs(KTEPS) 11041.27
+2023-04-10 03:52:09,759 - train_gatV2.py [line:145] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-10 03:52:09,780 - train_gatV2.py [line:148] - INFO: [FINAL MODEL] Run 1 .\Val accuracy 62.86% \Val loss: 1.1
+2023-04-10 03:52:09,801 - train_gatV2.py [line:150] - INFO: [FINAL MODEL] Run 1 .	Test accuracy 68.71% \Test loss: 0.97
+2023-04-10 03:52:13,117 - train_gatV2.py [line:134] - INFO: Epoch 00050 | Time(s) 0.0639 | Val Loss 1.0084 | Val Acc 0.6022 |  Train Acc 0.7158 | ETputs(KTEPS) 10171.85
+2023-04-10 03:52:16,283 - train_gatV2.py [line:134] - INFO: Epoch 00100 | Time(s) 0.0635 | Val Loss 0.9051 | Val Acc 0.6615 |  Train Acc 0.8044 | ETputs(KTEPS) 10240.15
+2023-04-10 03:52:19,465 - train_gatV2.py [line:134] - INFO: Epoch 00150 | Time(s) 0.0635 | Val Loss 0.8958 | Val Acc 0.6637 |  Train Acc 0.9033 | ETputs(KTEPS) 10238.85
+2023-04-10 03:52:22,660 - train_gatV2.py [line:134] - INFO: Epoch 00200 | Time(s) 0.0636 | Val Loss 1.0061 | Val Acc 0.6593 |  Train Acc 0.9297 | ETputs(KTEPS) 10226.17
+2023-04-10 03:52:25,827 - train_gatV2.py [line:134] - INFO: Epoch 00250 | Time(s) 0.0635 | Val Loss 0.9866 | Val Acc 0.6659 |  Train Acc 0.9443 | ETputs(KTEPS) 10235.23
+2023-04-10 03:52:28,558 - train_gatV2.py [line:134] - INFO: Epoch 00300 | Time(s) 0.0620 | Val Loss 1.0707 | Val Acc 0.6462 |  Train Acc 0.9487 | ETputs(KTEPS) 10481.01
+2023-04-10 03:52:30,905 - train_gatV2.py [line:134] - INFO: Epoch 00350 | Time(s) 0.0599 | Val Loss 1.0539 | Val Acc 0.6330 |  Train Acc 0.9289 | ETputs(KTEPS) 10859.61
+2023-04-10 03:52:34,023 - train_gatV2.py [line:134] - INFO: Epoch 00400 | Time(s) 0.0602 | Val Loss 0.9776 | Val Acc 0.6659 |  Train Acc 0.9612 | ETputs(KTEPS) 10804.31
+2023-04-10 03:52:37,132 - train_gatV2.py [line:134] - INFO: Epoch 00450 | Time(s) 0.0604 | Val Loss 1.1053 | Val Acc 0.6549 |  Train Acc 0.9568 | ETputs(KTEPS) 10764.79
+2023-04-10 03:52:37,913 - train_gatV2.py [line:145] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-10 03:52:37,931 - train_gatV2.py [line:148] - INFO: [FINAL MODEL] Run 2 .\Val accuracy 68.57% \Val loss: 0.88
+2023-04-10 03:52:37,949 - train_gatV2.py [line:150] - INFO: [FINAL MODEL] Run 2 .	Test accuracy 66.74% \Test loss: 0.97
+2023-04-10 03:52:41,075 - train_gatV2.py [line:134] - INFO: Epoch 00050 | Time(s) 0.0604 | Val Loss 1.1390 | Val Acc 0.6198 |  Train Acc 0.7839 | ETputs(KTEPS) 10773.32
+2023-04-10 03:52:44,140 - train_gatV2.py [line:134] - INFO: Epoch 00100 | Time(s) 0.0608 | Val Loss 1.1359 | Val Acc 0.6264 |  Train Acc 0.8330 | ETputs(KTEPS) 10696.85
+2023-04-10 03:52:47,265 - train_gatV2.py [line:134] - INFO: Epoch 00150 | Time(s) 0.0613 | Val Loss 1.1981 | Val Acc 0.6462 |  Train Acc 0.8989 | ETputs(KTEPS) 10598.87
+2023-04-10 03:52:50,348 - train_gatV2.py [line:134] - INFO: Epoch 00200 | Time(s) 0.0614 | Val Loss 1.2260 | Val Acc 0.6440 |  Train Acc 0.9333 | ETputs(KTEPS) 10586.59
+2023-04-10 03:52:53,462 - train_gatV2.py [line:134] - INFO: Epoch 00250 | Time(s) 0.0616 | Val Loss 1.2055 | Val Acc 0.6286 |  Train Acc 0.9487 | ETputs(KTEPS) 10558.01
+2023-04-10 03:52:56,593 - train_gatV2.py [line:134] - INFO: Epoch 00300 | Time(s) 0.0618 | Val Loss 1.3520 | Val Acc 0.6242 |  Train Acc 0.9590 | ETputs(KTEPS) 10529.39
+2023-04-10 03:52:59,721 - train_gatV2.py [line:134] - INFO: Epoch 00350 | Time(s) 0.0619 | Val Loss 1.2482 | Val Acc 0.6659 |  Train Acc 0.9744 | ETputs(KTEPS) 10510.98
+2023-04-10 03:53:01,975 - train_gatV2.py [line:145] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-10 03:53:01,996 - train_gatV2.py [line:148] - INFO: [FINAL MODEL] Run 3 .\Val accuracy 63.30% \Val loss: 1.1
+2023-04-10 03:53:02,010 - train_gatV2.py [line:150] - INFO: [FINAL MODEL] Run 3 .	Test accuracy 61.27% \Test loss: 1.1
+2023-04-10 03:53:05,208 - train_gatV2.py [line:134] - INFO: Epoch 00050 | Time(s) 0.0618 | Val Loss 1.1228 | Val Acc 0.6132 |  Train Acc 0.7641 | ETputs(KTEPS) 10524.42
+2023-04-10 03:53:07,242 - train_gatV2.py [line:134] - INFO: Epoch 00100 | Time(s) 0.0511 | Val Loss 1.1583 | Val Acc 0.5846 |  Train Acc 0.8117 | ETputs(KTEPS) 12736.32
+2023-04-10 03:53:10,316 - train_gatV2.py [line:134] - INFO: Epoch 00150 | Time(s) 0.0545 | Val Loss 1.1413 | Val Acc 0.5978 |  Train Acc 0.8484 | ETputs(KTEPS) 11940.49
+2023-04-10 03:53:13,411 - train_gatV2.py [line:134] - INFO: Epoch 00200 | Time(s) 0.0563 | Val Loss 1.1209 | Val Acc 0.6330 |  Train Acc 0.9326 | ETputs(KTEPS) 11548.15
+2023-04-10 03:53:16,543 - train_gatV2.py [line:134] - INFO: Epoch 00250 | Time(s) 0.0576 | Val Loss 1.0992 | Val Acc 0.6835 |  Train Acc 0.9267 | ETputs(KTEPS) 11294.47
+2023-04-10 03:53:19,668 - train_gatV2.py [line:134] - INFO: Epoch 00300 | Time(s) 0.0584 | Val Loss 1.1655 | Val Acc 0.6198 |  Train Acc 0.9480 | ETputs(KTEPS) 11137.10
+2023-04-10 03:53:22,791 - train_gatV2.py [line:134] - INFO: Epoch 00350 | Time(s) 0.0590 | Val Loss 1.1928 | Val Acc 0.6308 |  Train Acc 0.9612 | ETputs(KTEPS) 11027.54
+2023-04-10 03:53:25,897 - train_gatV2.py [line:134] - INFO: Epoch 00400 | Time(s) 0.0594 | Val Loss 1.2476 | Val Acc 0.6396 |  Train Acc 0.9707 | ETputs(KTEPS) 10955.09
+2023-04-10 03:53:28,595 - train_gatV2.py [line:145] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-10 03:53:28,611 - train_gatV2.py [line:148] - INFO: [FINAL MODEL] Run 4 .\Val accuracy 69.01% \Val loss: 0.99
+2023-04-10 03:53:28,630 - train_gatV2.py [line:150] - INFO: [FINAL MODEL] Run 4 .	Test accuracy 66.08% \Test loss: 1.1
+2023-04-10 03:53:31,800 - train_gatV2.py [line:134] - INFO: Epoch 00050 | Time(s) 0.0612 | Val Loss 0.9754 | Val Acc 0.6527 |  Train Acc 0.7839 | ETputs(KTEPS) 10627.12
+2023-04-10 03:53:34,917 - train_gatV2.py [line:134] - INFO: Epoch 00100 | Time(s) 0.0616 | Val Loss 0.9417 | Val Acc 0.6967 |  Train Acc 0.8462 | ETputs(KTEPS) 10549.17
+2023-04-10 03:53:38,038 - train_gatV2.py [line:134] - INFO: Epoch 00150 | Time(s) 0.0618 | Val Loss 0.9331 | Val Acc 0.6923 |  Train Acc 0.9040 | ETputs(KTEPS) 10517.29
+2023-04-10 03:53:41,179 - train_gatV2.py [line:134] - INFO: Epoch 00200 | Time(s) 0.0621 | Val Loss 0.9795 | Val Acc 0.6835 |  Train Acc 0.9209 | ETputs(KTEPS) 10477.03
+2023-04-10 03:53:44,256 - train_gatV2.py [line:134] - INFO: Epoch 00250 | Time(s) 0.0619 | Val Loss 1.0331 | Val Acc 0.6659 |  Train Acc 0.9341 | ETputs(KTEPS) 10495.63
+2023-04-10 03:53:47,381 - train_gatV2.py [line:134] - INFO: Epoch 00300 | Time(s) 0.0620 | Val Loss 1.1204 | Val Acc 0.6396 |  Train Acc 0.9399 | ETputs(KTEPS) 10480.63
+2023-04-10 03:53:50,115 - train_gatV2.py [line:134] - INFO: Epoch 00350 | Time(s) 0.0610 | Val Loss 1.0538 | Val Acc 0.6681 |  Train Acc 0.9568 | ETputs(KTEPS) 10662.27
+2023-04-10 03:53:52,457 - train_gatV2.py [line:134] - INFO: Epoch 00400 | Time(s) 0.0592 | Val Loss 1.1587 | Val Acc 0.6110 |  Train Acc 0.9341 | ETputs(KTEPS) 10981.34
+2023-04-10 03:53:54,795 - train_gatV2.py [line:145] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-10 03:53:54,809 - train_gatV2.py [line:148] - INFO: [FINAL MODEL] Run 5 .\Val accuracy 67.47% \Val loss: 0.89
+2023-04-10 03:53:54,825 - train_gatV2.py [line:150] - INFO: [FINAL MODEL] Run 5 .	Test accuracy 65.21% \Test loss: 1.1
+2023-04-10 03:53:58,080 - train_gatV2.py [line:134] - INFO: Epoch 00050 | Time(s) 0.0628 | Val Loss 1.1343 | Val Acc 0.6308 |  Train Acc 0.7575 | ETputs(KTEPS) 10345.97
+2023-04-10 03:54:01,205 - train_gatV2.py [line:134] - INFO: Epoch 00100 | Time(s) 0.0625 | Val Loss 1.0804 | Val Acc 0.6505 |  Train Acc 0.8315 | ETputs(KTEPS) 10401.94
+2023-04-10 03:54:04,159 - train_gatV2.py [line:134] - INFO: Epoch 00150 | Time(s) 0.0614 | Val Loss 1.0685 | Val Acc 0.6571 |  Train Acc 0.8908 | ETputs(KTEPS) 10597.12
+2023-04-10 03:54:07,119 - train_gatV2.py [line:134] - INFO: Epoch 00200 | Time(s) 0.0608 | Val Loss 1.0655 | Val Acc 0.6725 |  Train Acc 0.9458 | ETputs(KTEPS) 10692.19
+2023-04-10 03:54:10,088 - train_gatV2.py [line:134] - INFO: Epoch 00250 | Time(s) 0.0605 | Val Loss 1.1107 | Val Acc 0.6593 |  Train Acc 0.9560 | ETputs(KTEPS) 10743.85
+2023-04-10 03:54:13,040 - train_gatV2.py [line:134] - INFO: Epoch 00300 | Time(s) 0.0603 | Val Loss 1.1375 | Val Acc 0.6659 |  Train Acc 0.9612 | ETputs(KTEPS) 10789.25
+2023-04-10 03:54:15,919 - train_gatV2.py [line:134] - INFO: Epoch 00350 | Time(s) 0.0599 | Val Loss 1.2495 | Val Acc 0.6593 |  Train Acc 0.9538 | ETputs(KTEPS) 10859.11
+2023-04-10 03:54:17,688 - train_gatV2.py [line:145] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-10 03:54:17,710 - train_gatV2.py [line:148] - INFO: [FINAL MODEL] Run 6 .\Val accuracy 65.27% \Val loss: 1.0
+2023-04-10 03:54:17,730 - train_gatV2.py [line:150] - INFO: [FINAL MODEL] Run 6 .	Test accuracy 66.74% \Test loss: 1.1
+2023-04-10 03:54:20,621 - train_gatV2.py [line:134] - INFO: Epoch 00050 | Time(s) 0.0555 | Val Loss 1.0511 | Val Acc 0.5978 |  Train Acc 0.7663 | ETputs(KTEPS) 11708.59
+2023-04-10 03:54:23,217 - train_gatV2.py [line:134] - INFO: Epoch 00100 | Time(s) 0.0537 | Val Loss 1.1319 | Val Acc 0.6549 |  Train Acc 0.8337 | ETputs(KTEPS) 12106.00
+2023-04-10 03:54:25,786 - train_gatV2.py [line:134] - INFO: Epoch 00150 | Time(s) 0.0529 | Val Loss 1.0892 | Val Acc 0.6220 |  Train Acc 0.8711 | ETputs(KTEPS) 12286.81
+2023-04-10 03:54:29,015 - train_gatV2.py [line:134] - INFO: Epoch 00200 | Time(s) 0.0558 | Val Loss 1.1002 | Val Acc 0.6571 |  Train Acc 0.9355 | ETputs(KTEPS) 11647.60
+2023-04-10 03:54:32,263 - train_gatV2.py [line:134] - INFO: Epoch 00250 | Time(s) 0.0576 | Val Loss 1.1247 | Val Acc 0.6659 |  Train Acc 0.9590 | ETputs(KTEPS) 11279.88
+2023-04-10 03:54:35,408 - train_gatV2.py [line:134] - INFO: Epoch 00300 | Time(s) 0.0585 | Val Loss 1.2106 | Val Acc 0.6396 |  Train Acc 0.9568 | ETputs(KTEPS) 11112.26
+2023-04-10 03:54:37,738 - train_gatV2.py [line:145] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-10 03:54:37,755 - train_gatV2.py [line:148] - INFO: [FINAL MODEL] Run 7 .\Val accuracy 65.27% \Val loss: 1.0
+2023-04-10 03:54:37,776 - train_gatV2.py [line:150] - INFO: [FINAL MODEL] Run 7 .	Test accuracy 63.68% \Test loss: 1.0
+2023-04-10 03:54:41,050 - train_gatV2.py [line:134] - INFO: Epoch 00050 | Time(s) 0.0633 | Val Loss 1.1066 | Val Acc 0.6352 |  Train Acc 0.7634 | ETputs(KTEPS) 10263.60
+2023-04-10 03:54:44,322 - train_gatV2.py [line:134] - INFO: Epoch 00100 | Time(s) 0.0643 | Val Loss 1.1156 | Val Acc 0.6198 |  Train Acc 0.8212 | ETputs(KTEPS) 10104.13
+2023-04-10 03:54:47,574 - train_gatV2.py [line:134] - INFO: Epoch 00150 | Time(s) 0.0645 | Val Loss 1.1147 | Val Acc 0.6484 |  Train Acc 0.8711 | ETputs(KTEPS) 10073.36
+2023-04-10 03:54:50,820 - train_gatV2.py [line:134] - INFO: Epoch 00200 | Time(s) 0.0646 | Val Loss 1.1271 | Val Acc 0.6527 |  Train Acc 0.9231 | ETputs(KTEPS) 10059.53
+2023-04-10 03:54:54,066 - train_gatV2.py [line:134] - INFO: Epoch 00250 | Time(s) 0.0647 | Val Loss 1.1028 | Val Acc 0.6527 |  Train Acc 0.9414 | ETputs(KTEPS) 10051.88
+2023-04-10 03:54:57,329 - train_gatV2.py [line:134] - INFO: Epoch 00300 | Time(s) 0.0648 | Val Loss 1.2924 | Val Acc 0.6088 |  Train Acc 0.9392 | ETputs(KTEPS) 10038.15
+2023-04-10 03:54:59,520 - train_gatV2.py [line:134] - INFO: Epoch 00350 | Time(s) 0.0618 | Val Loss 1.2610 | Val Acc 0.6286 |  Train Acc 0.9407 | ETputs(KTEPS) 10525.24
+2023-04-10 03:55:02,716 - train_gatV2.py [line:134] - INFO: Epoch 00400 | Time(s) 0.0620 | Val Loss 1.2043 | Val Acc 0.6659 |  Train Acc 0.9729 | ETputs(KTEPS) 10480.31
+2023-04-10 03:55:05,333 - train_gatV2.py [line:145] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-10 03:55:05,354 - train_gatV2.py [line:148] - INFO: [FINAL MODEL] Run 8 .\Val accuracy 65.93% \Val loss: 1.1
+2023-04-10 03:55:05,369 - train_gatV2.py [line:150] - INFO: [FINAL MODEL] Run 8 .	Test accuracy 69.37% \Test loss: 0.94
+2023-04-10 03:55:08,689 - train_gatV2.py [line:134] - INFO: Epoch 00050 | Time(s) 0.0639 | Val Loss 1.0603 | Val Acc 0.6462 |  Train Acc 0.7590 | ETputs(KTEPS) 10167.34
+2023-04-10 03:55:11,926 - train_gatV2.py [line:134] - INFO: Epoch 00100 | Time(s) 0.0642 | Val Loss 1.0663 | Val Acc 0.6505 |  Train Acc 0.8015 | ETputs(KTEPS) 10127.44
+2023-04-10 03:55:15,200 - train_gatV2.py [line:134] - INFO: Epoch 00150 | Time(s) 0.0646 | Val Loss 1.0711 | Val Acc 0.6527 |  Train Acc 0.8696 | ETputs(KTEPS) 10062.55
+2023-04-10 03:55:18,367 - train_gatV2.py [line:134] - INFO: Epoch 00200 | Time(s) 0.0643 | Val Loss 1.0214 | Val Acc 0.6791 |  Train Acc 0.9385 | ETputs(KTEPS) 10113.87
+2023-04-10 03:55:21,444 - train_gatV2.py [line:134] - INFO: Epoch 00250 | Time(s) 0.0637 | Val Loss 1.1128 | Val Acc 0.6242 |  Train Acc 0.9502 | ETputs(KTEPS) 10202.13
+2023-04-10 03:55:24,643 - train_gatV2.py [line:134] - INFO: Epoch 00300 | Time(s) 0.0638 | Val Loss 1.0890 | Val Acc 0.6879 |  Train Acc 0.9436 | ETputs(KTEPS) 10196.14
+2023-04-10 03:55:27,865 - train_gatV2.py [line:134] - INFO: Epoch 00350 | Time(s) 0.0639 | Val Loss 1.1105 | Val Acc 0.6681 |  Train Acc 0.9670 | ETputs(KTEPS) 10181.36
+2023-04-10 03:55:30,267 - train_gatV2.py [line:145] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-10 03:55:30,296 - train_gatV2.py [line:148] - INFO: [FINAL MODEL] Run 9 .\Val accuracy 67.91% \Val loss: 0.95
+2023-04-10 03:55:30,313 - train_gatV2.py [line:150] - INFO: [FINAL MODEL] Run 9 .	Test accuracy 67.40% \Test loss: 0.99
+2023-04-10 03:55:33,601 - train_gatV2.py [line:134] - INFO: Epoch 00050 | Time(s) 0.0634 | Val Loss 1.0041 | Val Acc 0.6330 |  Train Acc 0.7648 | ETputs(KTEPS) 10258.00
+2023-04-10 03:55:36,906 - train_gatV2.py [line:134] - INFO: Epoch 00100 | Time(s) 0.0646 | Val Loss 0.9413 | Val Acc 0.6571 |  Train Acc 0.8652 | ETputs(KTEPS) 10061.27
+2023-04-10 03:55:40,151 - train_gatV2.py [line:134] - INFO: Epoch 00150 | Time(s) 0.0647 | Val Loss 1.0075 | Val Acc 0.6659 |  Train Acc 0.8967 | ETputs(KTEPS) 10047.96
+2023-04-10 03:55:43,382 - train_gatV2.py [line:134] - INFO: Epoch 00200 | Time(s) 0.0647 | Val Loss 1.0137 | Val Acc 0.6527 |  Train Acc 0.9370 | ETputs(KTEPS) 10052.57
+2023-04-10 03:55:45,664 - train_gatV2.py [line:134] - INFO: Epoch 00250 | Time(s) 0.0609 | Val Loss 1.0444 | Val Acc 0.6659 |  Train Acc 0.9546 | ETputs(KTEPS) 10682.92
+2023-04-10 03:55:48,712 - train_gatV2.py [line:134] - INFO: Epoch 00300 | Time(s) 0.0609 | Val Loss 1.0881 | Val Acc 0.6484 |  Train Acc 0.9685 | ETputs(KTEPS) 10681.02
+2023-04-10 03:55:51,928 - train_gatV2.py [line:134] - INFO: Epoch 00350 | Time(s) 0.0614 | Val Loss 1.1187 | Val Acc 0.6484 |  Train Acc 0.9700 | ETputs(KTEPS) 10596.25
+2023-04-10 03:55:54,429 - train_gatV2.py [line:145] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-10 03:55:54,455 - train_gatV2.py [line:148] - INFO: [FINAL MODEL] Run 10 .\Val accuracy 65.93% \Val loss: 0.94
+2023-04-10 03:55:54,469 - train_gatV2.py [line:150] - INFO: [FINAL MODEL] Run 10 .	Test accuracy 65.65% \Test loss: 1.0
+2023-04-10 03:55:57,315 - train_gatV2.py [line:134] - INFO: Epoch 00050 | Time(s) 0.0549 | Val Loss 1.1063 | Val Acc 0.6264 |  Train Acc 0.7883 | ETputs(KTEPS) 11843.29
+2023-04-10 03:55:59,955 - train_gatV2.py [line:134] - INFO: Epoch 00100 | Time(s) 0.0537 | Val Loss 1.1765 | Val Acc 0.6154 |  Train Acc 0.8000 | ETputs(KTEPS) 12100.84
+2023-04-10 03:56:02,495 - train_gatV2.py [line:134] - INFO: Epoch 00150 | Time(s) 0.0527 | Val Loss 1.2153 | Val Acc 0.5648 |  Train Acc 0.8520 | ETputs(KTEPS) 12338.92
+2023-04-10 03:56:04,995 - train_gatV2.py [line:134] - INFO: Epoch 00200 | Time(s) 0.0520 | Val Loss 1.1880 | Val Acc 0.6747 |  Train Acc 0.9348 | ETputs(KTEPS) 12500.40
+2023-04-10 03:56:07,217 - train_gatV2.py [line:134] - INFO: Epoch 00250 | Time(s) 0.0505 | Val Loss 1.2737 | Val Acc 0.6132 |  Train Acc 0.9429 | ETputs(KTEPS) 12876.72
+2023-04-10 03:56:10,498 - train_gatV2.py [line:134] - INFO: Epoch 00300 | Time(s) 0.0530 | Val Loss 1.2695 | Val Acc 0.6681 |  Train Acc 0.9590 | ETputs(KTEPS) 12265.56
+2023-04-10 03:56:13,954 - train_gatV2.py [line:134] - INFO: Epoch 00350 | Time(s) 0.0553 | Val Loss 1.2646 | Val Acc 0.6835 |  Train Acc 0.9685 | ETputs(KTEPS) 11756.50
+2023-04-10 03:56:17,444 - train_gatV2.py [line:134] - INFO: Epoch 00400 | Time(s) 0.0571 | Val Loss 1.2996 | Val Acc 0.6615 |  Train Acc 0.9736 | ETputs(KTEPS) 11384.34
+2023-04-10 03:56:18,761 - train_gatV2.py [line:145] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-10 03:56:18,779 - train_gatV2.py [line:148] - INFO: [FINAL MODEL] Run 11 .\Val accuracy 63.52% \Val loss: 1.0
+2023-04-10 03:56:18,805 - train_gatV2.py [line:150] - INFO: [FINAL MODEL] Run 11 .	Test accuracy 66.30% \Test loss: 0.99
+2023-04-10 03:56:22,409 - train_gatV2.py [line:134] - INFO: Epoch 00050 | Time(s) 0.0699 | Val Loss 1.1065 | Val Acc 0.6154 |  Train Acc 0.7963 | ETputs(KTEPS) 9298.06
+2023-04-10 03:56:25,958 - train_gatV2.py [line:134] - INFO: Epoch 00100 | Time(s) 0.0704 | Val Loss 1.1105 | Val Acc 0.5956 |  Train Acc 0.8139 | ETputs(KTEPS) 9235.24
+2023-04-10 03:56:29,482 - train_gatV2.py [line:134] - INFO: Epoch 00150 | Time(s) 0.0704 | Val Loss 1.1918 | Val Acc 0.5978 |  Train Acc 0.8593 | ETputs(KTEPS) 9233.88
+2023-04-10 03:56:33,054 - train_gatV2.py [line:134] - INFO: Epoch 00200 | Time(s) 0.0707 | Val Loss 1.2077 | Val Acc 0.6462 |  Train Acc 0.9179 | ETputs(KTEPS) 9201.10
+2023-04-10 03:56:36,607 - train_gatV2.py [line:134] - INFO: Epoch 00250 | Time(s) 0.0707 | Val Loss 1.1453 | Val Acc 0.6440 |  Train Acc 0.9560 | ETputs(KTEPS) 9191.64
+2023-04-10 03:56:40,144 - train_gatV2.py [line:134] - INFO: Epoch 00300 | Time(s) 0.0707 | Val Loss 1.1512 | Val Acc 0.6462 |  Train Acc 0.9729 | ETputs(KTEPS) 9192.26
+2023-04-10 03:56:43,765 - train_gatV2.py [line:134] - INFO: Epoch 00350 | Time(s) 0.0710 | Val Loss 1.2790 | Val Acc 0.6088 |  Train Acc 0.9560 | ETputs(KTEPS) 9162.14
+2023-04-10 03:56:45,658 - train_gatV2.py [line:145] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-10 03:56:45,682 - train_gatV2.py [line:148] - INFO: [FINAL MODEL] Run 12 .\Val accuracy 64.18% \Val loss: 1.0
+2023-04-10 03:56:45,698 - train_gatV2.py [line:150] - INFO: [FINAL MODEL] Run 12 .	Test accuracy 64.33% \Test loss: 1.1
+2023-04-10 03:56:49,370 - train_gatV2.py [line:134] - INFO: Epoch 00050 | Time(s) 0.0710 | Val Loss 1.0770 | Val Acc 0.5824 |  Train Acc 0.7106 | ETputs(KTEPS) 9163.93
+2023-04-10 03:56:52,957 - train_gatV2.py [line:134] - INFO: Epoch 00100 | Time(s) 0.0711 | Val Loss 1.1001 | Val Acc 0.6549 |  Train Acc 0.8300 | ETputs(KTEPS) 9139.30
+2023-04-10 03:56:56,535 - train_gatV2.py [line:134] - INFO: Epoch 00150 | Time(s) 0.0712 | Val Loss 1.0393 | Val Acc 0.6813 |  Train Acc 0.8901 | ETputs(KTEPS) 9128.47
+2023-04-10 03:57:00,101 - train_gatV2.py [line:134] - INFO: Epoch 00200 | Time(s) 0.0712 | Val Loss 1.2276 | Val Acc 0.6286 |  Train Acc 0.8996 | ETputs(KTEPS) 9126.04
+2023-04-10 03:57:03,629 - train_gatV2.py [line:134] - INFO: Epoch 00250 | Time(s) 0.0711 | Val Loss 1.0880 | Val Acc 0.6571 |  Train Acc 0.9355 | ETputs(KTEPS) 9144.33
+2023-04-10 03:57:06,998 - train_gatV2.py [line:134] - INFO: Epoch 00300 | Time(s) 0.0705 | Val Loss 1.2702 | Val Acc 0.6462 |  Train Acc 0.9077 | ETputs(KTEPS) 9225.94
+2023-04-10 03:57:10,412 - train_gatV2.py [line:134] - INFO: Epoch 00350 | Time(s) 0.0702 | Val Loss 1.2014 | Val Acc 0.6462 |  Train Acc 0.9509 | ETputs(KTEPS) 9267.62
+2023-04-10 03:57:13,127 - train_gatV2.py [line:134] - INFO: Epoch 00400 | Time(s) 0.0682 | Val Loss 1.2435 | Val Acc 0.6308 |  Train Acc 0.9275 | ETputs(KTEPS) 9537.77
+2023-04-10 03:57:16,303 - train_gatV2.py [line:145] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-10 03:57:16,319 - train_gatV2.py [line:148] - INFO: [FINAL MODEL] Run 13 .\Val accuracy 67.03% \Val loss: 1.0
+2023-04-10 03:57:16,343 - train_gatV2.py [line:150] - INFO: [FINAL MODEL] Run 13 .	Test accuracy 66.08% \Test loss: 1.0
+2023-04-10 03:57:19,964 - train_gatV2.py [line:134] - INFO: Epoch 00050 | Time(s) 0.0703 | Val Loss 1.0061 | Val Acc 0.6044 |  Train Acc 0.6945 | ETputs(KTEPS) 9247.05
+2023-04-10 03:57:23,504 - train_gatV2.py [line:134] - INFO: Epoch 00100 | Time(s) 0.0705 | Val Loss 0.9617 | Val Acc 0.6813 |  Train Acc 0.8418 | ETputs(KTEPS) 9226.82
+2023-04-10 03:57:27,070 - train_gatV2.py [line:134] - INFO: Epoch 00150 | Time(s) 0.0707 | Val Loss 1.0040 | Val Acc 0.6747 |  Train Acc 0.8571 | ETputs(KTEPS) 9196.11
+2023-04-10 03:57:30,607 - train_gatV2.py [line:134] - INFO: Epoch 00200 | Time(s) 0.0707 | Val Loss 0.9321 | Val Acc 0.6923 |  Train Acc 0.9253 | ETputs(KTEPS) 9195.89
+2023-04-10 03:57:34,148 - train_gatV2.py [line:134] - INFO: Epoch 00250 | Time(s) 0.0707 | Val Loss 1.0339 | Val Acc 0.6659 |  Train Acc 0.9326 | ETputs(KTEPS) 9193.89
+2023-04-10 03:57:37,687 - train_gatV2.py [line:134] - INFO: Epoch 00300 | Time(s) 0.0707 | Val Loss 1.0542 | Val Acc 0.6505 |  Train Acc 0.9282 | ETputs(KTEPS) 9193.22
+2023-04-10 03:57:41,192 - train_gatV2.py [line:134] - INFO: Epoch 00350 | Time(s) 0.0706 | Val Loss 1.0415 | Val Acc 0.6791 |  Train Acc 0.9582 | ETputs(KTEPS) 9205.56
+2023-04-10 03:57:44,721 - train_gatV2.py [line:134] - INFO: Epoch 00400 | Time(s) 0.0706 | Val Loss 1.0225 | Val Acc 0.6945 |  Train Acc 0.9729 | ETputs(KTEPS) 9207.02
+2023-04-10 03:57:47,654 - train_gatV2.py [line:145] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-10 03:57:47,679 - train_gatV2.py [line:148] - INFO: [FINAL MODEL] Run 14 .\Val accuracy 68.13% \Val loss: 0.9
+2023-04-10 03:57:47,695 - train_gatV2.py [line:150] - INFO: [FINAL MODEL] Run 14 .	Test accuracy 64.33% \Test loss: 1.1
+2023-04-10 03:57:51,385 - train_gatV2.py [line:134] - INFO: Epoch 00050 | Time(s) 0.0713 | Val Loss 1.0816 | Val Acc 0.5912 |  Train Acc 0.7465 | ETputs(KTEPS) 9116.01
+2023-04-10 03:57:54,944 - train_gatV2.py [line:134] - INFO: Epoch 00100 | Time(s) 0.0712 | Val Loss 0.9996 | Val Acc 0.6308 |  Train Acc 0.8139 | ETputs(KTEPS) 9130.44
+2023-04-10 03:57:58,483 - train_gatV2.py [line:134] - INFO: Epoch 00150 | Time(s) 0.0710 | Val Loss 1.0295 | Val Acc 0.6747 |  Train Acc 0.9033 | ETputs(KTEPS) 9153.36
+2023-04-10 03:58:01,242 - train_gatV2.py [line:134] - INFO: Epoch 00200 | Time(s) 0.0671 | Val Loss 1.0692 | Val Acc 0.6659 |  Train Acc 0.9297 | ETputs(KTEPS) 9694.98
+2023-04-10 03:58:04,875 - train_gatV2.py [line:134] - INFO: Epoch 00250 | Time(s) 0.0682 | Val Loss 1.1224 | Val Acc 0.6769 |  Train Acc 0.9355 | ETputs(KTEPS) 9536.64
+2023-04-10 03:58:08,491 - train_gatV2.py [line:134] - INFO: Epoch 00300 | Time(s) 0.0689 | Val Loss 1.0902 | Val Acc 0.6857 |  Train Acc 0.9582 | ETputs(KTEPS) 9441.77
+2023-04-10 03:58:12,146 - train_gatV2.py [line:134] - INFO: Epoch 00350 | Time(s) 0.0695 | Val Loss 1.2078 | Val Acc 0.6571 |  Train Acc 0.9619 | ETputs(KTEPS) 9360.18
+2023-04-10 03:58:15,776 - train_gatV2.py [line:134] - INFO: Epoch 00400 | Time(s) 0.0699 | Val Loss 1.1554 | Val Acc 0.6791 |  Train Acc 0.9656 | ETputs(KTEPS) 9308.06
+2023-04-10 03:58:17,832 - train_gatV2.py [line:145] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-10 03:58:17,853 - train_gatV2.py [line:148] - INFO: [FINAL MODEL] Run 15 .\Val accuracy 67.03% \Val loss: 0.98
+2023-04-10 03:58:17,878 - train_gatV2.py [line:150] - INFO: [FINAL MODEL] Run 15 .	Test accuracy 68.27% \Test loss: 0.94
+2023-04-10 03:58:21,654 - train_gatV2.py [line:134] - INFO: Epoch 00050 | Time(s) 0.0732 | Val Loss 1.1859 | Val Acc 0.5890 |  Train Acc 0.7670 | ETputs(KTEPS) 8881.73
+2023-04-10 03:58:25,349 - train_gatV2.py [line:134] - INFO: Epoch 00100 | Time(s) 0.0734 | Val Loss 1.2395 | Val Acc 0.5868 |  Train Acc 0.8308 | ETputs(KTEPS) 8859.87
+2023-04-10 03:58:29,059 - train_gatV2.py [line:134] - INFO: Epoch 00150 | Time(s) 0.0736 | Val Loss 1.1654 | Val Acc 0.6132 |  Train Acc 0.9201 | ETputs(KTEPS) 8828.57
+2023-04-10 03:58:32,765 - train_gatV2.py [line:134] - INFO: Epoch 00200 | Time(s) 0.0738 | Val Loss 1.2280 | Val Acc 0.6527 |  Train Acc 0.9582 | ETputs(KTEPS) 8814.85
+2023-04-10 03:58:36,393 - train_gatV2.py [line:134] - INFO: Epoch 00250 | Time(s) 0.0735 | Val Loss 1.2047 | Val Acc 0.6154 |  Train Acc 0.9700 | ETputs(KTEPS) 8844.60
+2023-04-10 03:58:39,946 - train_gatV2.py [line:134] - INFO: Epoch 00300 | Time(s) 0.0731 | Val Loss 1.3634 | Val Acc 0.5956 |  Train Acc 0.9678 | ETputs(KTEPS) 8894.60
+2023-04-10 03:58:43,496 - train_gatV2.py [line:134] - INFO: Epoch 00350 | Time(s) 0.0728 | Val Loss 1.4482 | Val Acc 0.6000 |  Train Acc 0.9597 | ETputs(KTEPS) 8931.96
+2023-04-10 03:58:46,285 - train_gatV2.py [line:145] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-10 03:58:46,306 - train_gatV2.py [line:148] - INFO: [FINAL MODEL] Run 16 .\Val accuracy 63.52% \Val loss: 1.1
+2023-04-10 03:58:46,328 - train_gatV2.py [line:150] - INFO: [FINAL MODEL] Run 16 .	Test accuracy 63.89% \Test loss: 1.0
+2023-04-10 03:58:49,981 - train_gatV2.py [line:134] - INFO: Epoch 00050 | Time(s) 0.0709 | Val Loss 1.0374 | Val Acc 0.6110 |  Train Acc 0.7238 | ETputs(KTEPS) 9173.92
+2023-04-10 03:58:53,551 - train_gatV2.py [line:134] - INFO: Epoch 00100 | Time(s) 0.0711 | Val Loss 1.0365 | Val Acc 0.6154 |  Train Acc 0.7949 | ETputs(KTEPS) 9150.46
+2023-04-10 03:58:57,157 - train_gatV2.py [line:134] - INFO: Epoch 00150 | Time(s) 0.0713 | Val Loss 1.1093 | Val Acc 0.5978 |  Train Acc 0.8212 | ETputs(KTEPS) 9113.92
+2023-04-10 03:59:00,978 - train_gatV2.py [line:134] - INFO: Epoch 00200 | Time(s) 0.0726 | Val Loss 1.0761 | Val Acc 0.6527 |  Train Acc 0.9092 | ETputs(KTEPS) 8955.48
+2023-04-10 03:59:04,698 - train_gatV2.py [line:134] - INFO: Epoch 00250 | Time(s) 0.0730 | Val Loss 1.1907 | Val Acc 0.6110 |  Train Acc 0.8806 | ETputs(KTEPS) 8911.95
+2023-04-10 03:59:08,380 - train_gatV2.py [line:134] - INFO: Epoch 00300 | Time(s) 0.0731 | Val Loss 1.0784 | Val Acc 0.6659 |  Train Acc 0.9560 | ETputs(KTEPS) 8898.70
+2023-04-10 03:59:11,329 - train_gatV2.py [line:134] - INFO: Epoch 00350 | Time(s) 0.0711 | Val Loss 1.1161 | Val Acc 0.6286 |  Train Acc 0.9333 | ETputs(KTEPS) 9151.02
+2023-04-10 03:59:14,792 - train_gatV2.py [line:134] - INFO: Epoch 00400 | Time(s) 0.0708 | Val Loss 1.1919 | Val Acc 0.6242 |  Train Acc 0.9304 | ETputs(KTEPS) 9180.70
+2023-04-10 03:59:17,896 - train_gatV2.py [line:145] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-10 03:59:17,917 - train_gatV2.py [line:148] - INFO: [FINAL MODEL] Run 17 .\Val accuracy 68.13% \Val loss: 0.98
+2023-04-10 03:59:17,943 - train_gatV2.py [line:150] - INFO: [FINAL MODEL] Run 17 .	Test accuracy 63.89% \Test loss: 1.0
+2023-04-10 03:59:21,664 - train_gatV2.py [line:134] - INFO: Epoch 00050 | Time(s) 0.0719 | Val Loss 1.0372 | Val Acc 0.6484 |  Train Acc 0.7795 | ETputs(KTEPS) 9039.35
+2023-04-10 03:59:25,328 - train_gatV2.py [line:134] - INFO: Epoch 00100 | Time(s) 0.0725 | Val Loss 1.0809 | Val Acc 0.6440 |  Train Acc 0.8381 | ETputs(KTEPS) 8973.09
+2023-04-10 03:59:29,029 - train_gatV2.py [line:134] - INFO: Epoch 00150 | Time(s) 0.0729 | Val Loss 1.1642 | Val Acc 0.6418 |  Train Acc 0.8952 | ETputs(KTEPS) 8916.69
+2023-04-10 03:59:32,775 - train_gatV2.py [line:134] - INFO: Epoch 00200 | Time(s) 0.0734 | Val Loss 1.0657 | Val Acc 0.6813 |  Train Acc 0.9443 | ETputs(KTEPS) 8856.70
+2023-04-10 03:59:36,439 - train_gatV2.py [line:134] - INFO: Epoch 00250 | Time(s) 0.0734 | Val Loss 1.2058 | Val Acc 0.6264 |  Train Acc 0.9451 | ETputs(KTEPS) 8860.83
+2023-04-10 03:59:40,094 - train_gatV2.py [line:134] - INFO: Epoch 00300 | Time(s) 0.0733 | Val Loss 1.1344 | Val Acc 0.6462 |  Train Acc 0.9751 | ETputs(KTEPS) 8866.90
+2023-04-10 03:59:43,756 - train_gatV2.py [line:134] - INFO: Epoch 00350 | Time(s) 0.0733 | Val Loss 1.2576 | Val Acc 0.6374 |  Train Acc 0.9597 | ETputs(KTEPS) 8869.07
+2023-04-10 03:59:47,426 - train_gatV2.py [line:134] - INFO: Epoch 00400 | Time(s) 0.0733 | Val Loss 1.1917 | Val Acc 0.6418 |  Train Acc 0.9773 | ETputs(KTEPS) 8868.25
+2023-04-10 03:59:50,058 - train_gatV2.py [line:145] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-10 03:59:50,073 - train_gatV2.py [line:148] - INFO: [FINAL MODEL] Run 18 .\Val accuracy 65.93% \Val loss: 0.97
+2023-04-10 03:59:50,094 - train_gatV2.py [line:150] - INFO: [FINAL MODEL] Run 18 .	Test accuracy 65.86% \Test loss: 0.94
+2023-04-10 03:59:53,896 - train_gatV2.py [line:134] - INFO: Epoch 00050 | Time(s) 0.0739 | Val Loss 1.0222 | Val Acc 0.6484 |  Train Acc 0.7773 | ETputs(KTEPS) 8801.59
+2023-04-10 03:59:57,630 - train_gatV2.py [line:134] - INFO: Epoch 00100 | Time(s) 0.0741 | Val Loss 1.0108 | Val Acc 0.6264 |  Train Acc 0.7949 | ETputs(KTEPS) 8771.36
+2023-04-10 04:00:01,352 - train_gatV2.py [line:134] - INFO: Epoch 00150 | Time(s) 0.0742 | Val Loss 1.0149 | Val Acc 0.6703 |  Train Acc 0.9245 | ETputs(KTEPS) 8763.03
+2023-04-10 04:00:05,030 - train_gatV2.py [line:134] - INFO: Epoch 00200 | Time(s) 0.0740 | Val Loss 1.0555 | Val Acc 0.6593 |  Train Acc 0.9150 | ETputs(KTEPS) 8782.63
+2023-04-10 04:00:08,691 - train_gatV2.py [line:134] - INFO: Epoch 00250 | Time(s) 0.0739 | Val Loss 1.0681 | Val Acc 0.6593 |  Train Acc 0.9421 | ETputs(KTEPS) 8802.39
+2023-04-10 04:00:11,427 - train_gatV2.py [line:134] - INFO: Epoch 00300 | Time(s) 0.0707 | Val Loss 1.0567 | Val Acc 0.6571 |  Train Acc 0.9626 | ETputs(KTEPS) 9200.68
+2023-04-10 04:00:15,106 - train_gatV2.py [line:134] - INFO: Epoch 00350 | Time(s) 0.0711 | Val Loss 1.1054 | Val Acc 0.6593 |  Train Acc 0.9663 | ETputs(KTEPS) 9147.29
+2023-04-10 04:00:18,781 - train_gatV2.py [line:134] - INFO: Epoch 00400 | Time(s) 0.0714 | Val Loss 1.2259 | Val Acc 0.6352 |  Train Acc 0.9553 | ETputs(KTEPS) 9109.11
+2023-04-10 04:00:18,964 - train_gatV2.py [line:145] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-10 04:00:18,990 - train_gatV2.py [line:148] - INFO: [FINAL MODEL] Run 19 .\Val accuracy 68.57% \Val loss: 0.96
+2023-04-10 04:00:19,011 - train_gatV2.py [line:150] - INFO: [FINAL MODEL] Run 19 .	Test accuracy 68.71% \Test loss: 0.98
+2023-04-10 04:00:19,011 - train_gatV2.py [line:175] - INFO: Mean Acc For Cross Validation: 0.6586, STDV: 0.0198
+2023-04-10 04:00:19,011 - train_gatV2.py [line:176] - INFO: [0.6477024070021882, 0.687089715536105, 0.6673960612691466, 0.612691466083151, 0.6608315098468271, 0.6520787746170679, 0.6673960612691466, 0.6367614879649891, 0.6936542669584245, 0.6739606126914661, 0.6564551422319475, 0.6630196936542669, 0.6433260393873085, 0.6608315098468271, 0.6433260393873085, 0.6827133479212254, 0.6389496717724289, 0.6389496717724289, 0.6586433260393874, 0.687089715536105]
+2023-04-10 04:00:22,187 - train_gatV2.py [line:251] - INFO: Namespace(seed=42, model='GAT', gpu=0, dataset='geom-chameleon', n_hidden=64, n_layers=2, heads=8, out_heads=1, with_negative_residual=True, with_initial_residual=True, wd1=0.001, wd2=1e-06, wd3=1e-07, lr1=0.01, lr2=0.04, lr3=0.02, momentum=0.9, dropout=0.4, dropout2=0.4, n_epochs=10000, loss='nll', self_loop=True, udgraph=True, early_stop=True, patience=300, es_ckpt='e0cham', n_cv=20, start_cv=0, logging=False, log_detail=True, log_detailedCh=True, id_log=0)
+2023-04-10 04:00:26,337 - train_gatV2.py [line:159] - INFO: Split_seeds:[1824, 409, 4506, 4012, 3657, 2286, 1679, 8935, 1424, 9674, 6912, 520, 488, 1535, 3582, 3811, 8279, 9863, 434, 9195]
+2023-04-10 04:00:26,337 - train_gatV2.py [line:160] - INFO: Model_seeds:[3257, 8928, 6873, 3611, 7359, 9654, 4557, 106, 2615, 6924, 5574, 4552, 2547, 3527, 5514, 1674, 1519, 6224, 1584, 5881]
+2023-04-10 04:00:32,985 - train_gatV2.py [line:134] - INFO: Epoch 00050 | Time(s) 0.1299 | Val Loss 1.5742 | Val Acc 0.3780 |  Train Acc 0.3700 | ETputs(KTEPS) 5006.00
+2023-04-10 04:00:37,853 - train_gatV2.py [line:134] - INFO: Epoch 00100 | Time(s) 0.1133 | Val Loss 1.1907 | Val Acc 0.4835 |  Train Acc 0.5714 | ETputs(KTEPS) 5737.24
+2023-04-10 04:00:42,750 - train_gatV2.py [line:134] - INFO: Epoch 00150 | Time(s) 0.1080 | Val Loss 1.0667 | Val Acc 0.6066 |  Train Acc 0.7560 | ETputs(KTEPS) 6020.29
+2023-04-10 04:00:47,650 - train_gatV2.py [line:134] - INFO: Epoch 00200 | Time(s) 0.1055 | Val Loss 1.2278 | Val Acc 0.6352 |  Train Acc 0.8242 | ETputs(KTEPS) 6163.41
+2023-04-10 04:00:52,528 - train_gatV2.py [line:134] - INFO: Epoch 00250 | Time(s) 0.1039 | Val Loss 1.1434 | Val Acc 0.6549 |  Train Acc 0.8989 | ETputs(KTEPS) 6259.14
+2023-04-10 04:00:57,416 - train_gatV2.py [line:134] - INFO: Epoch 00300 | Time(s) 0.1029 | Val Loss 1.1517 | Val Acc 0.6527 |  Train Acc 0.9011 | ETputs(KTEPS) 6321.52
+2023-04-10 04:01:02,325 - train_gatV2.py [line:134] - INFO: Epoch 00350 | Time(s) 0.1022 | Val Loss 1.1815 | Val Acc 0.6505 |  Train Acc 0.8886 | ETputs(KTEPS) 6363.15
+2023-04-10 04:01:07,171 - train_gatV2.py [line:134] - INFO: Epoch 00400 | Time(s) 0.1015 | Val Loss 1.2034 | Val Acc 0.6462 |  Train Acc 0.9201 | ETputs(KTEPS) 6404.70
+2023-04-10 04:01:12,078 - train_gatV2.py [line:134] - INFO: Epoch 00450 | Time(s) 0.1011 | Val Loss 1.1315 | Val Acc 0.6440 |  Train Acc 0.9495 | ETputs(KTEPS) 6428.64
+2023-04-10 04:01:16,957 - train_gatV2.py [line:134] - INFO: Epoch 00500 | Time(s) 0.1008 | Val Loss 1.0933 | Val Acc 0.6549 |  Train Acc 0.9377 | ETputs(KTEPS) 6451.63
+2023-04-10 04:01:18,496 - train_gatV2.py [line:145] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-10 04:01:18,527 - train_gatV2.py [line:148] - INFO: [FINAL MODEL] Run 0 .\Val accuracy 65.05% \Val loss: 1.0
+2023-04-10 04:01:18,556 - train_gatV2.py [line:150] - INFO: [FINAL MODEL] Run 0 .	Test accuracy 64.99% \Test loss: 0.95
+2023-04-10 04:01:23,607 - train_gatV2.py [line:134] - INFO: Epoch 00050 | Time(s) 0.0983 | Val Loss 1.5465 | Val Acc 0.3319 |  Train Acc 0.5341 | ETputs(KTEPS) 6613.03
+2023-04-10 04:01:28,558 - train_gatV2.py [line:134] - INFO: Epoch 00100 | Time(s) 0.0981 | Val Loss 1.2618 | Val Acc 0.5231 |  Train Acc 0.7143 | ETputs(KTEPS) 6624.58
+2023-04-10 04:01:33,488 - train_gatV2.py [line:134] - INFO: Epoch 00150 | Time(s) 0.0983 | Val Loss 1.1520 | Val Acc 0.6110 |  Train Acc 0.8220 | ETputs(KTEPS) 6616.92
+2023-04-10 04:01:37,677 - train_gatV2.py [line:134] - INFO: Epoch 00200 | Time(s) 0.0946 | Val Loss 1.1194 | Val Acc 0.6264 |  Train Acc 0.8872 | ETputs(KTEPS) 6871.93
+2023-04-10 04:01:42,190 - train_gatV2.py [line:134] - INFO: Epoch 00250 | Time(s) 0.0937 | Val Loss 1.4989 | Val Acc 0.2725 |  Train Acc 0.5179 | ETputs(KTEPS) 6936.22
+2023-04-10 04:01:46,987 - train_gatV2.py [line:134] - INFO: Epoch 00300 | Time(s) 0.0941 | Val Loss 1.4613 | Val Acc 0.4308 |  Train Acc 0.8454 | ETputs(KTEPS) 6909.60
+2023-04-10 04:01:51,721 - train_gatV2.py [line:134] - INFO: Epoch 00350 | Time(s) 0.0942 | Val Loss 1.4621 | Val Acc 0.4242 |  Train Acc 0.8872 | ETputs(KTEPS) 6903.69
+2023-04-10 04:01:56,497 - train_gatV2.py [line:134] - INFO: Epoch 00400 | Time(s) 0.0943 | Val Loss 1.5051 | Val Acc 0.4549 |  Train Acc 0.9267 | ETputs(KTEPS) 6891.72
+2023-04-10 04:02:01,375 - train_gatV2.py [line:134] - INFO: Epoch 00450 | Time(s) 0.0947 | Val Loss 1.5756 | Val Acc 0.4330 |  Train Acc 0.9341 | ETputs(KTEPS) 6865.96
+2023-04-10 04:02:02,002 - train_gatV2.py [line:145] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-10 04:02:02,024 - train_gatV2.py [line:148] - INFO: [FINAL MODEL] Run 1 .\Val accuracy 61.98% \Val loss: 1.1
+2023-04-10 04:02:02,061 - train_gatV2.py [line:150] - INFO: [FINAL MODEL] Run 1 .	Test accuracy 68.71% \Test loss: 0.94
+2023-04-10 04:02:07,016 - train_gatV2.py [line:134] - INFO: Epoch 00050 | Time(s) 0.0964 | Val Loss 1.4528 | Val Acc 0.3407 |  Train Acc 0.4681 | ETputs(KTEPS) 6745.33
+2023-04-10 04:02:11,924 - train_gatV2.py [line:134] - INFO: Epoch 00100 | Time(s) 0.0968 | Val Loss 1.1354 | Val Acc 0.5297 |  Train Acc 0.6513 | ETputs(KTEPS) 6718.68
+2023-04-10 04:02:16,830 - train_gatV2.py [line:134] - INFO: Epoch 00150 | Time(s) 0.0971 | Val Loss 0.9373 | Val Acc 0.6462 |  Train Acc 0.7927 | ETputs(KTEPS) 6697.95
+2023-04-10 04:02:21,677 - train_gatV2.py [line:134] - INFO: Epoch 00200 | Time(s) 0.0970 | Val Loss 0.9970 | Val Acc 0.6659 |  Train Acc 0.8212 | ETputs(KTEPS) 6704.16
+2023-04-10 04:02:26,541 - train_gatV2.py [line:134] - INFO: Epoch 00250 | Time(s) 0.0970 | Val Loss 0.8414 | Val Acc 0.6637 |  Train Acc 0.8601 | ETputs(KTEPS) 6703.76
+2023-04-10 04:02:31,416 - train_gatV2.py [line:134] - INFO: Epoch 00300 | Time(s) 0.0971 | Val Loss 0.9572 | Val Acc 0.6945 |  Train Acc 0.8952 | ETputs(KTEPS) 6699.23
+2023-04-10 04:02:36,253 - train_gatV2.py [line:134] - INFO: Epoch 00350 | Time(s) 0.0970 | Val Loss 1.0470 | Val Acc 0.6220 |  Train Acc 0.7465 | ETputs(KTEPS) 6702.49
+2023-04-10 04:02:41,076 - train_gatV2.py [line:134] - INFO: Epoch 00400 | Time(s) 0.0969 | Val Loss 0.8437 | Val Acc 0.6967 |  Train Acc 0.9238 | ETputs(KTEPS) 6707.60
+2023-04-10 04:02:44,871 - train_gatV2.py [line:134] - INFO: Epoch 00450 | Time(s) 0.0946 | Val Loss 0.9234 | Val Acc 0.7033 |  Train Acc 0.9238 | ETputs(KTEPS) 6873.48
+2023-04-10 04:02:49,423 - train_gatV2.py [line:134] - INFO: Epoch 00500 | Time(s) 0.0942 | Val Loss 0.9068 | Val Acc 0.7209 |  Train Acc 0.9685 | ETputs(KTEPS) 6900.18
+2023-04-10 04:02:54,083 - train_gatV2.py [line:134] - INFO: Epoch 00550 | Time(s) 0.0941 | Val Loss 0.9110 | Val Acc 0.7187 |  Train Acc 0.9509 | ETputs(KTEPS) 6907.29
+2023-04-10 04:02:58,749 - train_gatV2.py [line:134] - INFO: Epoch 00600 | Time(s) 0.0941 | Val Loss 0.9201 | Val Acc 0.7011 |  Train Acc 0.9443 | ETputs(KTEPS) 6912.38
+2023-04-10 04:03:03,420 - train_gatV2.py [line:134] - INFO: Epoch 00650 | Time(s) 0.0940 | Val Loss 1.0327 | Val Acc 0.7033 |  Train Acc 0.9685 | ETputs(KTEPS) 6916.17
+2023-04-10 04:03:08,331 - train_gatV2.py [line:134] - INFO: Epoch 00700 | Time(s) 0.0943 | Val Loss 1.0580 | Val Acc 0.6923 |  Train Acc 0.9663 | ETputs(KTEPS) 6894.36
+2023-04-10 04:03:13,237 - train_gatV2.py [line:134] - INFO: Epoch 00750 | Time(s) 0.0946 | Val Loss 1.0892 | Val Acc 0.6769 |  Train Acc 0.9780 | ETputs(KTEPS) 6875.99
+2023-04-10 04:03:14,555 - train_gatV2.py [line:145] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-10 04:03:14,581 - train_gatV2.py [line:148] - INFO: [FINAL MODEL] Run 2 .\Val accuracy 73.19% \Val loss: 0.8
+2023-04-10 04:03:14,611 - train_gatV2.py [line:150] - INFO: [FINAL MODEL] Run 2 .	Test accuracy 69.80% \Test loss: 0.93
+2023-04-10 04:03:19,668 - train_gatV2.py [line:134] - INFO: Epoch 00050 | Time(s) 0.0982 | Val Loss 1.3834 | Val Acc 0.4527 |  Train Acc 0.4615 | ETputs(KTEPS) 6618.23
+2023-04-10 04:03:24,643 - train_gatV2.py [line:134] - INFO: Epoch 00100 | Time(s) 0.0985 | Val Loss 1.1031 | Val Acc 0.5824 |  Train Acc 0.6689 | ETputs(KTEPS) 6602.84
+2023-04-10 04:03:29,539 - train_gatV2.py [line:134] - INFO: Epoch 00150 | Time(s) 0.0982 | Val Loss 1.1310 | Val Acc 0.5956 |  Train Acc 0.7802 | ETputs(KTEPS) 6619.50
+2023-04-10 04:03:33,455 - train_gatV2.py [line:134] - INFO: Epoch 00200 | Time(s) 0.0932 | Val Loss 1.2843 | Val Acc 0.5934 |  Train Acc 0.7612 | ETputs(KTEPS) 6973.47
+2023-04-10 04:03:38,272 - train_gatV2.py [line:134] - INFO: Epoch 00250 | Time(s) 0.0938 | Val Loss 1.1852 | Val Acc 0.6725 |  Train Acc 0.9201 | ETputs(KTEPS) 6929.27
+2023-04-10 04:03:43,087 - train_gatV2.py [line:134] - INFO: Epoch 00300 | Time(s) 0.0942 | Val Loss 1.2733 | Val Acc 0.6440 |  Train Acc 0.8564 | ETputs(KTEPS) 6899.46
+2023-04-10 04:03:47,919 - train_gatV2.py [line:134] - INFO: Epoch 00350 | Time(s) 0.0946 | Val Loss 1.4315 | Val Acc 0.6264 |  Train Acc 0.8967 | ETputs(KTEPS) 6874.76
+2023-04-10 04:03:52,771 - train_gatV2.py [line:134] - INFO: Epoch 00400 | Time(s) 0.0949 | Val Loss 1.1213 | Val Acc 0.6923 |  Train Acc 0.9311 | ETputs(KTEPS) 6852.68
+2023-04-10 04:03:57,634 - train_gatV2.py [line:134] - INFO: Epoch 00450 | Time(s) 0.0951 | Val Loss 1.3344 | Val Acc 0.6505 |  Train Acc 0.9179 | ETputs(KTEPS) 6833.86
+2023-04-10 04:04:02,511 - train_gatV2.py [line:134] - INFO: Epoch 00500 | Time(s) 0.0954 | Val Loss 1.2297 | Val Acc 0.6484 |  Train Acc 0.9370 | ETputs(KTEPS) 6816.95
+2023-04-10 04:04:03,459 - train_gatV2.py [line:145] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-10 04:04:03,483 - train_gatV2.py [line:148] - INFO: [FINAL MODEL] Run 3 .\Val accuracy 66.81% \Val loss: 0.99
+2023-04-10 04:04:03,508 - train_gatV2.py [line:150] - INFO: [FINAL MODEL] Run 3 .	Test accuracy 65.43% \Test loss: 0.98
+2023-04-10 04:04:08,505 - train_gatV2.py [line:134] - INFO: Epoch 00050 | Time(s) 0.0972 | Val Loss 1.4605 | Val Acc 0.4044 |  Train Acc 0.4073 | ETputs(KTEPS) 6691.12
+2023-04-10 04:04:13,405 - train_gatV2.py [line:134] - INFO: Epoch 00100 | Time(s) 0.0972 | Val Loss 1.1021 | Val Acc 0.6176 |  Train Acc 0.7538 | ETputs(KTEPS) 6686.79
+2023-04-10 04:04:18,301 - train_gatV2.py [line:134] - INFO: Epoch 00150 | Time(s) 0.0974 | Val Loss 1.0214 | Val Acc 0.6198 |  Train Acc 0.7897 | ETputs(KTEPS) 6674.74
+2023-04-10 04:04:23,161 - train_gatV2.py [line:134] - INFO: Epoch 00200 | Time(s) 0.0974 | Val Loss 1.0263 | Val Acc 0.6505 |  Train Acc 0.8828 | ETputs(KTEPS) 6678.78
+2023-04-10 04:04:28,005 - train_gatV2.py [line:134] - INFO: Epoch 00250 | Time(s) 0.0973 | Val Loss 1.2812 | Val Acc 0.6198 |  Train Acc 0.8381 | ETputs(KTEPS) 6685.76
+2023-04-10 04:04:32,838 - train_gatV2.py [line:134] - INFO: Epoch 00300 | Time(s) 0.0971 | Val Loss 1.1228 | Val Acc 0.6879 |  Train Acc 0.9370 | ETputs(KTEPS) 6692.88
+2023-04-10 04:04:37,657 - train_gatV2.py [line:134] - INFO: Epoch 00350 | Time(s) 0.0970 | Val Loss 1.1777 | Val Acc 0.6418 |  Train Acc 0.9106 | ETputs(KTEPS) 6700.56
+2023-04-10 04:04:42,513 - train_gatV2.py [line:134] - INFO: Epoch 00400 | Time(s) 0.0970 | Val Loss 1.2948 | Val Acc 0.6681 |  Train Acc 0.9238 | ETputs(KTEPS) 6700.18
+2023-04-10 04:04:46,810 - train_gatV2.py [line:145] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-10 04:04:46,844 - train_gatV2.py [line:148] - INFO: [FINAL MODEL] Run 4 .\Val accuracy 66.15% \Val loss: 0.97
+2023-04-10 04:04:46,874 - train_gatV2.py [line:150] - INFO: [FINAL MODEL] Run 4 .	Test accuracy 63.02% \Test loss: 1.1
+2023-04-10 04:04:51,842 - train_gatV2.py [line:134] - INFO: Epoch 00050 | Time(s) 0.0966 | Val Loss 1.3355 | Val Acc 0.4198 |  Train Acc 0.5114 | ETputs(KTEPS) 6728.13
+2023-04-10 04:04:56,710 - train_gatV2.py [line:134] - INFO: Epoch 00100 | Time(s) 0.0967 | Val Loss 1.6353 | Val Acc 0.3934 |  Train Acc 0.5304 | ETputs(KTEPS) 6723.85
+2023-04-10 04:05:01,606 - train_gatV2.py [line:134] - INFO: Epoch 00150 | Time(s) 0.0970 | Val Loss 1.0774 | Val Acc 0.5978 |  Train Acc 0.7267 | ETputs(KTEPS) 6702.69
+2023-04-10 04:05:06,410 - train_gatV2.py [line:134] - INFO: Epoch 00200 | Time(s) 0.0967 | Val Loss 0.9572 | Val Acc 0.6549 |  Train Acc 0.7853 | ETputs(KTEPS) 6723.72
+2023-04-10 04:05:11,298 - train_gatV2.py [line:134] - INFO: Epoch 00250 | Time(s) 0.0969 | Val Loss 1.0629 | Val Acc 0.7033 |  Train Acc 0.9011 | ETputs(KTEPS) 6709.39
+2023-04-10 04:05:16,226 - train_gatV2.py [line:134] - INFO: Epoch 00300 | Time(s) 0.0972 | Val Loss 1.0098 | Val Acc 0.6879 |  Train Acc 0.9062 | ETputs(KTEPS) 6690.76
+2023-04-10 04:05:21,153 - train_gatV2.py [line:134] - INFO: Epoch 00350 | Time(s) 0.0974 | Val Loss 1.0441 | Val Acc 0.7011 |  Train Acc 0.9451 | ETputs(KTEPS) 6677.55
+2023-04-10 04:05:26,030 - train_gatV2.py [line:134] - INFO: Epoch 00400 | Time(s) 0.0974 | Val Loss 1.1078 | Val Acc 0.7077 |  Train Acc 0.9172 | ETputs(KTEPS) 6676.44
+2023-04-10 04:05:30,866 - train_gatV2.py [line:134] - INFO: Epoch 00450 | Time(s) 0.0973 | Val Loss 1.1092 | Val Acc 0.6813 |  Train Acc 0.9487 | ETputs(KTEPS) 6681.78
+2023-04-10 04:05:33,104 - train_gatV2.py [line:145] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-10 04:05:33,122 - train_gatV2.py [line:148] - INFO: [FINAL MODEL] Run 5 .\Val accuracy 68.35% \Val loss: 0.92
+2023-04-10 04:05:33,152 - train_gatV2.py [line:150] - INFO: [FINAL MODEL] Run 5 .	Test accuracy 64.11% \Test loss: 1.0
+2023-04-10 04:05:38,122 - train_gatV2.py [line:134] - INFO: Epoch 00050 | Time(s) 0.0965 | Val Loss 1.3794 | Val Acc 0.4769 |  Train Acc 0.5780 | ETputs(KTEPS) 6737.20
+2023-04-10 04:05:42,913 - train_gatV2.py [line:134] - INFO: Epoch 00100 | Time(s) 0.0958 | Val Loss 1.0799 | Val Acc 0.6132 |  Train Acc 0.7832 | ETputs(KTEPS) 6784.31
+2023-04-10 04:05:47,733 - train_gatV2.py [line:134] - INFO: Epoch 00150 | Time(s) 0.0960 | Val Loss 1.2034 | Val Acc 0.6066 |  Train Acc 0.8095 | ETputs(KTEPS) 6773.28
+2023-04-10 04:05:52,527 - train_gatV2.py [line:134] - INFO: Epoch 00200 | Time(s) 0.0960 | Val Loss 1.0547 | Val Acc 0.6615 |  Train Acc 0.8747 | ETputs(KTEPS) 6775.59
+2023-04-10 04:05:57,406 - train_gatV2.py [line:134] - INFO: Epoch 00250 | Time(s) 0.0963 | Val Loss 1.0885 | Val Acc 0.6769 |  Train Acc 0.9128 | ETputs(KTEPS) 6754.94
+2023-04-10 04:06:02,256 - train_gatV2.py [line:134] - INFO: Epoch 00300 | Time(s) 0.0964 | Val Loss 1.2238 | Val Acc 0.6462 |  Train Acc 0.8952 | ETputs(KTEPS) 6746.74
+2023-04-10 04:06:07,117 - train_gatV2.py [line:134] - INFO: Epoch 00350 | Time(s) 0.0965 | Val Loss 1.1331 | Val Acc 0.6813 |  Train Acc 0.9414 | ETputs(KTEPS) 6738.53
+2023-04-10 04:06:11,928 - train_gatV2.py [line:134] - INFO: Epoch 00400 | Time(s) 0.0965 | Val Loss 1.2377 | Val Acc 0.6703 |  Train Acc 0.9546 | ETputs(KTEPS) 6741.06
+2023-04-10 04:06:16,774 - train_gatV2.py [line:134] - INFO: Epoch 00450 | Time(s) 0.0965 | Val Loss 1.1465 | Val Acc 0.6835 |  Train Acc 0.9700 | ETputs(KTEPS) 6737.66
+2023-04-10 04:06:21,617 - train_gatV2.py [line:134] - INFO: Epoch 00500 | Time(s) 0.0965 | Val Loss 1.0946 | Val Acc 0.6791 |  Train Acc 0.9678 | ETputs(KTEPS) 6735.34
+2023-04-10 04:06:23,324 - train_gatV2.py [line:145] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-10 04:06:23,353 - train_gatV2.py [line:148] - INFO: [FINAL MODEL] Run 6 .\Val accuracy 69.01% \Val loss: 1.0
+2023-04-10 04:06:23,381 - train_gatV2.py [line:150] - INFO: [FINAL MODEL] Run 6 .	Test accuracy 67.83% \Test loss: 1.1
+2023-04-10 04:06:28,180 - train_gatV2.py [line:134] - INFO: Epoch 00050 | Time(s) 0.0934 | Val Loss 1.4340 | Val Acc 0.4462 |  Train Acc 0.5355 | ETputs(KTEPS) 6963.10
+2023-04-10 04:06:32,372 - train_gatV2.py [line:134] - INFO: Epoch 00100 | Time(s) 0.0882 | Val Loss 1.2459 | Val Acc 0.5011 |  Train Acc 0.6183 | ETputs(KTEPS) 7371.32
+2023-04-10 04:06:37,245 - train_gatV2.py [line:134] - INFO: Epoch 00150 | Time(s) 0.0912 | Val Loss 1.6403 | Val Acc 0.5011 |  Train Acc 0.6352 | ETputs(KTEPS) 7130.06
+2023-04-10 04:06:42,122 - train_gatV2.py [line:134] - INFO: Epoch 00200 | Time(s) 0.0927 | Val Loss 1.0097 | Val Acc 0.6703 |  Train Acc 0.8227 | ETputs(KTEPS) 7011.02
+2023-04-10 04:06:46,930 - train_gatV2.py [line:134] - INFO: Epoch 00250 | Time(s) 0.0934 | Val Loss 0.9743 | Val Acc 0.6769 |  Train Acc 0.8674 | ETputs(KTEPS) 6961.78
+2023-04-10 04:06:51,756 - train_gatV2.py [line:134] - INFO: Epoch 00300 | Time(s) 0.0939 | Val Loss 1.1037 | Val Acc 0.6418 |  Train Acc 0.8139 | ETputs(KTEPS) 6923.49
+2023-04-10 04:06:56,613 - train_gatV2.py [line:134] - INFO: Epoch 00350 | Time(s) 0.0944 | Val Loss 1.0287 | Val Acc 0.6571 |  Train Acc 0.8425 | ETputs(KTEPS) 6890.05
+2023-04-10 04:07:01,458 - train_gatV2.py [line:134] - INFO: Epoch 00400 | Time(s) 0.0947 | Val Loss 1.1059 | Val Acc 0.6549 |  Train Acc 0.8879 | ETputs(KTEPS) 6867.37
+2023-04-10 04:07:06,301 - train_gatV2.py [line:134] - INFO: Epoch 00450 | Time(s) 0.0949 | Val Loss 1.0951 | Val Acc 0.6681 |  Train Acc 0.9150 | ETputs(KTEPS) 6850.05
+2023-04-10 04:07:11,160 - train_gatV2.py [line:134] - INFO: Epoch 00500 | Time(s) 0.0951 | Val Loss 1.1854 | Val Acc 0.6725 |  Train Acc 0.8886 | ETputs(KTEPS) 6833.88
+2023-04-10 04:07:14,221 - train_gatV2.py [line:145] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-10 04:07:14,253 - train_gatV2.py [line:148] - INFO: [FINAL MODEL] Run 7 .\Val accuracy 65.93% \Val loss: 0.93
+2023-04-10 04:07:14,282 - train_gatV2.py [line:150] - INFO: [FINAL MODEL] Run 7 .	Test accuracy 67.83% \Test loss: 0.96
+2023-04-10 04:07:19,283 - train_gatV2.py [line:134] - INFO: Epoch 00050 | Time(s) 0.0977 | Val Loss 1.5716 | Val Acc 0.3714 |  Train Acc 0.3194 | ETputs(KTEPS) 6653.72
+2023-04-10 04:07:23,922 - train_gatV2.py [line:134] - INFO: Epoch 00100 | Time(s) 0.0950 | Val Loss 1.1641 | Val Acc 0.5385 |  Train Acc 0.5817 | ETputs(KTEPS) 6845.37
+2023-04-10 04:07:28,248 - train_gatV2.py [line:134] - INFO: Epoch 00150 | Time(s) 0.0920 | Val Loss 1.1651 | Val Acc 0.6154 |  Train Acc 0.7802 | ETputs(KTEPS) 7067.49
+2023-04-10 04:07:33,085 - train_gatV2.py [line:134] - INFO: Epoch 00200 | Time(s) 0.0931 | Val Loss 1.1573 | Val Acc 0.6462 |  Train Acc 0.8110 | ETputs(KTEPS) 6980.62
+2023-04-10 04:07:37,895 - train_gatV2.py [line:134] - INFO: Epoch 00250 | Time(s) 0.0937 | Val Loss 1.2173 | Val Acc 0.6198 |  Train Acc 0.8462 | ETputs(KTEPS) 6936.89
+2023-04-10 04:07:42,634 - train_gatV2.py [line:134] - INFO: Epoch 00300 | Time(s) 0.0939 | Val Loss 1.1549 | Val Acc 0.6418 |  Train Acc 0.8601 | ETputs(KTEPS) 6925.10
+2023-04-10 04:07:46,814 - train_gatV2.py [line:134] - INFO: Epoch 00350 | Time(s) 0.0924 | Val Loss 1.1940 | Val Acc 0.6593 |  Train Acc 0.9099 | ETputs(KTEPS) 7035.54
+2023-04-10 04:07:51,212 - train_gatV2.py [line:134] - INFO: Epoch 00400 | Time(s) 0.0919 | Val Loss 1.2100 | Val Acc 0.6659 |  Train Acc 0.9348 | ETputs(KTEPS) 7078.55
+2023-04-10 04:07:56,168 - train_gatV2.py [line:134] - INFO: Epoch 00450 | Time(s) 0.0927 | Val Loss 1.4139 | Val Acc 0.5978 |  Train Acc 0.8982 | ETputs(KTEPS) 7017.01
+2023-04-10 04:08:01,116 - train_gatV2.py [line:134] - INFO: Epoch 00500 | Time(s) 0.0933 | Val Loss 1.1659 | Val Acc 0.6593 |  Train Acc 0.9487 | ETputs(KTEPS) 6969.88
+2023-04-10 04:08:04,655 - train_gatV2.py [line:145] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-10 04:08:04,679 - train_gatV2.py [line:148] - INFO: [FINAL MODEL] Run 8 .\Val accuracy 65.93% \Val loss: 1.0
+2023-04-10 04:08:04,719 - train_gatV2.py [line:150] - INFO: [FINAL MODEL] Run 8 .	Test accuracy 68.05% \Test loss: 0.95
+2023-04-10 04:08:09,809 - train_gatV2.py [line:134] - INFO: Epoch 00050 | Time(s) 0.0990 | Val Loss 1.3992 | Val Acc 0.4396 |  Train Acc 0.5385 | ETputs(KTEPS) 6569.37
+2023-04-10 04:08:14,805 - train_gatV2.py [line:134] - INFO: Epoch 00100 | Time(s) 0.0990 | Val Loss 1.3098 | Val Acc 0.4484 |  Train Acc 0.5304 | ETputs(KTEPS) 6570.75
+2023-04-10 04:08:19,779 - train_gatV2.py [line:134] - INFO: Epoch 00150 | Time(s) 0.0990 | Val Loss 1.0618 | Val Acc 0.6066 |  Train Acc 0.7429 | ETputs(KTEPS) 6566.26
+2023-04-10 04:08:24,732 - train_gatV2.py [line:134] - INFO: Epoch 00200 | Time(s) 0.0989 | Val Loss 1.0465 | Val Acc 0.6154 |  Train Acc 0.7538 | ETputs(KTEPS) 6571.30
+2023-04-10 04:08:29,701 - train_gatV2.py [line:134] - INFO: Epoch 00250 | Time(s) 0.0990 | Val Loss 1.0681 | Val Acc 0.6593 |  Train Acc 0.8403 | ETputs(KTEPS) 6565.87
+2023-04-10 04:08:34,248 - train_gatV2.py [line:134] - INFO: Epoch 00300 | Time(s) 0.0977 | Val Loss 1.1357 | Val Acc 0.6681 |  Train Acc 0.9040 | ETputs(KTEPS) 6656.81
+2023-04-10 04:08:38,480 - train_gatV2.py [line:134] - INFO: Epoch 00350 | Time(s) 0.0958 | Val Loss 1.2134 | Val Acc 0.6593 |  Train Acc 0.8769 | ETputs(KTEPS) 6786.40
+2023-04-10 04:08:43,375 - train_gatV2.py [line:134] - INFO: Epoch 00400 | Time(s) 0.0961 | Val Loss 1.1880 | Val Acc 0.6703 |  Train Acc 0.9245 | ETputs(KTEPS) 6768.19
+2023-04-10 04:08:48,250 - train_gatV2.py [line:134] - INFO: Epoch 00450 | Time(s) 0.0962 | Val Loss 1.1239 | Val Acc 0.6659 |  Train Acc 0.9407 | ETputs(KTEPS) 6757.23
+2023-04-10 04:08:52,343 - train_gatV2.py [line:145] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-10 04:08:52,372 - train_gatV2.py [line:148] - INFO: [FINAL MODEL] Run 9 .\Val accuracy 67.91% \Val loss: 0.95
+2023-04-10 04:08:52,406 - train_gatV2.py [line:150] - INFO: [FINAL MODEL] Run 9 .	Test accuracy 68.49% \Test loss: 0.95
+2023-04-10 04:08:57,498 - train_gatV2.py [line:134] - INFO: Epoch 00050 | Time(s) 0.0991 | Val Loss 1.4783 | Val Acc 0.3846 |  Train Acc 0.4000 | ETputs(KTEPS) 6562.76
+2023-04-10 04:09:02,491 - train_gatV2.py [line:134] - INFO: Epoch 00100 | Time(s) 0.0991 | Val Loss 1.1537 | Val Acc 0.5648 |  Train Acc 0.6381 | ETputs(KTEPS) 6558.97
+2023-04-10 04:09:07,470 - train_gatV2.py [line:134] - INFO: Epoch 00150 | Time(s) 0.0992 | Val Loss 1.0336 | Val Acc 0.6176 |  Train Acc 0.7663 | ETputs(KTEPS) 6551.20
+2023-04-10 04:09:12,410 - train_gatV2.py [line:134] - INFO: Epoch 00200 | Time(s) 0.0991 | Val Loss 1.0516 | Val Acc 0.6462 |  Train Acc 0.8535 | ETputs(KTEPS) 6562.48
+2023-04-10 04:09:17,382 - train_gatV2.py [line:134] - INFO: Epoch 00250 | Time(s) 0.0991 | Val Loss 0.9943 | Val Acc 0.6879 |  Train Acc 0.8879 | ETputs(KTEPS) 6559.20
+2023-04-10 04:09:22,345 - train_gatV2.py [line:134] - INFO: Epoch 00300 | Time(s) 0.0991 | Val Loss 1.0986 | Val Acc 0.6593 |  Train Acc 0.9231 | ETputs(KTEPS) 6557.92
+2023-04-10 04:09:27,317 - train_gatV2.py [line:134] - INFO: Epoch 00350 | Time(s) 0.0992 | Val Loss 1.2145 | Val Acc 0.6286 |  Train Acc 0.8996 | ETputs(KTEPS) 6555.59
+2023-04-10 04:09:32,275 - train_gatV2.py [line:134] - INFO: Epoch 00400 | Time(s) 0.0992 | Val Loss 1.0948 | Val Acc 0.6374 |  Train Acc 0.8322 | ETputs(KTEPS) 6555.99
+2023-04-10 04:09:37,231 - train_gatV2.py [line:134] - INFO: Epoch 00450 | Time(s) 0.0992 | Val Loss 0.9621 | Val Acc 0.6571 |  Train Acc 0.8645 | ETputs(KTEPS) 6557.18
+2023-04-10 04:09:41,796 - train_gatV2.py [line:134] - INFO: Epoch 00500 | Time(s) 0.0984 | Val Loss 0.9776 | Val Acc 0.6703 |  Train Acc 0.8864 | ETputs(KTEPS) 6609.72
+2023-04-10 04:09:46,079 - train_gatV2.py [line:134] - INFO: Epoch 00550 | Time(s) 0.0972 | Val Loss 1.1964 | Val Acc 0.6440 |  Train Acc 0.9077 | ETputs(KTEPS) 6688.52
+2023-04-10 04:09:50,788 - train_gatV2.py [line:134] - INFO: Epoch 00600 | Time(s) 0.0970 | Val Loss 1.2614 | Val Acc 0.6527 |  Train Acc 0.9245 | ETputs(KTEPS) 6706.11
+2023-04-10 04:09:55,536 - train_gatV2.py [line:134] - INFO: Epoch 00650 | Time(s) 0.0968 | Val Loss 1.2002 | Val Acc 0.6615 |  Train Acc 0.9223 | ETputs(KTEPS) 6716.87
+2023-04-10 04:10:00,327 - train_gatV2.py [line:134] - INFO: Epoch 00700 | Time(s) 0.0967 | Val Loss 1.1577 | Val Acc 0.6527 |  Train Acc 0.9802 | ETputs(KTEPS) 6721.92
+2023-04-10 04:10:04,934 - train_gatV2.py [line:145] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-10 04:10:04,962 - train_gatV2.py [line:148] - INFO: [FINAL MODEL] Run 10 .\Val accuracy 67.47% \Val loss: 0.87
+2023-04-10 04:10:04,990 - train_gatV2.py [line:150] - INFO: [FINAL MODEL] Run 10 .	Test accuracy 65.65% \Test loss: 0.95
+2023-04-10 04:10:09,876 - train_gatV2.py [line:134] - INFO: Epoch 00050 | Time(s) 0.0953 | Val Loss 1.4942 | Val Acc 0.3033 |  Train Acc 0.3941 | ETputs(KTEPS) 6819.00
+2023-04-10 04:10:14,719 - train_gatV2.py [line:134] - INFO: Epoch 00100 | Time(s) 0.0958 | Val Loss 1.0974 | Val Acc 0.5692 |  Train Acc 0.7018 | ETputs(KTEPS) 6790.35
+2023-04-10 04:10:19,330 - train_gatV2.py [line:134] - INFO: Epoch 00150 | Time(s) 0.0945 | Val Loss 1.1126 | Val Acc 0.6176 |  Train Acc 0.8147 | ETputs(KTEPS) 6882.13
+2023-04-10 04:10:23,465 - train_gatV2.py [line:134] - INFO: Epoch 00200 | Time(s) 0.0915 | Val Loss 1.1568 | Val Acc 0.6308 |  Train Acc 0.8432 | ETputs(KTEPS) 7108.64
+2023-04-10 04:10:28,125 - train_gatV2.py [line:134] - INFO: Epoch 00250 | Time(s) 0.0918 | Val Loss 1.0372 | Val Acc 0.6769 |  Train Acc 0.9194 | ETputs(KTEPS) 7082.16
+2023-04-10 04:10:32,792 - train_gatV2.py [line:134] - INFO: Epoch 00300 | Time(s) 0.0920 | Val Loss 1.2223 | Val Acc 0.6308 |  Train Acc 0.8835 | ETputs(KTEPS) 7063.84
+2023-04-10 04:10:37,528 - train_gatV2.py [line:134] - INFO: Epoch 00350 | Time(s) 0.0924 | Val Loss 1.2842 | Val Acc 0.6308 |  Train Acc 0.9172 | ETputs(KTEPS) 7034.90
+2023-04-10 04:10:42,274 - train_gatV2.py [line:134] - INFO: Epoch 00400 | Time(s) 0.0927 | Val Loss 1.2123 | Val Acc 0.6681 |  Train Acc 0.9209 | ETputs(KTEPS) 7011.43
+2023-04-10 04:10:47,028 - train_gatV2.py [line:134] - INFO: Epoch 00450 | Time(s) 0.0930 | Val Loss 1.3916 | Val Acc 0.6198 |  Train Acc 0.9216 | ETputs(KTEPS) 6992.12
+2023-04-10 04:10:50,993 - train_gatV2.py [line:134] - INFO: Epoch 00500 | Time(s) 0.0916 | Val Loss 1.2423 | Val Acc 0.6659 |  Train Acc 0.9216 | ETputs(KTEPS) 7096.82
+2023-04-10 04:10:55,721 - train_gatV2.py [line:134] - INFO: Epoch 00550 | Time(s) 0.0919 | Val Loss 1.2200 | Val Acc 0.6681 |  Train Acc 0.9729 | ETputs(KTEPS) 7076.37
+2023-04-10 04:10:59,139 - train_gatV2.py [line:145] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-10 04:10:59,159 - train_gatV2.py [line:148] - INFO: [FINAL MODEL] Run 11 .\Val accuracy 66.37% \Val loss: 0.99
+2023-04-10 04:10:59,186 - train_gatV2.py [line:150] - INFO: [FINAL MODEL] Run 11 .	Test accuracy 63.46% \Test loss: 1.1
+2023-04-10 04:11:04,062 - train_gatV2.py [line:134] - INFO: Epoch 00050 | Time(s) 0.0947 | Val Loss 1.4528 | Val Acc 0.3099 |  Train Acc 0.4945 | ETputs(KTEPS) 6868.22
+2023-04-10 04:11:08,905 - train_gatV2.py [line:134] - INFO: Epoch 00100 | Time(s) 0.0954 | Val Loss 1.3347 | Val Acc 0.4022 |  Train Acc 0.5502 | ETputs(KTEPS) 6818.56
+2023-04-10 04:11:13,760 - train_gatV2.py [line:134] - INFO: Epoch 00150 | Time(s) 0.0959 | Val Loss 1.1028 | Val Acc 0.5692 |  Train Acc 0.6894 | ETputs(KTEPS) 6782.48
+2023-04-10 04:11:18,549 - train_gatV2.py [line:134] - INFO: Epoch 00200 | Time(s) 0.0958 | Val Loss 1.1075 | Val Acc 0.6330 |  Train Acc 0.8344 | ETputs(KTEPS) 6785.28
+2023-04-10 04:11:22,482 - train_gatV2.py [line:134] - INFO: Epoch 00250 | Time(s) 0.0924 | Val Loss 1.1496 | Val Acc 0.6374 |  Train Acc 0.8908 | ETputs(KTEPS) 7038.07
+2023-04-10 04:11:27,147 - train_gatV2.py [line:134] - INFO: Epoch 00300 | Time(s) 0.0925 | Val Loss 1.1078 | Val Acc 0.6527 |  Train Acc 0.9099 | ETputs(KTEPS) 7027.68
+2023-04-10 04:11:31,842 - train_gatV2.py [line:134] - INFO: Epoch 00350 | Time(s) 0.0927 | Val Loss 1.2041 | Val Acc 0.6110 |  Train Acc 0.8879 | ETputs(KTEPS) 7013.12
+2023-04-10 04:11:36,573 - train_gatV2.py [line:134] - INFO: Epoch 00400 | Time(s) 0.0929 | Val Loss 1.1448 | Val Acc 0.6769 |  Train Acc 0.9634 | ETputs(KTEPS) 6995.44
+2023-04-10 04:11:41,399 - train_gatV2.py [line:134] - INFO: Epoch 00450 | Time(s) 0.0933 | Val Loss 1.6965 | Val Acc 0.3758 |  Train Acc 0.5736 | ETputs(KTEPS) 6965.86
+2023-04-10 04:11:46,259 - train_gatV2.py [line:134] - INFO: Epoch 00500 | Time(s) 0.0937 | Val Loss 1.3644 | Val Acc 0.5187 |  Train Acc 0.8689 | ETputs(KTEPS) 6937.58
+2023-04-10 04:11:50,269 - train_gatV2.py [line:134] - INFO: Epoch 00550 | Time(s) 0.0925 | Val Loss 1.4099 | Val Acc 0.5209 |  Train Acc 0.9158 | ETputs(KTEPS) 7030.11
+2023-04-10 04:11:54,140 - train_gatV2.py [line:145] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-10 04:11:54,165 - train_gatV2.py [line:148] - INFO: [FINAL MODEL] Run 12 .\Val accuracy 66.81% \Val loss: 1.0
+2023-04-10 04:11:54,189 - train_gatV2.py [line:150] - INFO: [FINAL MODEL] Run 12 .	Test accuracy 65.86% \Test loss: 1.1
+2023-04-10 04:11:58,815 - train_gatV2.py [line:134] - INFO: Epoch 00050 | Time(s) 0.0900 | Val Loss 1.4385 | Val Acc 0.3253 |  Train Acc 0.4403 | ETputs(KTEPS) 7227.01
+2023-04-10 04:12:03,457 - train_gatV2.py [line:134] - INFO: Epoch 00100 | Time(s) 0.0911 | Val Loss 1.1595 | Val Acc 0.5429 |  Train Acc 0.6015 | ETputs(KTEPS) 7135.95
+2023-04-10 04:12:08,203 - train_gatV2.py [line:134] - INFO: Epoch 00150 | Time(s) 0.0922 | Val Loss 1.0342 | Val Acc 0.6593 |  Train Acc 0.8396 | ETputs(KTEPS) 7052.91
+2023-04-10 04:12:12,988 - train_gatV2.py [line:134] - INFO: Epoch 00200 | Time(s) 0.0930 | Val Loss 1.0374 | Val Acc 0.6681 |  Train Acc 0.8769 | ETputs(KTEPS) 6989.30
+2023-04-10 04:12:17,566 - train_gatV2.py [line:134] - INFO: Epoch 00250 | Time(s) 0.0927 | Val Loss 1.1147 | Val Acc 0.6637 |  Train Acc 0.9062 | ETputs(KTEPS) 7011.91
+2023-04-10 04:12:21,580 - train_gatV2.py [line:134] - INFO: Epoch 00300 | Time(s) 0.0906 | Val Loss 1.1838 | Val Acc 0.6220 |  Train Acc 0.8513 | ETputs(KTEPS) 7172.76
+2023-04-10 04:12:26,191 - train_gatV2.py [line:134] - INFO: Epoch 00350 | Time(s) 0.0909 | Val Loss 1.0377 | Val Acc 0.6769 |  Train Acc 0.9355 | ETputs(KTEPS) 7155.21
+2023-04-10 04:12:30,879 - train_gatV2.py [line:134] - INFO: Epoch 00400 | Time(s) 0.0912 | Val Loss 1.0372 | Val Acc 0.6901 |  Train Acc 0.9451 | ETputs(KTEPS) 7128.00
+2023-04-10 04:12:35,570 - train_gatV2.py [line:134] - INFO: Epoch 00450 | Time(s) 0.0915 | Val Loss 1.1478 | Val Acc 0.6747 |  Train Acc 0.9736 | ETputs(KTEPS) 7105.73
+2023-04-10 04:12:40,364 - train_gatV2.py [line:134] - INFO: Epoch 00500 | Time(s) 0.0919 | Val Loss 1.4642 | Val Acc 0.6286 |  Train Acc 0.9509 | ETputs(KTEPS) 7072.14
+2023-04-10 04:12:45,117 - train_gatV2.py [line:134] - INFO: Epoch 00550 | Time(s) 0.0922 | Val Loss 1.0990 | Val Acc 0.6637 |  Train Acc 0.9795 | ETputs(KTEPS) 7050.62
+2023-04-10 04:12:49,698 - train_gatV2.py [line:134] - INFO: Epoch 00600 | Time(s) 0.0922 | Val Loss 1.2104 | Val Acc 0.6703 |  Train Acc 0.9641 | ETputs(KTEPS) 7054.63
+2023-04-10 04:12:53,406 - train_gatV2.py [line:134] - INFO: Epoch 00650 | Time(s) 0.0908 | Val Loss 1.1808 | Val Acc 0.6681 |  Train Acc 0.9663 | ETputs(KTEPS) 7162.42
+2023-04-10 04:12:57,207 - train_gatV2.py [line:145] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-10 04:12:57,233 - train_gatV2.py [line:148] - INFO: [FINAL MODEL] Run 13 .\Val accuracy 68.13% \Val loss: 0.93
+2023-04-10 04:12:57,267 - train_gatV2.py [line:150] - INFO: [FINAL MODEL] Run 13 .	Test accuracy 66.52% \Test loss: 1.0
+2023-04-10 04:13:01,907 - train_gatV2.py [line:134] - INFO: Epoch 00050 | Time(s) 0.0906 | Val Loss 1.4067 | Val Acc 0.3473 |  Train Acc 0.3956 | ETputs(KTEPS) 7179.75
+2023-04-10 04:13:06,681 - train_gatV2.py [line:134] - INFO: Epoch 00100 | Time(s) 0.0926 | Val Loss 1.0970 | Val Acc 0.5758 |  Train Acc 0.7473 | ETputs(KTEPS) 7020.40
+2023-04-10 04:13:11,478 - train_gatV2.py [line:134] - INFO: Epoch 00150 | Time(s) 0.0935 | Val Loss 1.0502 | Val Acc 0.6220 |  Train Acc 0.7853 | ETputs(KTEPS) 6952.57
+2023-04-10 04:13:16,347 - train_gatV2.py [line:134] - INFO: Epoch 00200 | Time(s) 0.0945 | Val Loss 0.9166 | Val Acc 0.6725 |  Train Acc 0.9077 | ETputs(KTEPS) 6883.22
+2023-04-10 04:13:20,425 - train_gatV2.py [line:134] - INFO: Epoch 00250 | Time(s) 0.0918 | Val Loss 0.9906 | Val Acc 0.6681 |  Train Acc 0.8711 | ETputs(KTEPS) 7081.63
+2023-04-10 04:13:25,179 - train_gatV2.py [line:134] - INFO: Epoch 00300 | Time(s) 0.0923 | Val Loss 0.9209 | Val Acc 0.7055 |  Train Acc 0.9407 | ETputs(KTEPS) 7042.06
+2023-04-10 04:13:29,908 - train_gatV2.py [line:134] - INFO: Epoch 00350 | Time(s) 0.0926 | Val Loss 0.9732 | Val Acc 0.6967 |  Train Acc 0.9348 | ETputs(KTEPS) 7018.14
+2023-04-10 04:13:34,644 - train_gatV2.py [line:134] - INFO: Epoch 00400 | Time(s) 0.0929 | Val Loss 0.9412 | Val Acc 0.7143 |  Train Acc 0.9407 | ETputs(KTEPS) 6999.51
+2023-04-10 04:13:39,417 - train_gatV2.py [line:134] - INFO: Epoch 00450 | Time(s) 0.0932 | Val Loss 1.0932 | Val Acc 0.6681 |  Train Acc 0.8828 | ETputs(KTEPS) 6978.31
+2023-04-10 04:13:44,277 - train_gatV2.py [line:134] - INFO: Epoch 00500 | Time(s) 0.0936 | Val Loss 0.8923 | Val Acc 0.7077 |  Train Acc 0.9670 | ETputs(KTEPS) 6949.03
+2023-04-10 04:13:48,270 - train_gatV2.py [line:134] - INFO: Epoch 00550 | Time(s) 0.0923 | Val Loss 1.0396 | Val Acc 0.6879 |  Train Acc 0.9516 | ETputs(KTEPS) 7043.04
+2023-04-10 04:13:52,975 - train_gatV2.py [line:134] - INFO: Epoch 00600 | Time(s) 0.0925 | Val Loss 0.9095 | Val Acc 0.7077 |  Train Acc 0.9810 | ETputs(KTEPS) 7032.05
+2023-04-10 04:13:57,647 - train_gatV2.py [line:134] - INFO: Epoch 00650 | Time(s) 0.0925 | Val Loss 0.9106 | Val Acc 0.7121 |  Train Acc 0.9553 | ETputs(KTEPS) 7026.46
+2023-04-10 04:14:02,395 - train_gatV2.py [line:134] - INFO: Epoch 00700 | Time(s) 0.0927 | Val Loss 1.0031 | Val Acc 0.6901 |  Train Acc 0.9685 | ETputs(KTEPS) 7013.59
+2023-04-10 04:14:07,140 - train_gatV2.py [line:134] - INFO: Epoch 00750 | Time(s) 0.0928 | Val Loss 1.0390 | Val Acc 0.6945 |  Train Acc 0.9656 | ETputs(KTEPS) 7002.68
+2023-04-10 04:14:11,653 - train_gatV2.py [line:145] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-10 04:14:11,676 - train_gatV2.py [line:148] - INFO: [FINAL MODEL] Run 14 .\Val accuracy 70.99% \Val loss: 0.84
+2023-04-10 04:14:11,710 - train_gatV2.py [line:150] - INFO: [FINAL MODEL] Run 14 .	Test accuracy 65.86% \Test loss: 1.2
+2023-04-10 04:14:16,577 - train_gatV2.py [line:134] - INFO: Epoch 00050 | Time(s) 0.0954 | Val Loss 1.5868 | Val Acc 0.2088 |  Train Acc 0.3663 | ETputs(KTEPS) 6816.22
+2023-04-10 04:14:20,611 - train_gatV2.py [line:134] - INFO: Epoch 00100 | Time(s) 0.0873 | Val Loss 1.0730 | Val Acc 0.5890 |  Train Acc 0.6850 | ETputs(KTEPS) 7444.37
+2023-04-10 04:14:25,285 - train_gatV2.py [line:134] - INFO: Epoch 00150 | Time(s) 0.0892 | Val Loss 1.0256 | Val Acc 0.6286 |  Train Acc 0.8022 | ETputs(KTEPS) 7285.81
+2023-04-10 04:14:29,917 - train_gatV2.py [line:134] - INFO: Epoch 00200 | Time(s) 0.0900 | Val Loss 0.9874 | Val Acc 0.6835 |  Train Acc 0.8601 | ETputs(KTEPS) 7220.45
+2023-04-10 04:14:34,587 - train_gatV2.py [line:134] - INFO: Epoch 00250 | Time(s) 0.0907 | Val Loss 0.9692 | Val Acc 0.6725 |  Train Acc 0.8733 | ETputs(KTEPS) 7168.50
+2023-04-10 04:14:39,408 - train_gatV2.py [line:134] - INFO: Epoch 00300 | Time(s) 0.0916 | Val Loss 1.0888 | Val Acc 0.6967 |  Train Acc 0.8850 | ETputs(KTEPS) 7096.09
+2023-04-10 04:14:44,257 - train_gatV2.py [line:134] - INFO: Epoch 00350 | Time(s) 0.0924 | Val Loss 1.0019 | Val Acc 0.6791 |  Train Acc 0.9289 | ETputs(KTEPS) 7037.62
+2023-04-10 04:14:49,084 - train_gatV2.py [line:134] - INFO: Epoch 00400 | Time(s) 0.0929 | Val Loss 1.0596 | Val Acc 0.7121 |  Train Acc 0.9275 | ETputs(KTEPS) 6998.57
+2023-04-10 04:14:53,040 - train_gatV2.py [line:134] - INFO: Epoch 00450 | Time(s) 0.0914 | Val Loss 0.9881 | Val Acc 0.6813 |  Train Acc 0.9509 | ETputs(KTEPS) 7116.09
+2023-04-10 04:14:57,795 - train_gatV2.py [line:134] - INFO: Epoch 00500 | Time(s) 0.0917 | Val Loss 1.0320 | Val Acc 0.6835 |  Train Acc 0.9502 | ETputs(KTEPS) 7087.43
+2023-04-10 04:15:02,639 - train_gatV2.py [line:134] - INFO: Epoch 00550 | Time(s) 0.0922 | Val Loss 1.0130 | Val Acc 0.7077 |  Train Acc 0.9604 | ETputs(KTEPS) 7051.72
+2023-04-10 04:15:03,957 - train_gatV2.py [line:145] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-10 04:15:03,980 - train_gatV2.py [line:148] - INFO: [FINAL MODEL] Run 15 .\Val accuracy 72.31% \Val loss: 0.92
+2023-04-10 04:15:04,020 - train_gatV2.py [line:150] - INFO: [FINAL MODEL] Run 15 .	Test accuracy 71.55% \Test loss: 0.89
+2023-04-10 04:15:08,922 - train_gatV2.py [line:134] - INFO: Epoch 00050 | Time(s) 0.0952 | Val Loss 3.1271 | Val Acc 0.1934 |  Train Acc 0.2000 | ETputs(KTEPS) 6827.90
+2023-04-10 04:15:13,765 - train_gatV2.py [line:134] - INFO: Epoch 00100 | Time(s) 0.0958 | Val Loss 1.2998 | Val Acc 0.5165 |  Train Acc 0.6769 | ETputs(KTEPS) 6786.94
+2023-04-10 04:15:18,591 - train_gatV2.py [line:134] - INFO: Epoch 00150 | Time(s) 0.0960 | Val Loss 1.2159 | Val Acc 0.5604 |  Train Acc 0.7495 | ETputs(KTEPS) 6773.60
+2023-04-10 04:15:23,449 - train_gatV2.py [line:134] - INFO: Epoch 00200 | Time(s) 0.0963 | Val Loss 1.2844 | Val Acc 0.5934 |  Train Acc 0.8059 | ETputs(KTEPS) 6755.07
+2023-04-10 04:15:27,421 - train_gatV2.py [line:134] - INFO: Epoch 00250 | Time(s) 0.0929 | Val Loss 1.0814 | Val Acc 0.6527 |  Train Acc 0.8769 | ETputs(KTEPS) 6999.96
+2023-04-10 04:15:32,086 - train_gatV2.py [line:134] - INFO: Epoch 00300 | Time(s) 0.0929 | Val Loss 1.1408 | Val Acc 0.6396 |  Train Acc 0.9092 | ETputs(KTEPS) 6995.11
+2023-04-10 04:15:36,814 - train_gatV2.py [line:134] - INFO: Epoch 00350 | Time(s) 0.0932 | Val Loss 1.2449 | Val Acc 0.6330 |  Train Acc 0.8842 | ETputs(KTEPS) 6978.25
+2023-04-10 04:15:41,668 - train_gatV2.py [line:134] - INFO: Epoch 00400 | Time(s) 0.0937 | Val Loss 1.2314 | Val Acc 0.6615 |  Train Acc 0.9363 | ETputs(KTEPS) 6942.03
+2023-04-10 04:15:46,297 - train_gatV2.py [line:134] - INFO: Epoch 00450 | Time(s) 0.0935 | Val Loss 1.0918 | Val Acc 0.6967 |  Train Acc 0.9377 | ETputs(KTEPS) 6951.30
+2023-04-10 04:15:48,624 - train_gatV2.py [line:145] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-10 04:15:48,651 - train_gatV2.py [line:148] - INFO: [FINAL MODEL] Run 16 .\Val accuracy 64.18% \Val loss: 1.0
+2023-04-10 04:15:48,677 - train_gatV2.py [line:150] - INFO: [FINAL MODEL] Run 16 .	Test accuracy 68.27% \Test loss: 0.99
+2023-04-10 04:15:53,475 - train_gatV2.py [line:134] - INFO: Epoch 00050 | Time(s) 0.0935 | Val Loss 1.3930 | Val Acc 0.4527 |  Train Acc 0.5810 | ETputs(KTEPS) 6956.01
+2023-04-10 04:15:58,300 - train_gatV2.py [line:134] - INFO: Epoch 00100 | Time(s) 0.0946 | Val Loss 1.0511 | Val Acc 0.5846 |  Train Acc 0.6154 | ETputs(KTEPS) 6875.69
+2023-04-10 04:16:03,126 - train_gatV2.py [line:134] - INFO: Epoch 00150 | Time(s) 0.0951 | Val Loss 1.0177 | Val Acc 0.6505 |  Train Acc 0.7546 | ETputs(KTEPS) 6835.84
+2023-04-10 04:16:07,964 - train_gatV2.py [line:134] - INFO: Epoch 00200 | Time(s) 0.0955 | Val Loss 1.0594 | Val Acc 0.6374 |  Train Acc 0.8725 | ETputs(KTEPS) 6809.24
+2023-04-10 04:16:12,764 - train_gatV2.py [line:134] - INFO: Epoch 00250 | Time(s) 0.0956 | Val Loss 1.0035 | Val Acc 0.6791 |  Train Acc 0.9099 | ETputs(KTEPS) 6804.44
+2023-04-10 04:16:17,452 - train_gatV2.py [line:134] - INFO: Epoch 00300 | Time(s) 0.0952 | Val Loss 1.0738 | Val Acc 0.6462 |  Train Acc 0.8835 | ETputs(KTEPS) 6827.75
+2023-04-10 04:16:22,231 - train_gatV2.py [line:134] - INFO: Epoch 00350 | Time(s) 0.0953 | Val Loss 0.9879 | Val Acc 0.6989 |  Train Acc 0.9267 | ETputs(KTEPS) 6824.34
+2023-04-10 04:16:27,006 - train_gatV2.py [line:134] - INFO: Epoch 00400 | Time(s) 0.0953 | Val Loss 1.1118 | Val Acc 0.6747 |  Train Acc 0.9473 | ETputs(KTEPS) 6822.62
+2023-04-10 04:16:31,755 - train_gatV2.py [line:134] - INFO: Epoch 00450 | Time(s) 0.0953 | Val Loss 1.0871 | Val Acc 0.6813 |  Train Acc 0.9597 | ETputs(KTEPS) 6825.34
+2023-04-10 04:16:36,595 - train_gatV2.py [line:134] - INFO: Epoch 00500 | Time(s) 0.0954 | Val Loss 1.2388 | Val Acc 0.6923 |  Train Acc 0.9524 | ETputs(KTEPS) 6814.65
+2023-04-10 04:16:41,324 - train_gatV2.py [line:134] - INFO: Epoch 00550 | Time(s) 0.0953 | Val Loss 1.1561 | Val Acc 0.6571 |  Train Acc 0.9678 | ETputs(KTEPS) 6820.21
+2023-04-10 04:16:45,846 - train_gatV2.py [line:145] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-10 04:16:45,869 - train_gatV2.py [line:148] - INFO: [FINAL MODEL] Run 17 .\Val accuracy 69.67% \Val loss: 0.92
+2023-04-10 04:16:45,898 - train_gatV2.py [line:150] - INFO: [FINAL MODEL] Run 17 .	Test accuracy 63.02% \Test loss: 1.0
+2023-04-10 04:16:49,831 - train_gatV2.py [line:134] - INFO: Epoch 00050 | Time(s) 0.0758 | Val Loss 1.3226 | Val Acc 0.4154 |  Train Acc 0.5509 | ETputs(KTEPS) 8576.11
+2023-04-10 04:16:54,400 - train_gatV2.py [line:134] - INFO: Epoch 00100 | Time(s) 0.0832 | Val Loss 1.0678 | Val Acc 0.5934 |  Train Acc 0.6703 | ETputs(KTEPS) 7813.79
+2023-04-10 04:16:59,000 - train_gatV2.py [line:134] - INFO: Epoch 00150 | Time(s) 0.0860 | Val Loss 0.9495 | Val Acc 0.6527 |  Train Acc 0.7751 | ETputs(KTEPS) 7561.55
+2023-04-10 04:17:03,581 - train_gatV2.py [line:134] - INFO: Epoch 00200 | Time(s) 0.0873 | Val Loss 0.9673 | Val Acc 0.6681 |  Train Acc 0.8740 | ETputs(KTEPS) 7445.79
+2023-04-10 04:17:07,260 - train_gatV2.py [line:134] - INFO: Epoch 00250 | Time(s) 0.0846 | Val Loss 1.0049 | Val Acc 0.6571 |  Train Acc 0.8828 | ETputs(KTEPS) 7689.63
+2023-04-10 04:17:11,749 - train_gatV2.py [line:134] - INFO: Epoch 00300 | Time(s) 0.0854 | Val Loss 1.0897 | Val Acc 0.6440 |  Train Acc 0.8645 | ETputs(KTEPS) 7611.60
+2023-04-10 04:17:16,332 - train_gatV2.py [line:134] - INFO: Epoch 00350 | Time(s) 0.0863 | Val Loss 1.0110 | Val Acc 0.6813 |  Train Acc 0.9363 | ETputs(KTEPS) 7533.39
+2023-04-10 04:17:21,001 - train_gatV2.py [line:134] - INFO: Epoch 00400 | Time(s) 0.0872 | Val Loss 1.0204 | Val Acc 0.7011 |  Train Acc 0.9553 | ETputs(KTEPS) 7457.36
+2023-04-10 04:17:24,827 - train_gatV2.py [line:134] - INFO: Epoch 00450 | Time(s) 0.0860 | Val Loss 1.0466 | Val Acc 0.7121 |  Train Acc 0.9509 | ETputs(KTEPS) 7560.39
+2023-04-10 04:17:29,416 - train_gatV2.py [line:134] - INFO: Epoch 00500 | Time(s) 0.0866 | Val Loss 0.9824 | Val Acc 0.7033 |  Train Acc 0.9663 | ETputs(KTEPS) 7510.33
+2023-04-10 04:17:33,356 - train_gatV2.py [line:145] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-10 04:17:33,377 - train_gatV2.py [line:148] - INFO: [FINAL MODEL] Run 18 .\Val accuracy 69.89% \Val loss: 0.88
+2023-04-10 04:17:33,405 - train_gatV2.py [line:150] - INFO: [FINAL MODEL] Run 18 .	Test accuracy 69.15% \Test loss: 0.95
+2023-04-10 04:17:38,240 - train_gatV2.py [line:134] - INFO: Epoch 00050 | Time(s) 0.0940 | Val Loss 1.3630 | Val Acc 0.4703 |  Train Acc 0.4264 | ETputs(KTEPS) 6913.81
+2023-04-10 04:17:42,186 - train_gatV2.py [line:134] - INFO: Epoch 00100 | Time(s) 0.0862 | Val Loss 1.1159 | Val Acc 0.5890 |  Train Acc 0.6520 | ETputs(KTEPS) 7542.96
+2023-04-10 04:17:46,815 - train_gatV2.py [line:134] - INFO: Epoch 00150 | Time(s) 0.0882 | Val Loss 1.3206 | Val Acc 0.5648 |  Train Acc 0.7267 | ETputs(KTEPS) 7371.13
+2023-04-10 04:17:51,550 - train_gatV2.py [line:134] - INFO: Epoch 00200 | Time(s) 0.0898 | Val Loss 1.0908 | Val Acc 0.6198 |  Train Acc 0.8527 | ETputs(KTEPS) 7243.85
+2023-04-10 04:17:56,314 - train_gatV2.py [line:134] - INFO: Epoch 00250 | Time(s) 0.0908 | Val Loss 1.0628 | Val Acc 0.6725 |  Train Acc 0.9172 | ETputs(KTEPS) 7157.50
+2023-04-10 04:18:01,078 - train_gatV2.py [line:134] - INFO: Epoch 00300 | Time(s) 0.0916 | Val Loss 1.2999 | Val Acc 0.6132 |  Train Acc 0.8418 | ETputs(KTEPS) 7100.07
+2023-04-10 04:18:05,802 - train_gatV2.py [line:134] - INFO: Epoch 00350 | Time(s) 0.0920 | Val Loss 1.1485 | Val Acc 0.6791 |  Train Acc 0.9458 | ETputs(KTEPS) 7068.19
+2023-04-10 04:18:10,515 - train_gatV2.py [line:134] - INFO: Epoch 00400 | Time(s) 0.0923 | Val Loss 1.0672 | Val Acc 0.6879 |  Train Acc 0.9516 | ETputs(KTEPS) 7046.83
+2023-04-10 04:18:14,465 - train_gatV2.py [line:134] - INFO: Epoch 00450 | Time(s) 0.0908 | Val Loss 1.1354 | Val Acc 0.6681 |  Train Acc 0.9436 | ETputs(KTEPS) 7161.45
+2023-04-10 04:18:19,207 - train_gatV2.py [line:134] - INFO: Epoch 00500 | Time(s) 0.0912 | Val Loss 1.1124 | Val Acc 0.6725 |  Train Acc 0.9766 | ETputs(KTEPS) 7129.98
+2023-04-10 04:18:20,316 - train_gatV2.py [line:145] - DEBUG: Model Saved by Early Stopper is Loaded!
+2023-04-10 04:18:20,350 - train_gatV2.py [line:148] - INFO: [FINAL MODEL] Run 19 .\Val accuracy 71.87% \Val loss: 0.94
+2023-04-10 04:18:20,373 - train_gatV2.py [line:150] - INFO: [FINAL MODEL] Run 19 .	Test accuracy 69.15% \Test loss: 0.95
+2023-04-10 04:18:20,374 - train_gatV2.py [line:175] - INFO: Mean Acc For Cross Validation: 0.6684, STDV: 0.0235
+2023-04-10 04:18:20,374 - train_gatV2.py [line:176] - INFO: [0.649890590809628, 0.687089715536105, 0.6980306345733042, 0.6542669584245077, 0.6301969365426696, 0.6411378555798687, 0.6783369803063457, 0.6783369803063457, 0.6805251641137856, 0.6849015317286652, 0.6564551422319475, 0.6345733041575492, 0.6586433260393874, 0.6652078774617067, 0.6586433260393874, 0.7155361050328227, 0.6827133479212254, 0.6301969365426696, 0.6914660831509847, 0.6914660831509847]
