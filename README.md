@@ -1,4 +1,14 @@
-# Artifact of ClenshawGNN
+# Artifact of Clenshaw Graph Neural Networks
+
+**[Under Construction]**
+
+This repository includes the implementation for ClenshawGCN(KDD'23). 
+By equipping GCN convolution layers with a simple residual connection, 
+our model simulates any polynomial based on the second kind of Chebyshev polynomials! 
+
+A previous version can be viewed [here](https://arxiv.org/abs/2210.16508).  
+This will be updated once the soon!
+
 
 ## Install
 
@@ -7,14 +17,14 @@ conda env create -f environment.yml  # create a conda environment for ClenshawGN
 conda activate checkclenshaw         # enter conda environment
 ```
 
-## Reproduce Results for Table 2
+## Reproducing Results for Geom-GCN and Citation datasets
 
 ```bash
 bash run_all.sh
 ```
 
 
-## Reproduce Results for Table 3
+## Reproducing Results for LINKX datasets
 
 ```bash
 bash run_all_linkx.sh
