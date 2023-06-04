@@ -15,7 +15,7 @@ models/GCNII.py
 rebuttalLogs/*
 train_GCNII*
 train_en*
-train_GCNII*
+train_gat*
 
 # vscode
 .vscode/settings.json

@@ -6,8 +6,8 @@ This repository includes the implementation for ClenshawGCN(KDD'23).
 By equipping GCN convolution layers with a simple residual connection, 
 our model simulates any polynomial based on the second kind of Chebyshev polynomials! 
 
-A previous version can be viewed [here](https://arxiv.org/abs/2210.16508).  
-This will be updated once the soon!
+A previous version can be viewed [here](https://arxiv.org/abs/2210.16508).  A new version is coming soon!
+
 
 
 ## Install
