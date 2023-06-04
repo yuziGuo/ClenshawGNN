@@ -3,7 +3,6 @@ from data.citation_full_dataloader import  citation_full_supervised_loader
 from data.geom_dataloader import geom_dataloader
 from data.linkx_dataloader import linkx_dataloader
 
-# from models.ChebClenshawNN import ChebNN
 from models.GATV2 import GATV2
 
 from utils.grading_logger import get_logger

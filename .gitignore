@@ -7,6 +7,12 @@
 optunalog/*
 logNoRelu/*
 *.sh
+tune*
+
+# specific
+models/GCNIIJK.py
+models/GCNII.py
+rebuttalLogs/*
 
 # vscode
 .vscode/settings.json

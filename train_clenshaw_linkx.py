@@ -181,7 +181,7 @@ def set_args():
     parser = argparse.ArgumentParser(description='GCN')
     parser.add_argument('--seed', type=int, default=42, help='Random seed.')
     parser.add_argument("--model", type=str, default='ChebNN')
-    parser.add_argument("--gpu", type=int, default=0, help="gpu")
+    parser.add_argument("--gpu", type=int, default=1, help="gpu")
     parser.add_argument("--dataset", type=str, default="cora", help="Dataset name ('cora', 'citeseer', 'pubmed').")
     parser.add_argument("--ds-split", type=str, default="standard", help="split by ('standard', 'mg', 'random').")
     parser.add_argument('--split-seed', type=str, default='random', help='(predefined, random)')

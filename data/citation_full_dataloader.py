@@ -54,7 +54,6 @@ class citation_full_supervised_loader(loader):
         self.n_edges = self.edge_index.shape[-1]
 
     def load_a_mask(self, p=None):
-        # print('mask loaded!')
         if p == None:
             splits_file_path = os.path.join(
                 "dataset/splits",
@@ -70,14 +69,6 @@ class citation_full_supervised_loader(loader):
             self.val_mask = th.BoolTensor(val_mask).to(self.device)
             self.test_mask = th.BoolTensor(test_mask).to(self.device)
             return
-        # elif p == 'complete':
-            # N = self.labels.shape[0]
-            # self.train_mask = th.BoolTensor(N).to(self.device)
-            # self.train_mask[:N - 1000] = 1
-            # self.val_mask = th.BoolTensor(N).to(self.device)
-            # self.val_mask[:N-1000 :N-500] = 1
-            # self.test_mask = th.BoolTensor(N).to(self.device)
-            # self.test_mask[:N - 500 :N] = 1
         else:
             (p_train, p_val, p_test) = p
             percls_trn = int(round(p_train * len(self.labels) / self.n_classes))
@@ -92,17 +83,6 @@ class citation_full_supervised_loader(loader):
             self.train_mask = train_mask.bool()
             self.val_mask = val_mask.bool()
             self.test_mask = test_mask.bool()
-
-            # N = self.labels.shape[0]
-            # train_mask = th.BoolTensor(N).to(self.device)
-            # train_mask[:N - 1000] = 1
-            # val_mask = th.BoolTensor(N).to(self.device)
-            # val_mask[:N-1000 :N-500] = 1
-            # test_mask = th.BoolTensor(N).to(self.device)
-            # test_mask[:N - 500 :N] = 1
-            # self.train_mask = train_mask.bool()
-            # self.val_mask = val_mask.bool()
-            # self.test_mask = test_mask.bool()
 
 if __name__ == "__main__":
     loader = citation_full_supervised_loader("corafull", "cuda:1", True)

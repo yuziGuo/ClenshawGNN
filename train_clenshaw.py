@@ -68,7 +68,6 @@ def build_optimizer_SGD(args, model):
         {'params':[model.alpha_params], 'lr':args.lr3,'weight_decay':args.wd3}, # p
     ]
     optimizer = th.optim.SGD(param_groups, momentum=args.momentum)
-    # optimizer = th.optim.Adam(param_groups)
     return optimizer
 
 
@@ -205,7 +204,7 @@ def set_args():
     parser.add_argument("--lr2",  type=float, default=1e-2, help="learning rate")
     parser.add_argument("--lr3",  type=float, default=1e-2, help="learning rate")
     parser.add_argument("--momentum",  type=float, default=0.9, help="SGD momentum")
-    parser.add_argument("--n-epochs", type=int, default=10000, help="number of training epochs")
+    parser.add_argument("--n-epochs", type=int, default=2000, help="number of training epochs")
     parser.add_argument("--dropout", type=float, default=0.5, help="dropout probability")
     parser.add_argument("--dropout2", type=float, default=0.7, help="dropout probability")
 

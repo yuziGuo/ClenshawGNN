@@ -29,7 +29,8 @@ class GAT(torch.nn.Module):
 
     def forward(self, x):
         x = F.dropout(x, p=self.dropout, training=self.training)
-        x = F.elu(self.convs[0](x, self.edge_index))
+        x = self.convs[0](x, self.edge_index)
+        x = F.elu(x)
         
         x = F.dropout(x, p=self.dropout, training=self.training)
         x = self.convs[-1](x, self.edge_index)
