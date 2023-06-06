@@ -16,6 +16,7 @@ rebuttalLogs/*
 train_GCNII*
 train_en*
 train_gat*
+parse_log*
 
 # vscode
 .vscode/settings.json

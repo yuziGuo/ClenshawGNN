@@ -19,15 +19,21 @@ conda activate checkclenshaw         # enter conda environment
 
 ## Reproducing Results for Geom-GCN and Citation datasets
 
+Run the scripts altogether: 
 ```bash
-bash run_all.sh
+bash scripts/run_all.sh
 ```
+or run one command in the script at a time.
 
 
 ## Reproducing Results for LINKX datasets
 
+ClenshawGCN achieves state-of-the-art results on genius and twitch-gamer.
+The results are as below; they will be released with the KDD'23 paper.
+<img src="./scripts/clenshawlinkx.jpg" alt="Linkx" width="500" height="300">
+
 ```bash
-bash run_all_linkx.sh
+bash scripts/run_all_linkx.sh
 ```
 
 
