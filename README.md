@@ -30,7 +30,8 @@ or run one command in the script at a time.
 
 ClenshawGCN achieves state-of-the-art results on genius and twitch-gamer.
 The results are as below; they will be released with the KDD'23 paper.
-<img src="./scripts/clenshawlinkx.jpg" alt="Linkx" width="300" height="350">
+
+<img src="./scripts/clenshawlinkx.jpg" alt="Linkx" width="400" height="470">
 
 ```bash
 bash scripts/run_all_linkx.sh
